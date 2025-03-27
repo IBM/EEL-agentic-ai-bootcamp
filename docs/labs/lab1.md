@@ -16,7 +16,6 @@ Key Features:
 - Web Search for Attractions & Activities: Uses a web research agent to gather information on must-visit places, local events, restaurants, and transportation.
 - Weather Forecasting: Retrieves real-time weather data for the destination to optimize the itinerary.
 - Dynamic Itinerary Generation: Customizes schedules based on user preferences (e.g., adventure, culture, relaxation) and weather conditions.
-- Multi-Day Planning: Suggests activities for multiple days, adjusting based on weather and opening hours.
 
 ## Steps
 
