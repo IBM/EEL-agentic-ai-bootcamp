@@ -8,14 +8,14 @@
 
 **1. IBM Agents & Landscape (1.5h)**
 
-- AI Agents Overview and Marketlandscape Session
+- AI Agents Overview and Market landscape Session
 - IBM's Vision for Agentic AI
 - IBM's Agentic Options Session
 
 **2. Show and tell (1h)**
 
 - Wealth management use case
-- wx.o usecase
+- wx.o use case
 - Agentic Use cases with IBM products
 
 **3. Hands-on lab (2h)**

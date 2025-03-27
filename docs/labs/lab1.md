@@ -89,7 +89,7 @@ Key Features:
 
     ![11](../images/lab1/11.png)  
 
-1. You will be presented with the model catelog.  We'll use the `llama-3-3-70b-instruct` to build this agent.
+1. You will be presented with the model catalog.  We'll use the `llama-3-3-70b-instruct` to build this agent.
 
     ![12](../images/lab1/12.png)  
 
