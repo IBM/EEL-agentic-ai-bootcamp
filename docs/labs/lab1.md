@@ -1,9 +1,5 @@
 # Build and Deploy a no-code travel planner agent with Agent Lab on watsonx.ai
 
-!!! warning "Draft version"
-    
-    Work in progress!
-
 !!! info "Agentic AI Framework Details"
 
     - **Framework**: LangGraph
