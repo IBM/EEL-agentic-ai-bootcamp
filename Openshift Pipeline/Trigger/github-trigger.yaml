@@ -1,0 +1,72 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: mkdocs-build-triggertemplate
+spec:
+  params:
+    - name: git-revision
+      description: The git revision to checkout
+    - name: git-repo-url
+      description: The git repo url to clone
+  resourcetemplates:
+    - apiVersion: tekton.dev/v1beta1
+      kind: PipelineRun
+      metadata:
+        annotations: {}
+        generateName: mkdocs-oc-pipeline-run-
+        labels:
+          tekton.dev/pipeline: mkdocs-oc-pipeline
+      spec:
+        serviceAccountName: pipeline
+        params:
+          - name: git-url
+            value: $(tt.params.git-repo-url)
+          - name: git-rev
+            value: $(tt.params.git-revision)
+        pipelineRef:
+          name: mkdocs-oc-pipeline
+        resources: []
+        status: null
+        workspaces: []
+        
+---
+apiVersion: triggers.tekton.dev/v1alpha1 
+kind: EventListener 
+metadata:
+  name: mkdocs-build-eventlistener
+spec:
+  serviceAccountName: pipeline 
+  triggers:
+    - bindings:
+        - kind: ClusterTriggerBinding
+          ref: github-push
+      interceptors:
+        - params:
+            - name: filter
+              value: >-
+                header.match('X-GitHub-Event', 'push') && body.ref ==
+                'refs/heads/main'
+            - name: overlays
+              value: null
+          ref:
+            kind: ClusterInterceptor
+            name: cel
+      template:
+        ref: mkdocs-build-triggertemplate
+status:
+  address:
+    url: 'http://mkdocs-build-listener-el.mkdocs.svc.cluster.local:8080'
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    eventlistener: mkdocs-build-eventlistener
+  name: mkdocs-build-listener-el
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: el-mkdocs-build-eventlistener

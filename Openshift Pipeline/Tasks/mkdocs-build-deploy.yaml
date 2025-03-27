@@ -1,0 +1,27 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: mkdocs-build-deploy
+spec:
+  params:
+    - description: The docs github repository
+      name: gitUrl
+      type: string
+    - description: The git revision to checkout
+      name: gitRevision
+      type: string
+  steps:
+    - image: manojjahgirdar/ubi-mkdocs-builder:v2.1
+      name: build-and-deploy-mkdocs
+      resources: {}
+      script: |
+        #!/usr/bin/env sh
+
+        echo "------Cloning mkdocs repo------"
+        git clone "$(params.gitUrl)" ./mkdocs || exit 1
+        echo "-------------------------------"
+
+        echo "------Building and Deploying Mkdocs------"
+        cd ./mkdocs/
+        python3.9 -m mkdocs gh-deploy || exit 1
+        echo "-------------------------------"

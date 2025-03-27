@@ -1,0 +1,26 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: mkdocs-lint
+spec:
+  params:
+    - description: The docs github repository
+      name: gitUrl
+      type: string
+    - description: The git revision to checkout
+      name: gitRevision
+      type: string
+  steps:
+    - image: manojjahgirdar/ubi-mkdocs-builder:v2.1
+      name: mkdocs-spell-lint
+      resources: {}
+      script: |
+        #!/usr/bin/env sh
+
+        echo "------Cloning mkdocs repo------"
+        git clone "$(params.gitUrl)" ./mkdocs || exit 1
+        echo "-------------------------------"
+
+        echo "-------Linting spellings-------"
+        cspell mkdocs/**/*.md || exit 1
+        echo "-------------------------------"

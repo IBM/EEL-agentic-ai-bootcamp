@@ -1,0 +1,48 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: mkdocs-oc-pipeline
+spec:
+  params:
+    - name: git-url
+      type: string
+      description: The docs github repository
+    - default: main
+      name: git-rev
+      type: string
+      description: The git revision to checkout
+  tasks:
+    - name: setup
+      params:
+        - name: gitUrl
+          value: $(params.git-url)
+        - name: gitRevision
+          value: $(params.git-rev)
+      taskRef:
+        kind: Task
+        name: mkdocs-setup
+    - name: lint-spellings
+      params:
+        - name: gitUrl
+          value: $(params.git-url)
+        - name: gitRevision
+          value: $(params.git-rev)
+      runAfter:
+        - setup
+      taskRef:
+        kind: Task
+        name: mkdocs-lint
+    - name: deploy-docs
+      params:
+        - name: gitUrl
+          value: $(params.git-url)
+        - name: gitRevision
+          value: $(params.git-rev)
+      runAfter:
+        - lint-spellings
+      taskRef:
+        kind: Task
+        name: mkdocs-build-deploy
+  resources: []
+  workspaces: []
+  finally: []

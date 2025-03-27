@@ -1,0 +1,18 @@
+[project]
+name = "eel-agentic-ai-bootcamp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "jinja2>=3.1.6",
+    "linkchecker",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.9",
+    "mkdocs-material-extensions>=1.3.1",
+    "mkdocs-minify-plugin>=0.8.0",
+    "mkdocs-pymdownx-material-extras>=2.8",
+]
+
+[tool.uv.sources]
+linkchecker = { git = "https://github.com/linkchecker/linkchecker", rev = "v10.0.1" }

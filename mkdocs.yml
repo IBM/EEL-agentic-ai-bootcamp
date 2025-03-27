@@ -1,0 +1,80 @@
+site_name: Agentic AI Bootcamp
+site_description: >-
+    IBM watsonx Agentic AI Bootcamp, presented by IBM Ecosystem Engineering Lab, Client Engineering.
+site_url: https://ibm.github.io/EEL-agentic-ai-bootcamp/docs
+site_author: Enter Author Name
+repo_url: https://github.com/IBM/EEL-agentic-ai-bootcamp
+docs_dir: docs
+site_dir: site
+edit_uri: edit/master/docs
+
+theme:
+    name: material
+    palette:
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to light mode
+          primary: cyan
+          accent: yellow
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to dark mode
+          primary: indigo
+          accent: deep purple
+    font:
+        text: IBM Plex Sans
+        code: IBM Plex Mono
+    language: en
+    features:
+        - navigation.instant
+        - navigation.tracking
+use_directory_urls: true
+plugins:
+    - search:
+          lang: en
+    - minify:
+          minify_html: true
+    - mkdocs_pymdownx_material_extras:
+
+extra_css:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+
+markdown_extensions:
+    - attr_list
+    - admonition
+    - toc:
+          permalink: true
+          toc_depth: 3
+    - pymdownx.superfences:
+          custom_fences:
+              - name: diagram
+                class: diagram
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.highlight
+    - pymdownx.tabbed
+    - pymdownx.details
+    - pymdownx.arithmatex:
+          generic: true
+extra_javascript:
+    - https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra:
+    generator: false
+
+
+nav:
+    - Introduction: index.md
+    - Overview: overview.md
+    - Lab 0: labs/lab0.md
+    - Lab 1: labs/lab1.md
+    - Lab 2: labs/lab2.md
+    - Lab 3: labs/lab3.md
+    - Lab 4: labs/lab4.md
+    - Conclusion: conclusion.md

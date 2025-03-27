@@ -1,0 +1,28 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: mkdocs-setup
+spec:
+  params:
+    - description: The docs github repository
+      name: gitUrl
+      type: string
+    - description: The git revision to checkout
+      name: gitRevision
+      type: string
+  steps:
+    - image: >-
+        manojjahgirdar/ubi-mkdocs-builder:v2.1
+      name: git-clone
+      resources: {}
+      script: |
+        #!/usr/bin/env sh
+
+        echo "------Cloning mkdocs repo------"
+        git config --global user.email "tekton@tekton.dev"
+        git config --global user.name "Tekton Pipeline"
+        git init
+        git remote add origin "$(params.gitUrl)"
+        git fetch origin "$(params.gitRevision)"
+        git pull origin "$(params.gitRevision)"
+        echo "-------------------------------"
