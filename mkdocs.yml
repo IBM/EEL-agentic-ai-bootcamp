@@ -6,7 +6,7 @@ site_author: Enter Author Name
 repo_url: https://github.com/IBM/EEL-agentic-ai-bootcamp
 docs_dir: docs
 site_dir: site
-edit_uri: edit/master/docs
+edit_uri: edit/main/docs
 
 theme:
     name: material
