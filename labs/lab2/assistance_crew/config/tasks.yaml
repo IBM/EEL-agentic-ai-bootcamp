@@ -1,0 +1,38 @@
+generate_response_task:
+  description: >
+    Respond to user prompt: {user_prompt}. Delegate tasks to other agents if required.
+  expected_output: >
+    A concise and polite response on the user prompt: {user_prompt}
+  agent: ai_assistant
+
+retrieve_portfolio_task:
+  description: >
+    Fetch {user}'s portfolio and return it in markdown table format.
+  expected_output: >
+    A markdown table listing securities, tickers, shares, and price.
+  agent: portfolio_agent
+
+fetch_news_task:
+  description: >
+    For each security in the portfolio, search for recent news and performance data using Tavily search.
+  expected_output: >
+    A list of news and market performance for each security.
+  agent: research_agent
+
+summarize_news_task:
+  description: >
+    Summarize key insights for each security based on the retrieved news and performance data.
+  expected_output: >
+    A list of one key point per security summarizing news and performance.
+  agent: summarization_agent
+
+write_report_task:
+  description: >
+    Compile a markdown report with sections:
+    1. Introduction
+    2. Portfolio Table
+    3. News & Performance
+    4. Conclusion
+  expected_output: >
+    A well-structured markdown report summarizing {user}'s portfolio and insights.
+  agent: report_writer_agent

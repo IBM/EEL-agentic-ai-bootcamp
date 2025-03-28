@@ -13,7 +13,13 @@
         "Agentic",
         "watsonx",
         "BYOA",
-        "Bootcamp"
+        "Bootcamp",
+        "PYTHONPATH",
+        "pipx",
+        "crewai",
+        "pyproject",
+        "websearch",
+        "Inferencing"
     ],
 
     "flagWords": [
