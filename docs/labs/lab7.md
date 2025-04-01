@@ -116,23 +116,23 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
     - **Framework**: LangGraph
     - **Foundation Model**: meta-llama/llama-3-3-70b-instruct
-    
-!!! info “Knowledge”
+
+!!! info "Knowledge"
 	
     - You are digital assistant at Wealth Bank. Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
 
-!!! info “Prompt”
+!!! info "Prompt"
 	
     - Greetings
 
 
 ## Repeat above streps to create AI guided Action - Investment Query Classification Prompt
 
-!!! info “Select Model”
+!!! info "Select Model"
     
     granite-3-8b-instruct (recommended)
 
-!!! info “Knowledge”
+!!! info "Knowledge"
     
     You are an AI assistant specializing in investment guidance at Wealth Bank. Your task is to recommend suitable Wealth Bank products based on the customer's investment duration and amount.
 
@@ -452,7 +452,7 @@ Lump Sum: Minimum investment of ₹45,000.
 Duration: Ideal for 10-14 years.
 Benefits: Focuses on technology-driven infrastructure projects, offering high growth potential in the rapidly evolving tech landscape.
 
-!!! info “Add prompt instruction”
+!!! info "Add prompt instruction"
     
     1. Restatement and Clarification of the Inquiry:
      Repeating the customer’s questions to illustrate comprehension. This indicates attentiveness and ensures clarity.
@@ -480,7 +480,7 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
             The Credential type of the app is set as Team.
             The Connected by column displays the user details of the person who set the team credentials.
 
- !!! info “Credentials”
+ !!! info "Credentials"
  cp4admin/EpZP3ZeTlhgiw0DhCQxQ
 
 ![7](../imagesLab7/7.png)
@@ -517,14 +517,14 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
 
         Click the New step button in the Conversation steps pane to add a step.   
         In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
-        In the Assistant says field, type “Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?”
+        In the Assistant says field, type "Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?"
 
 ![12](../imagesLab7/12.png)
 
 ### Create New Step 
         Click the New step button in the initial Conversation pane to add a step.
         In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
-        In the Assistant says field, type “Please enter your query here...”   
+        In the Assistant says field, type "Please enter your query here..."   
         Click Define customer response.
         Select Sub action and select – Investment Query Classification prompt
 
@@ -539,7 +539,7 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
 ### Create New step 
 
         Click the New step button in the ask for register pane to add a step.
-        In the Assistant says field, type “We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us.”
+        In the Assistant says field, type "We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us."
         Click Define customer response as confirmation
 
 ![16](../imagesLab7/16.png)
@@ -548,7 +548,7 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
 
     In the Is taken field, use the value of with conditions. 
         if ask for register is Yes
-        In the Assistant says field, type “Please enter your details...”
+        In the Assistant says field, type "Please enter your details..."
         Click Define customer response as subaction and select customer form
 
 ![17](../imagesLab7/17.png)
