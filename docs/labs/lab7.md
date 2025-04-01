@@ -1,20 +1,22 @@
 # Lab 1 : Building AI assistants in AI assistant builder
 
 In watsonX Orchestrate, you create an AI assistant using the AI Assistant Builder. This tool is a chat interface builder designed to deliver an engaging and seamlessly embedded chatbot experience. By leveraging the power of large language models (LLMs) and the conversational capabilities of watsonX Assistant, the AI Assistant Builder enables dynamic and interactive conversations between users and watsonX Orchestrate.
+
 ## Accessing the watsonX Orchestrate Platform
+
 To create an AI Assistant in watsonX Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
-### 1. Log in to watsonX Orchestrate
-    Open your web browser and go to the watsonX Orchestrate portal.
-    Enter your IBM credentials and sign in.
-### 2. Navigate to the Home Page
-    Upon logging in, you will land on the watsonX Orchestrate home page.
-    This page provides options to build AI skills, automate tasks, and explore learning resources.
-### 3. Access the AI Assistant Builder
-    In the "Build" section, find the "AI Assistant Builder" card.
-    Click on it to begin creating your AI Assistant.
+
+    1. Log in to watsonX Orchestrate
+        Open your web browser and go to the watsonX Orchestrate portal.
+        Enter your IBM credentials and sign in.
+    2. Navigate to the Home Page
+        Upon logging in, you will land on the watsonX Orchestrate home page.
+        This page provides options to build AI skills, automate tasks, and explore learning resources.
+    3. Access the AI Assistant Builder
+        In the "Build" section, find the "AI Assistant Builder" card.
+        Click on it to begin creating your AI Assistant.
 
 ![1](../imagesLab7/1.png)
-    
 
 ## Building your AI assistant with actions
 
@@ -33,11 +35,13 @@ The examples in this guide demonstrate building a money withdrawal action. You c
         Click the "Next" button at the top-right corner to continue to the Personalization step.
 
 ![2](../imagesLab7/2.png)
- 
-    
+     
 ## Personalizing Your Assistant
+    
     In this step, you will personalize your AI assistant by specifying where it will be deployed, your industry, role, and the assistant’s purpose. These choices will help tailor the onboarding experience.
+
 ### Instructions
+    
     1.	Deployment Channel
         Under "Tell us where your assistant will live", select where you plan to deploy the assistant. Options may include Web, Mobile App, Messaging Platforms, or Others. Example: Select "Web" if you plan to use the assistant on a website.
     2.	Provide Industry Information
@@ -49,9 +53,10 @@ The examples in this guide demonstrate building a money withdrawal action. You c
         
 ![3](../imagesLab7/3.png)
 
-
- ## Customizing Your Assistant UI
+## Customizing Your Assistant UI
+    
     In this step, you will customize the chat UI to align with your brand identity. You can set the assistant’s display name, theme, colons, and other appearance settings.
+
 ### Instructions
     1.	Set the Assistant's Display Name
         Under "Assistant’s name as known by customers", enter the name that users will see when they interact with the assistant.Example: "Fund Management Assistant"
@@ -79,9 +84,10 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 ![4](../imagesLab7/4.png)
 
-
 ## Previewing Your Assistant
+
     In this step, you will preview how your AI assistant appears and functions on a website before finalizing the setup. This allows you to test interactions and ensure the chatbot is visually and functionally aligned with your requirements.
+
 ### Instructions
     1.	Review the Chatbot Preview
         The right panel displays a simulated website with the chatbot embedded.Interact with the assistant by typing a message in the input field to see how it responds.Verify that the UI elements, colors, and avatar (if uploaded) appear correctly.
@@ -106,23 +112,27 @@ The examples in this guide demonstrate building a money withdrawal action. You c
     7.	In the Add prompt instructions section, click the Add instructions button if you want to add instructions for the default prompt in your assistant.
     8.	Enter the prompt instructions in the Prompt instruction field that help the LLM in your assistant to give refined responses and guide the conversations with clarity and specificity.
 
-    !!! info “Knowledge”
-	You are digital assistant at Wealth Bank. 
+!!! info “Knowledge”
+	
+    You are digital assistant at Wealth Bank. 
     Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
 
-    !!! info “Prompt”
-	Greetings
+!!! info “Prompt”
+	
+    Greetings
 
 
 ## Repeat above streps to create AI guided Action - Investment Query Classification Prompt
 
-    !!! info “Select Model”
+!!! info “Select Model”
+    
     granite-3-8b-instruct (recommended)
 
-    !!! info “Knowledge”
+!!! info “Knowledge”
+    
     You are an AI assistant specializing in investment guidance at Wealth Bank. Your task is to recommend suitable Wealth Bank products based on the customer's investment duration and amount.
 
-    #Products Offered:
+    **Products Offered:**
 
     ##Short-term Investment (1-2 years):
 
@@ -279,10 +289,11 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 
 
-Knowledge
+!!! info "Knowledge"
+
 You are an AI assistant specializing in investment guidance at Wealth Bank. Your task is to recommend suitable Wealth Bank products based on the customer's investment duration and amount.
 
-#Products Offered:
+**Products Offered:**
 
 ##Short-term Investment (1-2 years):
 
@@ -299,11 +310,7 @@ Monthly SIP: Start with 1000 INR.
 Lump Sum: Minimum investment of 10,000 INR.
 Duration: Suitable for 1-2 years.
 Benefits: Focuses on short-term debt securities, providing liquidity and safety.
-
-
-
-
-
+    
 **WB Quick Access Savings Plan**
 
 Monthly SIP: Start with 1500 INR.
@@ -311,7 +318,7 @@ Lump Sum: Minimum investment of 15,000 INR.
 Duration: Best for up to 2 years.
 Benefits: Offers easy access to funds with competitive interest rates, ensuring your money is available when needed.
 
-##Mid-term Investment (3-5 years):
+**Mid-term Investment (3-5 years):**
 
 **WB Mid Term Fund**
 
@@ -355,7 +362,7 @@ Lump Sum: Minimum investment of 30,000 INR.
 Duration: Best for 3-5 years.
 Benefits: Invests in both equity and debt instruments, aiming for growth with a safety cushion.
 
-##Long-term Investment (5+ years):
+**Long-term Investment (5+ years):**
 
 **WB Long Term Funds**
 
@@ -574,12 +581,3 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
 ![22](../imagesLab7/22.png)
 
 ## Embed this code to web html file to run the AI assistant.
-
-
-
-
-
-
-
-
-[def]: ../imagesLab7/lab7/1.png
