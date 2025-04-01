@@ -38,7 +38,7 @@ The examples in this guide demonstrate building a money withdrawal action. You c
      
 ## Personalizing Your Assistant
     
-    In this step, you will personalize your AI assistant by specifying where it will be deployed, your industry, role, and the assistant’s purpose. These choices will help tailor the onboarding experience.
+In this step, you will personalize your AI assistant by specifying where it will be deployed, your industry, role, and the assistant’s purpose. These choices will help tailor the onboarding experience.
 
 ## Instructions
     
@@ -55,7 +55,7 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 ## Customizing Your Assistant UI
     
-    In this step, you will customize the chat UI to align with your brand identity. You can set the assistant’s display name, theme, colons, and other appearance settings.
+In this step, you will customize the chat UI to align with your brand identity. You can set the assistant’s display name, theme, colons, and other appearance settings.
 
 ## Instructions
 1.	Set the Assistant's Display Name
@@ -86,7 +86,7 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 ## Previewing Your Assistant
 
-    In this step, you will preview how your AI assistant appears and functions on a website before finalizing the setup. This allows you to test interactions and ensure the chatbot is visually and functionally aligned with your requirements.
+In this step, you will preview how your AI assistant appears and functions on a website before finalizing the setup. This allows you to test interactions and ensure the chatbot is visually and functionally aligned with your requirements.
 
 ## Instructions
 1.	Review the Chatbot Preview
@@ -100,7 +100,7 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 ## Creating an AI-guided action
 
-    You can create AI-guided actions to help your assistants to respond to a specific set of inquiries that are based on the preloaded knowledge and instructions.
+You can create AI-guided actions to help your assistants to respond to a specific set of inquiries that are based on the preloaded knowledge and instructions.
 
 ## To create an AI-guided action, do the following steps:
 1.	Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder.
@@ -114,11 +114,11 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 !!! info "Add Knowledge"
 	
-    - You are digital assistant at Wealth Bank. Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
+You are digital assistant at Wealth Bank. Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
 
 !!! info "Add prompt instructions"
 	
-    - Greetings
+Greetings
 
 
 ## Repeat above steps to create AI guided Action - Investment Query Classification Prompt
@@ -290,20 +290,20 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 !!! info "Add prompt instructions"
 
-    1. Restatement and Clarification of the Inquiry:
-        Repeating the customer’s questions to illustrate comprehension. This indicates attentiveness and ensures clarity.
-    2. Divide the Investment Options into Segments: Split investment options according to term; which are
-        short-term, medium-term and long-term.
-        Give detailed product information with key attributes and benefits highlighted.
-    3. Ask for registration if more personalised offer needed or existing customer show the offers. 
+1. Restatement and Clarification of the Inquiry:
+    Repeating the customer’s questions to illustrate comprehension. This indicates attentiveness and ensures clarity.
+2. Divide the Investment Options into Segments: Split investment options according to term; which are
+    short-term, medium-term and long-term.
+    Give detailed product information with key attributes and benefits highlighted.
+3. Ask for registration if more personalised offer needed or existing customer show the offers. 
 
 ![7](../imagesLab7/7.png)
  
 ## Creating a skill-based action
 
-    Create an action from a skill when you want to implement orchestration for specific conversations in your AI assistant through the skills available on watsonX Orchestrate. 
-    Before you begin
-    You must connect to the app of the skill for it to appear as an option in this step
+Create an action from a skill when you want to implement orchestration for specific conversations in your AI assistant through the skills available on watsonX Orchestrate. 
+Before you begin
+You must connect to the app of the skill for it to appear as an option in this step
 
 ## Connecting to apps
     By default, the credential type is not specified for an app. Complete the following steps to assign credential preferences for an app and connect to it:
@@ -326,52 +326,52 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 ![8](../imagesLab7/8.png)
 
 ## To create a skill-based action, do the following steps:
-        Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder. 
-        In AI assistant builder, go to Actions > New action > Skill-based action.
-        In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
+    Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder. 
+    In AI assistant builder, go to Actions > New action > Skill-based action.
+    In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
 
 ![9](../imagesLab7/9.png)
 
-        In the Name your action field, enter a name for your action . Example - Register customer
-        In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonX Orchestrate skill. Example - Register customer   
-        Click the Save button to save the action
+    In the Name your action field, enter a name for your action . Example - Register customer
+    In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonX Orchestrate skill. Example - Register customer   
+    Click the Save button to save the action
 
 ![10](../imagesLab7/10.png)
 
 ## Creating a custom-built action
 
-    You create a new action from scratch when you want to define each step of your action in your conversation. You can define the steps with or without conditions, which help you to control the customer responses.
-    
-    You can also use the AI-guided and skill-based actions that you created as subactions for your steps. Its enables to the possibility to pass generated values between these actions to use as you want. For more information about how to use AI-guided and skill-based actions as subactions.
+You create a new action from scratch when you want to define each step of your action in your conversation. You can define the steps with or without conditions, which help you to control the customer responses.
+
+You can also use the AI-guided and skill-based actions that you created as subactions for your steps. Its enables to the possibility to pass generated values between these actions to use as you want. For more information about how to use AI-guided and skill-based actions as subactions.
 
 ## To create an action from scratch, do the following steps:	
 
-        Click the AI assistants tile in watsonX Orchestrate to go to AI assistant builder.
-        In AI assistant builder, go to Actions > Create action > Custom-built action. 
-        In the New action dialog, enter the phrase that the customer must type to start the interaction.  Refer below screenshots
-        After entering the phrase to start the interaction, you must add steps in an action to create the conversation flow. To add a step, use the following instructions:
+    Click the AI assistants tile in watsonX Orchestrate to go to AI assistant builder.
+    In AI assistant builder, go to Actions > Create action > Custom-built action. 
+    In the New action dialog, enter the phrase that the customer must type to start the interaction.  Refer below screenshots
+    After entering the phrase to start the interaction, you must add steps in an action to create the conversation flow. To add a step, use the following instructions:
 
  ![11](../imagesLab7/11.png)
 
 ![12](../imagesLab7/12.png)
 
-        Click the New step button in the Conversation steps pane to add a step.   
-        In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
-        In the Assistant says field, type "Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?"
+    Click the New step button in the Conversation steps pane to add a step.   
+    In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
+    In the Assistant says field, type "Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?"
 
 ![13](../imagesLab7/13.png)
  
 ## Create New Step 
-        Click the New step button in the initial Conversation pane to add a step.
-        In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
-        In the Assistant says field, type "Please enter your query here..."   
-        Click Define customer response.
-        Select Sub action and select – Investment Query Classification prompt
+    Click the New step button in the initial Conversation pane to add a step.
+    In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
+    In the Assistant says field, type "Please enter your query here..."   
+    Click Define customer response.
+    Select Sub action and select – Investment Query Classification prompt
 
 ![14](../imagesLab7/14.png)
 
-        Set variables –
-        Set Inventory Query to 2.Initial conversation
+    Set variables –
+    Set Inventory Query to 2.Initial conversation
 
  ![15](../imagesLab7/15.png)
 
@@ -379,9 +379,9 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 ## Create New step 
 
-        Click the New step button in the ask for register pane to add a step.
-        In the Assistant says field, type "We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us."
-        Click Define customer response as confirmation
+    Click the New step button in the ask for register pane to add a step.
+    In the Assistant says field, type "We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us."
+    Click Define customer response as confirmation
 
 ![17](../imagesLab7/17.png)
 
@@ -391,48 +391,48 @@ The examples in this guide demonstrate building a money withdrawal action. You c
     In the Is taken field, use the value of with conditions. 
         if ask for register is Yes
         In the Assistant says field, type "Please enter your details..."
-        Click Define customer response as subaction and select customer form
+    Click Define customer response as subaction and select customer form
 
 ![17](../imagesLab7/18.png)
 
-        Save and exit
+    Save and exit
 
 ![19](../imagesLab7/19.png)
 
 ## Previewing and publishing
-    After you build an assistant, you can test to make sure it works as you intended before you make it available to customers. AI assistant builder makes it straightforward to preview your assistant in a closed environment and manage exactly what you make available to customers. Go to Publish .
+After you build an assistant, you can test to make sure it works as you intended before you make it available to customers. AI assistant builder makes it straightforward to preview your assistant in a closed environment and manage exactly what you make available to customers. Go to Publish .
 
 ![20](../imagesLab7/20.png)
  
-    Review all draft content
+Review all draft content
 
 ![21](../imagesLab7/21.png)
 
-    Click on publish 
+Click on publish 
 
 ![22](../imagesLab7/22.png)
     
-    When you publish your content, AI assistant builder creates a snapshot of the draft content, resulting in a version. This version contains all of the content from actions, including settings and variables.
+When you publish your content, AI assistant builder creates a snapshot of the draft content, resulting in a version. This version contains all of the content from actions, including settings and variables.
 
 ![23](../imagesLab7/23.png)
 
 ## Sharing AI assistant with web chat
 
-    Click on integration 
+Click on integration 
 
 ![24](../imagesLab7/24.png)
     
-    Select Web Chat to Open
+Select Web Chat to Open
 
 ![25](../imagesLab7/25.png)
 
-    Select Live environment
+Select Live environment
 
 ![26](../imagesLab7/26.png)
 
 ![27](../imagesLab7/27.png)
 
-    Select embed tab
+Select embed tab
 
 ![28](../imagesLab7/28.png)
 
