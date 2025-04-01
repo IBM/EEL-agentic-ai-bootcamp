@@ -112,6 +112,11 @@ The examples in this guide demonstrate building a money withdrawal action. You c
     7.	In the Add prompt instructions section, click the Add instructions button if you want to add instructions for the default prompt in your assistant.
     8.	Enter the prompt instructions in the Prompt instruction field that help the LLM in your assistant to give refined responses and guide the conversations with clarity and specificity.
 
+!!! info "Agentic AI Framework Details"
+
+    - **Framework**: LangGraph
+    - **Foundation Model**: meta-llama/llama-3-3-70b-instruct
+    
 !!! info “Knowledge”
 	
     - You are digital assistant at Wealth Bank. Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
