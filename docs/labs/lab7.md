@@ -4,14 +4,14 @@ In watsonX Orchestrate, you create an AI assistant using the AI Assistant Builde
 ## Accessing the watsonX Orchestrate Platform
 To create an AI Assistant in watsonX Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
 ### 1. Log in to watsonX Orchestrate
-    - Open your web browser and go to the watsonX Orchestrate portal.
-    - Enter your IBM credentials and sign in.
+    Open your web browser and go to the watsonX Orchestrate portal.
+    Enter your IBM credentials and sign in.
 ### 2. Navigate to the Home Page
-    - Upon logging in, you will land on the watsonX Orchestrate home page.
-    - This page provides options to build AI skills, automate tasks, and explore learning resources.
+    Upon logging in, you will land on the watsonX Orchestrate home page.
+    This page provides options to build AI skills, automate tasks, and explore learning resources.
 ### 3. Access the AI Assistant Builder
-    - In the "Build" section, find the "AI Assistant Builder" card.
-    - Click on it to begin creating your AI Assistant.
+    In the "Build" section, find the "AI Assistant Builder" card.
+    Click on it to begin creating your AI Assistant.
 
 ![1](../imagesLab7/1.png)
     
@@ -39,13 +39,13 @@ The examples in this guide demonstrate building a money withdrawal action. You c
     In this step, you will personalize your AI assistant by specifying where it will be deployed, your industry, role, and the assistant’s purpose. These choices will help tailor the onboarding experience.
 ### Instructions
     1.	Deployment Channel
-        - Under "Tell us where your assistant will live", select where you plan to deploy the assistant. Options may include Web, Mobile App, Messaging Platforms, or Others. Example: Select "Web" if you plan to use the assistant on a website.
+        Under "Tell us where your assistant will live", select where you plan to deploy the assistant. Options may include Web, Mobile App, Messaging Platforms, or Others. Example: Select "Web" if you plan to use the assistant on a website.
     2.	Provide Industry Information
-        - In the "Which industry do you work in?" dropdown, select your industry.Example: Banking and Financial Services (if the assistant is for a finance-related use case).
+        In the "Which industry do you work in?" dropdown, select your industry.Example: Banking and Financial Services (if the assistant is for a finance-related use case).
     3.	Define Your Role
-        - In "What is your role on the team building the assistant?", choose the most relevant role. Example: Designer, Developer, Product Manager, etc.
+        In "What is your role on the team building the assistant?", choose the most relevant role. Example: Designer, Developer, Product Manager, etc.
     4.	Select a Need Statement
-        - Choose a statement that best describes your AI assistant’s purpose.Example: "I want to make it easier for my customers to find what they’re looking for in my app."This helps refine the assistant’s focus and experience.
+        Choose a statement that best describes your AI assistant’s purpose.Example: "I want to make it easier for my customers to find what they’re looking for in my app."This helps refine the assistant’s focus and experience.
         
 ![3](../imagesLab7/3.png)
 
@@ -57,17 +57,17 @@ The examples in this guide demonstrate building a money withdrawal action. You c
         Under "Assistant’s name as known by customers", enter the name that users will see when they interact with the assistant.Example: "Fund Management Assistant"
     2.	Choose the Intended Purpose
         Select an option based on the assistant’s main use case:
-            - Standard: For customer support and virtual agent use cases.
-            - Carbon for AI: If integrating with IBM internal AI-focused applications.
-            - Recommended: Standard for most business use cases.
+            Standard: For customer support and virtual agent use cases.
+            Carbon for AI: If integrating with IBM internal AI-focused applications.
+            Recommended: Standard for most business use cases.
     3.	Select a Theme
         Choose between Light or Dark mode based on your brand style.Example: Light mode for a clean, professional look.
     4.	Customize Colors
         Primary Color (Chat Header): Define the main color of the assistant's interface.Secondary Color (User Message Bubble): Choose a contrasting color for messages sent by users.Account Color (Special AI Actions): Assign a color to highlight AI-driven responses.
         Example:
-            - Primary: #FFFFFF (White)
-            - Secondary: #303D1D (Dark Green)
-            - Account: #0345AE (Blue)
+            Primary: #FFFFFF (White)
+            Secondary: #303D1D (Dark Green)
+            Account: #0345AE (Blue)
     5.	Set Chat Widget Size (Optional)
         Adjust the width and height of the chatbot window.Default: Width – 380px, Height – 640px(Leave as is if unsure).
     6.	IBM Watermark
@@ -461,13 +461,13 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
     3.	From the drop-down menu with skill sets, select Team skills or an AI assistant or Orchestrate Agent Skillset.
     4.	Search and select the app (Ex. – Customer profile) from the search menu.
     5.	Click the overflow menu next to the app, and click Connect app.
-        - set Team credentials:
-            - Select the option Team credentials.
-            - Click Connect app.
-            - Provide the connection details * for the app, and click Connect app.
-            - All your team members can now use the skills that the app offers without providing the connection details.
-            - The Credential type of the app is set as Team.
-            - The Connected by column displays the user details of the person who set the team credentials.
+        set Team credentials:
+            Select the option Team credentials.
+            Click Connect app.
+            Provide the connection details * for the app, and click Connect app.
+            All your team members can now use the skills that the app offers without providing the connection details.
+            The Credential type of the app is set as Team.
+            The Connected by column displays the user details of the person who set the team credentials.
 
  !!! info “Credentials”
  cp4admin/EpZP3ZeTlhgiw0DhCQxQ
@@ -475,15 +475,15 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
 ![7](../imagesLab7/7.png)
 
 ### To create a skill-based action, do the following steps:
-    - Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder. 
-    - In AI assistant builder, go to Actions > New action > Skill-based action.
-    - In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
+        Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder. 
+        In AI assistant builder, go to Actions > New action > Skill-based action.
+        In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
 
 ![8](../imagesLab7/8.png)
 
-    - In the Name your action field, enter a name for your action . Example - Register customer
-    - In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonX Orchestrate skill. Example - Register customer   
-    - Click the Save button to save the action
+        In the Name your action field, enter a name for your action . Example - Register customer
+        In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonX Orchestrate skill. Example - Register customer   
+        Click the Save button to save the action
 
 ![9](../imagesLab7/9.png)
 
@@ -496,48 +496,47 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
 
 ### To create an action from scratch, do the following steps:	
 
-    - Click the AI assistants tile in watsonX Orchestrate to go to AI assistant builder.
-    - In AI assistant builder, go to Actions > Create action > Custom-built action. 
-    - In the New action dialog, enter the phrase that the customer must type to start the interaction.  Refer below screenshots
-    - After entering the phrase to start the interaction, you must add steps in an action to create the conversation flow. To add a step, use the following instructions:
+        Click the AI assistants tile in watsonX Orchestrate to go to AI assistant builder.
+        In AI assistant builder, go to Actions > Create action > Custom-built action. 
+        In the New action dialog, enter the phrase that the customer must type to start the interaction.  Refer below screenshots
+        After entering the phrase to start the interaction, you must add steps in an action to create the conversation flow. To add a step, use the following instructions:
 
 ![10](../imagesLab7/10.png)
 ![11](../imagesLab7/11.png)
 
-    - Click the New step button in the Conversation steps pane to add a step.   
-    - In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
-    - In the Assistant says field, type “Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?”
+        Click the New step button in the Conversation steps pane to add a step.   
+        In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
+        In the Assistant says field, type “Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?”
 
 ![12](../imagesLab7/12.png)
 
 ### Create New Step 
-    - Click the New step button in the initial Conversation pane to add a step.
-    - In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
-    - In the Assistant says field, type “Please enter your query here...”   
-    - Click Define customer response.
-    - Select Sub action and select – Investment Query Classification prompt
+        Click the New step button in the initial Conversation pane to add a step.
+        In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
+        In the Assistant says field, type “Please enter your query here...”   
+        Click Define customer response.
+        Select Sub action and select – Investment Query Classification prompt
 
 ![13](../imagesLab7/13.png)
  
-    - Set variables –
-    - Set Inventory Query to 2.Initial conversation
+        Set variables –
+        Set Inventory Query to 2.Initial conversation
 
 ![14](../imagesLab7/14.png)
 ![15](../imagesLab7/15.png)
  
 ### Create New step 
 
-    - Click the New step button in the ask for register pane to add a step.
-
-    - In the Assistant says field, type “We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us.”
-    - Click Define customer response as confirmation
+        Click the New step button in the ask for register pane to add a step.
+        In the Assistant says field, type “We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us.”
+        Click Define customer response as confirmation
 
 ![16](../imagesLab7/16.png)
 
 ### Create new step 
 
-- In the Is taken field, use the value of with conditions. 
-    - if ask for register is Yes
+    In the Is taken field, use the value of with conditions. 
+        if ask for register is Yes
         In the Assistant says field, type “Please enter your details...”
         Click Define customer response as subaction and select customer form
 
