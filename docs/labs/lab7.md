@@ -306,7 +306,7 @@ Before you begin
 You must connect to the app of the skill for it to appear as an option in this step
 
 ## Connecting to apps
-    By default, the credential type is not specified for an app. Complete the following steps to assign credential preferences for an app and connect to it:
+By default, the credential type is not specified for an app. Complete the following steps to assign credential preferences for an app and connect to it:
 1.	From the menu , click Skill sets.
 2.	On the Fund Manager page, select the Connections tab.
 3.	From the drop-down menu with skill sets, select Team skills or an AI assistant or Orchestrate Agent Skillset.
@@ -326,15 +326,15 @@ You must connect to the app of the skill for it to appear as an option in this s
 ![8](../imagesLab7/8.png)
 
 ## To create a skill-based action, do the following steps:
-    Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder. 
-    In AI assistant builder, go to Actions > New action > Skill-based action.
-    In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
+Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder. 
+In AI assistant builder, go to Actions > New action > Skill-based action.
+In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
 
 ![9](../imagesLab7/9.png)
 
-    In the Name your action field, enter a name for your action . Example - Register customer
-    In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonX Orchestrate skill. Example - Register customer   
-    Click the Save button to save the action
+In the Name your action field, enter a name for your action . Example - Register customer
+In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonX Orchestrate skill. Example - Register customer   
+Click the Save button to save the action
 
 ![10](../imagesLab7/10.png)
 
@@ -346,32 +346,32 @@ You can also use the AI-guided and skill-based actions that you created as subac
 
 ## To create an action from scratch, do the following steps:	
 
-    Click the AI assistants tile in watsonX Orchestrate to go to AI assistant builder.
-    In AI assistant builder, go to Actions > Create action > Custom-built action. 
-    In the New action dialog, enter the phrase that the customer must type to start the interaction.  Refer below screenshots
-    After entering the phrase to start the interaction, you must add steps in an action to create the conversation flow. To add a step, use the following instructions:
+Click the AI assistants tile in watsonX Orchestrate to go to AI assistant builder.
+In AI assistant builder, go to Actions > Create action > Custom-built action. 
+In the New action dialog, enter the phrase that the customer must type to start the interaction.  Refer below screenshots
+After entering the phrase to start the interaction, you must add steps in an action to create the conversation flow. To add a step, use the following instructions:
 
  ![11](../imagesLab7/11.png)
 
 ![12](../imagesLab7/12.png)
 
-    Click the New step button in the Conversation steps pane to add a step.   
-    In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
-    In the Assistant says field, type "Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?"
+Click the New step button in the Conversation steps pane to add a step.   
+In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
+In the Assistant says field, type "Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?"
 
 ![13](../imagesLab7/13.png)
  
 ## Create New Step 
-    Click the New step button in the initial Conversation pane to add a step.
-    In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
-    In the Assistant says field, type "Please enter your query here..."   
-    Click Define customer response.
-    Select Sub action and select – Investment Query Classification prompt
+Click the New step button in the initial Conversation pane to add a step.
+In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
+In the Assistant says field, type "Please enter your query here..."   
+Click Define customer response.
+Select Sub action and select – Investment Query Classification prompt
 
 ![14](../imagesLab7/14.png)
 
-    Set variables –
-    Set Inventory Query to 2.Initial conversation
+Set variables –
+Set Inventory Query to 2.Initial conversation
 
  ![15](../imagesLab7/15.png)
 
@@ -379,23 +379,23 @@ You can also use the AI-guided and skill-based actions that you created as subac
 
 ## Create New step 
 
-    Click the New step button in the ask for register pane to add a step.
-    In the Assistant says field, type "We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us."
-    Click Define customer response as confirmation
+Click the New step button in the ask for register pane to add a step.
+In the Assistant says field, type "We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us."
+Click Define customer response as confirmation
 
 ![17](../imagesLab7/17.png)
 
 
 ## Create new step 
 
-    In the Is taken field, use the value of with conditions. 
-        if ask for register is Yes
-        In the Assistant says field, type "Please enter your details..."
-    Click Define customer response as subaction and select customer form
+In the Is taken field, use the value of with conditions. 
+    if ask for register is Yes
+    In the Assistant says field, type "Please enter your details..."
+Click Define customer response as subaction and select customer form
 
 ![17](../imagesLab7/18.png)
 
-    Save and exit
+Save and exit
 
 ![19](../imagesLab7/19.png)
 
