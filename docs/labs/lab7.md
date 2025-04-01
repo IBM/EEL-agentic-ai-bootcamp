@@ -112,16 +112,11 @@ The examples in this guide demonstrate building a money withdrawal action. You c
     7.	In the Add prompt instructions section, click the Add instructions button if you want to add instructions for the default prompt in your assistant.
     8.	Enter the prompt instructions in the Prompt instruction field that help the LLM in your assistant to give refined responses and guide the conversations with clarity and specificity.
 
-!!! info "Agentic AI Framework Details"
-
-    - **Framework**: LangGraph
-    - **Foundation Model**: meta-llama/llama-3-3-70b-instruct
-
-!!! info "Knowledge"
+!!! info "Add Knowledge"
 	
     - You are digital assistant at Wealth Bank. Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
 
-!!! info "Prompt"
+!!! info "Add prompt instructions"
 	
     - Greetings
 
@@ -132,7 +127,7 @@ The examples in this guide demonstrate building a money withdrawal action. You c
     
     granite-3-8b-instruct (recommended)
 
-!!! info "Knowledge"
+!!! info "Add Knowledge"
     
     You are an AI assistant specializing in investment guidance at Wealth Bank. Your task is to recommend suitable Wealth Bank products based on the customer's investment duration and amount.
 
@@ -293,171 +288,14 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 
 
-!!! info "Knowledge"
+!!! info "Add prompt instructions"
 
-You are an AI assistant specializing in investment guidance at Wealth Bank. Your task is to recommend suitable Wealth Bank products based on the customer's investment duration and amount.
-
-**Products Offered:**
-
-##Short-term Investment (1-2 years):
-
-**WB Ultra Short Fund**
-
-Monthly SIP: Start with just 500 INR.
-Lump Sum: Minimum investment of 5000 INR.
-Duration: Ideal for 1-2 years.
-Benefits: Low-risk option with reasonable returns, perfect for short-term goals.
-
-**WB Short Duration Fund**
-
-Monthly SIP: Start with 1000 INR.
-Lump Sum: Minimum investment of 10,000 INR.
-Duration: Suitable for 1-2 years.
-Benefits: Focuses on short-term debt securities, providing liquidity and safety.
-
-**WB Quick Access Savings Plan**
-
-Monthly SIP: Start with 1500 INR.
-Lump Sum: Minimum investment of 15,000 INR.
-Duration: Best for up to 2 years.
-Benefits: Offers easy access to funds with competitive interest rates, ensuring your money is available when needed.
-
-**Mid-term Investment (3-5 years):**
-
-**WB Mid Term Fund**
-
-Monthly SIP: Start with just 500 INR.
-Lump Sum: Minimum investment of 5000 INR.
-Duration: Ideal for 3-5 years.
-Benefits: Balanced fund with moderate risk and potential for steady growth.
-
-**WB Balanced Advantage Fund**
-
-Monthly SIP: Start with 1000 INR.
-Lump Sum: Minimum investment of 10,000 INR.
-Duration: Suitable for 3-5 years.
-Benefits: Dynamically managed equity and debt portfolio, aiming for stable returns with reduced volatility.
-
-**WB Dynamic Bond Fund**
-
-Monthly SIP: Start with 1500 INR.
-Lump Sum: Minimum investment of 15,000 INR.
-Duration: Best for 3-5 years.
-Benefits: Actively managed bond fund that adjusts duration based on interest rate outlook, providing potential for higher returns.
-
-**WB Growth and Income Plan**
-
-Monthly SIP: Start with 2000 INR.
-Lump Sum: Minimum investment of 20,000 INR.
-Duration: Suitable for 3-5 years.
-Benefits: Combines growth from equity investments with the stability of fixed-income securities, offering a balanced approach.
-
-**WB Multi-Asset Allocation Fund**
-
-Monthly SIP: Start with 2500 INR.
-Lump Sum: Minimum investment of 25,000 INR.
-Duration: Ideal for 3-5 years.
-Benefits: Diversified across asset classes including equity, debt, and gold, aiming for consistent returns and risk mitigation.
-
-**WB Hybrid Equity Fund**
-
-Monthly SIP: Start with 3000 INR.
-Lump Sum: Minimum investment of 30,000 INR.
-Duration: Best for 3-5 years.
-Benefits: Invests in both equity and debt instruments, aiming for growth with a safety cushion.
-
-**Long-term Investment (5+ years):**
-
-**WB Long Term Funds**
-
-Monthly SIP: Flexible amounts starting from 500 INR.
-Lump Sum: Minimum investment of 5000 INR.
-Duration: Ideal for 5+ years.
-Benefits: Diversified portfolio aimed at long-term capital appreciation with a 3-year lock-in period.
-
-**WB Guaranteed Income Plan**
-
-Lump Sum: Minimum investment of 3 lakh INR.
-Duration: 12-year investment period, with payouts starting after 15 years of maturity.
-Benefits: After 15 years, receive a monthly income of 40K for the next 15 years plus the invested corpus, ensuring financial stability and steady income.
-
-**WB Equity Linked Savings Scheme (ELSS)**
-
-Monthly SIP: Start with 1000 INR.
-Lump Sum: Minimum investment of 10,000 INR.
-Duration: 5+ years, with a 3-year lock-in period.
-Benefits: Tax-saving benefits under Section 80C with potential for high returns through equity investments.
-
-**WB Child Education Fund**
-
-Monthly SIP: Start with 1500 INR.
-Lump Sum: Minimum investment of 15,000 INR.
-Duration: Best for 10-15 years.
-Benefits: Structured to accumulate wealth for a child's higher education, with potential growth from equity and debt instruments.
-
-**WB Retirement Savings Plan**
-
-Monthly SIP: Start with 2000 INR.
-Lump Sum: Minimum investment of 20,000 INR.
-Duration: Suitable for 15-20 years.
-Benefits: Focuses on building a substantial retirement corpus through a mix of equity and fixed-income securities.
-
-**Wealth Builder Plan**
-
-Monthly SIP: Start with 2500 INR.
-Lump Sum: Minimum investment of 25,000 INR.
-Duration: Ideal for 10+ years.
-Benefits: Aggressive growth plan aimed at long-term wealth creation through diversified equity investments.
-
-**WB Real Estate Investment Fund**
-
-Monthly SIP: Start with 3000 INR.
-Lump Sum: Minimum investment of 50,000 INR.
-Duration: Best for 7-10 years.
-Benefits: Invests in real estate projects and properties, providing potential for high returns and diversification.
-
-**WB Prime Real Estate Growth Fund**
-Monthly SIP: Start with ₹5,000.
-Lump Sum: Minimum investment of ₹50,000.
-Duration: Ideal for 8-12 years.
-Benefits: Focuses on high-growth commercial and residential real estate projects, offering potential for significant capital appreciation.
-
-**Urban Real Estate Opportunities Fund**
-Monthly SIP: Start with ₹4,000.
-Lump Sum: Minimum investment of ₹40,000.
-Duration: Best suited for 7-10 years.
-Benefits: Invests in urban real estate developments, including residential complexes and office spaces, providing a balanced growth opportunity.
-
-**Global Real Estate Advantage Fund**
-Monthly SIP: Start with ₹6,000.
-Lump Sum: Minimum investment of ₹60,000.
-Duration: Ideal for 10-15 years.
-Benefits: Offers exposure to international real estate markets, providing diversification and access to global growth opportunities.
-
-**WB Infrastructure Growth Fund**
-Monthly SIP: Start with 3500 INR.
-Lump Sum: Minimum investment of 35,000 INR.
-Duration: Ideal for 8-12 years.
-Benefits: Focuses on infrastructure projects, offering potential for substantial growth and capital appreciation.
-
-**Global Infra Growth Fund**
-Monthly SIP: Start with ₹4,000.
-Lump Sum: Minimum investment of ₹40,000.
-Duration: Best suited for 10-15 years.
-Benefits: Invests in global infrastructure projects, offering diversification and long-term growth potential.
-
-**Tech-Driven Infra Fund**
-Monthly SIP: Start with ₹4,500.
-Lump Sum: Minimum investment of ₹45,000.
-Duration: Ideal for 10-14 years.
-Benefits: Focuses on technology-driven infrastructure projects, offering high growth potential in the rapidly evolving tech landscape.
-
-!!! info "Add prompt instruction"
-    
     1. Restatement and Clarification of the Inquiry:
-     Repeating the customer’s questions to illustrate comprehension. This indicates attentiveness and ensures clarity.
-    2. Divide the Investment Options into Segments: Split investment options according to term; which are short-term, medium-term and long-term.Give detailed product information with key attributes and benefits highlighted.
-    3. Ask for registration if more personalised offer needed or existing customer show the offers.
+        Repeating the customer’s questions to illustrate comprehension. This indicates attentiveness and ensures clarity.
+    2. Divide the Investment Options into Segments: Split investment options according to term; which are
+        short-term, medium-term and long-term.
+        Give detailed product information with key attributes and benefits highlighted.
+    3. Ask for registration if more personalised offer needed or existing customer show the offers. 
  
 ## Creating a skill-based action
 
@@ -480,8 +318,8 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
             The Credential type of the app is set as Team.
             The Connected by column displays the user details of the person who set the team credentials.
 
- !!! info "Credentials"
- cp4admin/EpZP3ZeTlhgiw0DhCQxQ
+!!! info "Credentials"
+    cp4admin/EpZP3ZeTlhgiw0DhCQxQ
 
 ![7](../imagesLab7/7.png)
 
@@ -497,12 +335,11 @@ Benefits: Focuses on technology-driven infrastructure projects, offering high gr
         Click the Save button to save the action
 
 ![9](../imagesLab7/9.png)
-
-
+    
 ## Creating a custom-built action
 
     You create a new action from scratch when you want to define each step of your action in your conversation. You can define the steps with or without conditions, which help you to control the customer responses.
-
+    
     You can also use the AI-guided and skill-based actions that you created as subactions for your steps. Its enables to the possibility to pass generated values between these actions to use as you want. For more information about how to use AI-guided and skill-based actions as subactions.
 
 ### To create an action from scratch, do the following steps:	
