@@ -13,7 +13,7 @@ To create an AI Assistant in watsonX Orchestrate, you first need to access the p
     - In the "Build" section, find the "AI Assistant Builder" card.
     - Click on it to begin creating your AI Assistant.
 
-![1](../imagesLab7/lab7/1.png)
+![1](./imagesLab7/lab7/1.png)
 
  
 
@@ -34,7 +34,7 @@ The examples in this guide demonstrate building a money withdrawal action. You c
     4.	Proceed to the Next Step
         Click the "Next" button at the top-right corner to continue to the Personalization step.
 
-![1](../imagesLab7/lab7/2.png)
+![1](./imagesLab7/lab7/2.png)
  
     
 ## Personalizing Your Assistant
