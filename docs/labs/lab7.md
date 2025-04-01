@@ -6,15 +6,15 @@ In watsonX Orchestrate, you create an AI assistant using the AI Assistant Builde
 
 To create an AI Assistant in watsonX Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
 
-    1. Log in to watsonX Orchestrate
-        Open your web browser and go to the watsonX Orchestrate portal.
-        Enter your IBM credentials and sign in.
-    2. Navigate to the Home Page
-        Upon logging in, you will land on the watsonX Orchestrate home page.
-        This page provides options to build AI skills, automate tasks, and explore learning resources.
-    3. Access the AI Assistant Builder
-        In the "Build" section, find the "AI Assistant Builder" card.
-        Click on it to begin creating your AI Assistant.
+1. Log in to watsonX Orchestrate
+    Open your web browser and go to the watsonX Orchestrate portal.
+    Enter your IBM credentials and sign in.
+2. Navigate to the Home Page
+    Upon logging in, you will land on the watsonX Orchestrate home page.
+    This page provides options to build AI skills, automate tasks, and explore learning resources.
+3. Access the AI Assistant Builder
+    In the "Build" section, find the "AI Assistant Builder" card.
+    Click on it to begin creating your AI Assistant.
 
 ![1](../imagesLab7/1.png)
 
