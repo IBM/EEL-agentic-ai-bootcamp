@@ -1,4 +1,4 @@
-# Lab 1 : Building AI assistants in AI assistant builder
+# Building AI assistants in AI assistant builder
 
 In watsonX Orchestrate, you create an AI assistant using the AI Assistant Builder. This tool is a chat interface builder designed to deliver an engaging and seamlessly embedded chatbot experience. By leveraging the power of large language models (LLMs) and the conversational capabilities of watsonX Assistant, the AI Assistant Builder enables dynamic and interactive conversations between users and watsonX Orchestrate.
 
@@ -114,12 +114,11 @@ The examples in this guide demonstrate building a money withdrawal action. You c
 
 !!! info “Knowledge”
 	
-    You are digital assistant at Wealth Bank. 
-    Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
+    - You are digital assistant at Wealth Bank. Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
 
 !!! info “Prompt”
 	
-    Greetings
+    - Greetings
 
 
 ## Repeat above streps to create AI guided Action - Investment Query Classification Prompt
@@ -310,7 +309,7 @@ Monthly SIP: Start with 1000 INR.
 Lump Sum: Minimum investment of 10,000 INR.
 Duration: Suitable for 1-2 years.
 Benefits: Focuses on short-term debt securities, providing liquidity and safety.
-    
+
 **WB Quick Access Savings Plan**
 
 Monthly SIP: Start with 1500 INR.
