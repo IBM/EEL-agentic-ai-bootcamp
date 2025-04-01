@@ -1,17 +1,19 @@
-Lab 1 : Building AI assistants in AI assistant builder
+# Lab 1 : Building AI assistants in AI assistant builder
+
 In watsonX Orchestrate, you create an AI assistant using the AI Assistant Builder. This tool is a chat interface builder designed to deliver an engaging and seamlessly embedded chatbot experience. By leveraging the power of large language models (LLMs) and the conversational capabilities of watsonX Assistant, the AI Assistant Builder enables dynamic and interactive conversations between users and watsonX Orchestrate.
-Accessing the watsonX Orchestrate Platform
+## Accessing the watsonX Orchestrate Platform
 To create an AI Assistant in watsonX Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
-1. Log in to watsonX Orchestrate
+### 1. Log in to watsonX Orchestrate
 •	Open your web browser and go to the watsonX Orchestrate portal.
 •	Enter your IBM credentials and sign in.
-2. Navigate to the Home Page
+### 2. Navigate to the Home Page
 •	Upon logging in, you will land on the watsonX Orchestrate home page.
 •	This page provides options to build AI skills, automate tasks, and explore learning resources.
-3. Access the AI Assistant Builder
+### 3. Access the AI Assistant Builder
 •	In the "Build" section, find the "AI Assistant Builder" card.
 •	Click on it to begin creating your AI Assistant.
 
+![1](../imagesLab7/lab7/1.png)
  
 
 
