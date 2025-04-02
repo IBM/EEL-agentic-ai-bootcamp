@@ -44,8 +44,7 @@ In the email, look for the link in the sentence "Please go HERE to accept your i
 
 Option: If you miss the email or don't receive it for any reason!
 
-You can find the invitation on your IBM Cloud account: https://cloud.ibm.com/notifications?type=account
-
+You can find the invitation on your [ IBM Cloud account](https://cloud.ibm.com/notifications?type=account)
 Please select the Join Now link.
 
 ![ibmid](../imagesLab7/ibmcloudaccount.png)
