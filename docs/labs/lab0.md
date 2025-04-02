@@ -15,7 +15,7 @@ Getting started:
     Create your IBMid
     Access your class instance
 
-!!! info "**Create your IBMid**"
+## **Create your IBMid**
 
  Follow these brief instructions to create an IBMID. These are specifically for our Business Partners and clients who may not have access to a TechZone environment previously. IBM employees do not need to register.
 
@@ -23,7 +23,7 @@ Getting started:
 1. Start by accessing the [IBMid Registration Page].(https://www.ibm.com/account/reg/signup?formid=urx-19776&)
 2. Enter the required information in the fields provided, such as Email address, name, company, and country.
 
-!!! info "IMPORTANT: Your email address becomes your IBMid, which you will use to access the bootcamp environment!"
+!!! info "**IMPORTANT:** Your email address becomes your IBMid, which you will use to access the bootcamp environment!"
 
 ![ibmid](../imagesLab7/ibmid.png)
 
@@ -32,7 +32,7 @@ Getting started:
 5. Click Create account.
 6. An email will be sent indicating that your IBMid account creation was successful and your account is now activated.
 
-!!! info "**Access Class Environment**"
+## **Access Class Environment**
 
 Follow these instructions for accessing your instance of the class environment in order to successfully complete the Agentic AI Bootcamp.
 
