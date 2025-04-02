@@ -2,6 +2,15 @@
 
 In watsonX Orchestrate, you create an AI assistant using the AI Assistant Builder. This tool is a chat interface builder designed to deliver an engaging and seamlessly embedded chatbot experience. By leveraging the power of large language models (LLMs) and the conversational capabilities of watsonX Assistant, the AI Assistant Builder enables dynamic and interactive conversations between users and watsonX Orchestrate.
 
+
+# Use case 
+<TBD>
+
+
+## Key features 
+<TBD>
+
+
 ## Accessing the watsonX Orchestrate Platform
 
 To create an AI Assistant in watsonX Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
@@ -25,6 +34,7 @@ You can design AI assistants that function like personal assistants by creating 
 The examples in this guide demonstrate building a money withdrawal action. You can modify these to suit your own use case.
 
 ## To create AI assistant , do the following steps
+
 1.	Enter Assistant Name
     In the "Assistant name" field, enter a meaningful name for your assistant. Example: Fund Management Bot (or any other relevant name based on your use case). The name is used internally and is not visible to end users.
 2.	Provide a Description (Optional)
