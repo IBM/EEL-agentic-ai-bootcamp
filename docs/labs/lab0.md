@@ -8,7 +8,7 @@ For this bootcamp, we have created [the Agentic AI Bootcamp TechZone bundle](htt
     watsonx Orchestrate
     IBM CodeEngine
     Container Registry
-    watsonx.governance (for the demo)
+    watsonx.governance (for the demo)   
 
 Getting started:
 
