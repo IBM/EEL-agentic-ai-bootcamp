@@ -447,4 +447,4 @@ Select embed tab
 ![28](../imagesLab7/28.png)
 
 ## Embed this code to web html file to run the AI assistant.
-## test 
+## test   
