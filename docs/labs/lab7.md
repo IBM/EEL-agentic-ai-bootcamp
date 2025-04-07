@@ -1,25 +1,28 @@
-# Building AI Agent in watsonx Orchestrate
-## test
-In watsonX Orchestrate, you create an AI assistant using the AI Assistant Builder. This tool is a chat interface builder designed to deliver an engaging and seamlessly embedded chatbot experience. By leveraging the power of large language models (LLMs) and the conversational capabilities of watsonX Assistant, the AI Assistant Builder enables dynamic and interactive conversations between users and watsonX Orchestrate.
+# Building AI assistants in AI assistant builder
 
 
-## Use case  Test Use Access
+In watsonx orchestrate, you create an AI assistant using the AI Assistant Builder. This tool is a chat interface builder designed to deliver an engaging and seamlessly embedded chatbot experience. By leveraging the power of large language models (LLMs) and the conversational capabilities of watsonx Assistant, the AI Assistant Builder enables dynamic and interactive conversations between users and watsonx Orchestrate.
+
+
+## Use case
 TBD
 
+### Travel planner agent
 
 ## Key features 
 TBD
 
+## Steps
 
-## Accessing the watsonX Orchestrate Platform
+### Accessing the IBM watsonx Orchestrate Platform
 
-To create an AI Assistant in watsonX Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
+To create an AI Assistant in watsonx Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
 
-1. Log in to watsonX Orchestrate
-    Open your web browser and go to the watsonX Orchestrate portal.
+1. Log in to IBM watsonx Orchestrate account 
+    Open your web browser and go to the IBM watsonx Orchestrate portal.
     Enter your IBM credentials and sign in.
 2. Navigate to the Home Page
-    Upon logging in, you will land on the watsonX Orchestrate home page.
+    Upon logging in, you will land on the watsonx Orchestrate home page.
     This page provides options to build AI skills, automate tasks, and explore learning resources.
 3. Access the AI Assistant Builder
     In the "Build" section, find the "AI Assistant Builder" card.
@@ -27,111 +30,47 @@ To create an AI Assistant in watsonX Orchestrate, you first need to access the p
 
 ![1](../imagesLab7/1.png)
 
-## Building your AI assistant with actions
+### Building your AI assistant with actions
 
 In the AI Assistant Builder, an action is a specific outcome your AI assistant completes in response to a user's request. Actions consist of steps, which guide the conversation between the user and the AI assistant. The interaction starts with user input (e.g., "I want to withdraw money"), may involve additional exchanges for gathering information, and concludes when the assistant fulfils the request.
 You can design AI assistants that function like personal assistants by creating AI-guided actions, skill-based actions, or custom-built actions.
-The examples in this guide demonstrate building a money withdrawal action. You can modify these to suit your own use case.
 
-## To create AI assistant , do the following steps
+### Create a watsonx AI Assistant 
 
-1.	Enter Assistant Name
+1.  Enter Assistant Name
     In the "Assistant name" field, enter a meaningful name for your assistant. Example: Fund Management Bot (or any other relevant name based on your use case). The name is used internally and is not visible to end users.
-2.	Provide a Description (Optional)
+2.  Provide a Description (Optional)
     You can add a short description that summarizes the purpose of this assistant.Example: "A chatbot to assist users with fund management queries and investment options."This step is optional but helps in organizing multiple assistants.
-3.	Select Assistant Language
+3.  Select Assistant Language
     From the "Assistant language" dropdown, choose the preferred language for the assistant.By default, English (U.S.) is selected.
-4.	Proceed to the Next Step
-    Click the "Next" button at the top-right corner to continue to the Personalization step.
+4.  Click on "Create Assistant" . A new Fund Management Bot assistant is created .
 
 ![2](../imagesLab7/2.png)
      
-## Personalizing Your Assistant
-    
-In this step, you will personalize your AI assistant by specifying where it will be deployed, your industry, role, and the assistant’s purpose. These choices will help tailor the onboarding experience.
 
-## Instructions
-    
-1.	Deployment Channel
-    Under "Tell us where your assistant will live", select where you plan to deploy the assistant. Options may include Web, Mobile App, Messaging Platforms, or Others. Example: Select "Web" if you plan to use the assistant on a website.
-2.	Provide Industry Information
-    In the "Which industry do you work in?" dropdown, select your industry.Example: Banking and Financial Services (if the assistant is for a finance-related use case).
-3.	Define Your Role
-    In "What is your role on the team building the assistant?", choose the most relevant role. Example: Designer, Developer, Product Manager, etc.
-4.	Select a Need Statement
-    Choose a statement that best describes your AI assistant’s purpose.Example: "I want to make it easier for my customers to find what they’re looking for in my app."This helps refine the assistant’s focus and experience.
-        
-![3](../imagesLab7/3.png)
-
-## Customizing Your Assistant UI
-    
-In this step, you will customize the chat UI to align with your brand identity. You can set the assistant’s display name, theme, colons, and other appearance settings.
-
-## Instructions
-1.	Set the Assistant's Display Name
-    Under "Assistant’s name as known by customers", enter the name that users will see when they interact with the assistant.Example: "Fund Management Assistant"
-2.	Choose the Intended Purpose
-    Select an option based on the assistant’s main use case:
-        Standard: For customer support and virtual agent use cases.
-        Carbon for AI: If integrating with IBM internal AI-focused applications.
-        Recommended: Standard for most business use cases.
-3.	Select a Theme
-    Choose between Light or Dark mode based on your brand style.Example: Light mode for a clean, professional look.
-4.	Customize Colors
-    Primary Color (Chat Header): Define the main color of the assistant's interface.Secondary Color (User Message Bubble): Choose a contrasting color for messages sent by users.Account Color (Special AI Actions): Assign a color to highlight AI-driven responses.
-    Example:
-        Primary: #FFFFFF (White)
-        Secondary: #303D1D (Dark Green)
-        Account: #0345AE (Blue)
-5.	Set Chat Widget Size (Optional)
-    Adjust the width and height of the chatbot window.Default: Width – 380px, Height – 640px(Leave as is if unsure).
-6.	IBM Watermark
-    Enable or Disable the "Built with IBM WatsonX" watermark based on preference.
-7.	Enable Streaming (Optional)
-    Streaming allows messages to appear dynamically as they are being typed.Recommended: Keep ON for a more natural user experience.
-8.	Upload an Avatar Image (Optional)
-    Click "Add an avatar image" to upload a custom icon for your assistant.
-
-![4](../imagesLab7/4.png)
-
-## Previewing Your Assistant
-
-In this step, you will preview how your AI assistant appears and functions on a website before finalizing the setup. This allows you to test interactions and ensure the chatbot is visually and functionally aligned with your requirements.
-
-## Instructions
-1.	Review the Chatbot Preview
-    The right panel displays a simulated website with the chatbot embedded.Interact with the assistant by typing a message in the input field to see how it responds.Verify that the UI elements, colors, and avatar (if uploaded) appear correctly.
-2.	Customize Web Chat (Optional)
-    Click "Customize web chat" to modify the chatbot’s appearance further.You can adjust its layout, colors, and positioning based on your website’s design.
-3.	Share the Preview (Optional)
-    Click "Copy link to share" to generate a preview link that you can send to stakeholders for feedback.
-
-![5](../imagesLab7/5.png)
-
-## Creating an AI-guided action
+### Creating an AI-guided action
 
 You can create AI-guided actions to help your assistants to respond to a specific set of inquiries that are based on the preloaded knowledge and instructions.
 
-## To create an AI-guided action, do the following steps:
-1.	Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder.
-2.	In AI assistant builder, go to Actions > New action > AI-guided action.
-3.	In the New action dialog, enter the phrase that the customer must type to start the interaction. Example – GenAI Chat Action
-4.	Click Save.
-5.	In the AI-guided action page, select the large language model (LLM) from the Select a model dropdown. For more information about models. Example - granite-3b-instruct model (recommended)
-6.	Optional: In the Add knowledge* field, you can add a content, which is the knowledge reference for the AI-guided action. This knowledge is sent to the LLM along with the prompt**.
-7.	In the Add prompt instructions section, click the Add instructions button if you want to add instructions for the default prompt in your assistant.
-8.	Enter the prompt instructions in the Prompt instruction field that help the LLM in your assistant to give refined responses and guide the conversations with clarity and specificity.
+### Steps
+1.  In AI assistant builder, go to Actions > New action > AI-guided action.
+2.  In the New action dialog, enter the phrase that the customer must type to start the interaction. Example – GenAI Chat Action
+3.  Click Save.
+4.  In the AI-guided action page, select the large language model (LLM) from the Select a model dropdown. For more information about models. Example - granite-3b-instruct model (recommended)
+5.  Optional: In the Add knowledge* field, you can add a content, which is the knowledge reference for the AI-guided action. This knowledge is sent to the LLM along with the prompt**.
+6.  In the Add prompt instructions section, click the Add instructions button if you want to add instructions for the default prompt in your assistant.
+7.  Enter the prompt instructions in the Prompt instruction field that help the LLM in your assistant to give refined responses and guide the conversations with clarity and specificity.
 
 !!! info "Add Knowledge"
-	
+    
 You are digital assistant at Wealth Bank. Your primary responsibility is to assist customers with their financial needs, specifically with investment suggestions.Wealth Bank offers a variety of investment products tailored to different time horizons: short-term (1-2 years), mid-term (3-5 years), and long-term (5+ years).
 
 !!! info "Add prompt instructions"
-	
+    
 Greetings
 
 
-## Repeat above steps to create AI guided Action - Investment Query Classification Prompt
+### Repeat above steps to create another AI guided Action - Investment Query Classification Prompt
 
 !!! info "Select Model"
     
@@ -297,11 +236,10 @@ Greetings
     Benefits: Focuses on technology-driven infrastructure projects, offering high growth potential in the rapidly evolving tech landscape.
 
 
-
 !!! info "Add prompt instructions"
 
 1. Restatement and Clarification of the Inquiry:
-    Repeating the customer’s questions to illustrate comprehension. This indicates attentiveness and ensures clarity.
+   Repeating the customer’s questions to illustrate comprehension. This indicates attentiveness and ensures clarity.
 2. Divide the Investment Options into Segments: Split investment options according to term; which are
     short-term, medium-term and long-term.
     Give detailed product information with key attributes and benefits highlighted.
@@ -309,19 +247,50 @@ Greetings
 
 ![7](../imagesLab7/7.png)
  
-## Creating a skill-based action
+### Create a skill-based action
 
-Create an action from a skill when you want to implement orchestration for specific conversations in your AI assistant through the skills available on watsonX Orchestrate. 
-Before you begin
-You must connect to the app of the skill for it to appear as an option in this step
+Create an action from a skill when you want to implement orchestration for specific conversations in your AI assistant through the skills available on watsonx Orchestrate. Before you begin , you must connect to the app of the skill for it to appear as an option in this step
 
-## Connecting to apps
+### Import a skill
+1. Import the customerInfo.json File. Begin by importing the provided customerInfo.json file, which is included as part of this lab exercise.
+2. Navigate to the Watsonx Orchestrate interface via the hamburger menu:
+- Hamburger Menu → Skill Studio → Create → Import API
+3. Upload the JSON File as a Skill
+On the **Add Skills** page:
+- Select From a file
+- Browse and select the customerInfo.json file
+- Click Next, then Add
+The newly created skill will appear in the **"Ready for Publish"** state.
+4. Locate the skill in the list
+- Click the three-dot menu (⋮) next to the skill
+- Select Enhance the skill, then click Publish.
+5. Repeat for customerProfile.json.
+Follow the same process (Steps 1–4) to import and publish the second file, customerProfile.json.
+
+### Import a skill flow
+1. Import the customerOnboard.json File
+Begin by importing the customerOnboard.json file, which is provided as part of the lab resources.
+2. Access the Skill Studio
+- Navigate through the Watsonx Orchestrate interface:
+- Hamburger Menu → Skill Studio → Create → Import API
+3. Upload the JSON File as a Skill
+On the Add Skills page:
+- Choose From a file
+- Browse and select the customerOnboard.json file
+- Click Next, then Add
+The skill will be listed with a **"Ready for Publish"** status
+4. Enhance the Imported Skill
+- Locate the imported skill
+- Click the three-dot menu (⋮) next to the skill
+- Select Enhance the skill
+
+### Connecting to apps 
 By default, the credential type is not specified for an app. Complete the following steps to assign credential preferences for an app and connect to it:
-1.	From the menu , click Skill sets.
-2.	On the Fund Manager page, select the Connections tab.
-3.	From the drop-down menu with skill sets, select Team skills or an AI assistant or Orchestrate Agent Skillset.
-4.	Search and select the app (Ex. – Customer profile) from the search menu.
-5.	Click the overflow menu next to the app, and click Connect app.
+1.  From the menu , click Skill sets.
+2.  In the drop down select "Fund Management Bot Draft" , select the Connections tab.
+3.  From the drop-down menu with skill sets, select Team skills or an AI assistant or Orchestrate Agent Skillset.
+4.  Search and select the app (Ex. – Customer profile) from the search menu.
+5.  Go to Action column, and click Connect app.
     set Team credentials:
         Select the option Team credentials.
         Click Connect app.
@@ -335,45 +304,51 @@ By default, the credential type is not specified for an app. Complete the follow
 
 ![8](../imagesLab7/8.png)
 
-## To create a skill-based action, do the following steps:
-Click the AI assistant builder tile in watsonX Orchestrate to go to AI assistant builder. 
-In AI assistant builder, go to Actions > New action > Skill-based action.
-In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
+### To create a skill-based action, do the following steps:
+1. In AI assistant builder, go to Actions > New action > Skill-based action.
+2. In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
 
 ![9](../imagesLab7/9.png)
 
-In the Name your action field, enter a name for your action . Example - Register customer
-In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonX Orchestrate skill. Example - Register customer   
+3. In the Name your action field, enter a name for your action . Example - Register customer
+4. In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonx Orchestrate skill. Example - Register customer   
 Click the Save button to save the action
 
 ![10](../imagesLab7/10.png)
 
-## Creating a custom-built action
+### Creating a custom-built action
 
 You create a new action from scratch when you want to define each step of your action in your conversation. You can define the steps with or without conditions, which help you to control the customer responses.
 
 You can also use the AI-guided and skill-based actions that you created as subactions for your steps. Its enables to the possibility to pass generated values between these actions to use as you want. For more information about how to use AI-guided and skill-based actions as subactions.
 
-## To create an action from scratch, do the following steps:	
+### To create an action from scratch, do the following steps:    TBD
 
-Click the AI assistants tile in watsonX Orchestrate to go to AI assistant builder.
-In AI assistant builder, go to Actions > Create action > Custom-built action. 
-In the New action dialog, enter the phrase that the customer must type to start the interaction.  Refer below screenshots
-After entering the phrase to start the interaction, you must add steps in an action to create the conversation flow. To add a step, use the following instructions:
+1. Access the AI Assistant Builder
+Navigate to the AI Assistant Builder, then follow:
+Actions → Create Action → Custom-built action 
+2. Define the Trigger Phrase
+In the New Action dialog, enter the user-facing phrase that will trigger this interaction.
+(Refer to the provided screenshots for examples.)
+
+To add a step, use the following instructions:
 
  ![11](../imagesLab7/11.png)
 
 ![12](../imagesLab7/12.png)
 
-Click the New step button in the Conversation steps pane to add a step.   
-In the Is taken field, use the default value of without conditions. This step is always required for any withdrawal.
-In the Assistant says field, type "Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?"
+3. Add a Conversation Step
+
+- In the Conversation steps pane, click New step to add a step
+- In the Is taken field, retain the default value: without conditions
+- This initial step is mandatory and forms the foundation for actions such as customer withdrawal processes. This step is always required for any withdrawal.
+- In the Assistant says field, type "Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?"
 
 ![13](../imagesLab7/13.png)
  
-## Create New Step 
-Click the New step button in the initial Conversation pane to add a step.
-In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
+### Create New Step
+- Click the New step button in the initial Conversation pane to add a step.
+- In the Is taken field, use the value of without conditions. This step is always required for any withdrawal.
 In the Assistant says field, type "Please enter your query here..."   
 Click Define customer response.
 Select Sub action and select – Investment Query Classification prompt
@@ -387,7 +362,7 @@ Set Inventory Query to 2.Initial conversation
 
 ![16](../imagesLab7/16.png)
 
-## Create New step 
+### Create New step 
 
 Click the New step button in the ask for register pane to add a step.
 In the Assistant says field, type "We have expert team of financial advisors, who will work with you to structure your financial portfolio. We would encourage you to register with us."
@@ -396,7 +371,7 @@ Click Define customer response as confirmation
 ![17](../imagesLab7/17.png)
 
 
-## Create new step 
+### Create new step 
 
 In the Is taken field, use the value of with conditions. 
     if ask for register is Yes
@@ -447,4 +422,50 @@ Select embed tab
 ![28](../imagesLab7/28.png)
 
 ## Embed this code to web html file to run the AI assistant.
-## test   
+
+##TB Validated
+## Customizing Your Assistant UI - TobeModified
+    
+In this step, you will customize the chat UI to align with your brand identity. You can set the assistant’s display name, theme, colons, and other appearance settings.
+
+## Instructions
+1.  Set the Assistant's Display Name
+    Under "Assistant’s name as known by customers", enter the name that users will see when they interact with the assistant.Example: "Fund Management Assistant"
+2.  Choose the Intended Purpose
+    Select an option based on the assistant’s main use case:
+        Standard: For customer support and virtual agent use cases.
+        Carbon for AI: If integrating with IBM internal AI-focused applications.
+        Recommended: Standard for most business use cases.
+3.  Select a Theme
+    Choose between Light or Dark mode based on your brand style.Example: Light mode for a clean, professional look.
+4.  Customize Colors
+    Primary Color (Chat Header): Define the main color of the assistant's interface.Secondary Color (User Message Bubble): Choose a contrasting color for messages sent by users.Account Color (Special AI Actions): Assign a color to highlight AI-driven responses.
+    Example:
+        Primary: #FFFFFF (White)
+        Secondary: #303D1D (Dark Green)
+        Account: #0345AE (Blue)
+5.  Set Chat Widget Size (Optional)
+    Adjust the width and height of the chatbot window.Default: Width – 380px, Height – 640px(Leave as is if unsure).
+6.  IBM Watermark
+    Enable or Disable the "Built with IBM watsonx" watermark based on preference.
+7.  Enable Streaming (Optional)
+    Streaming allows messages to appear dynamically as they are being typed.Recommended: Keep ON for a more natural user experience.
+8.  Upload an Avatar Image (Optional)
+    Click "Add an avatar image" to upload a custom icon for your assistant.
+
+![4](../imagesLab7/4.png)
+
+## Previewing Your Assistant
+
+In this step, you will preview how your AI assistant appears and functions on a website before finalizing the setup. This allows you to test interactions and ensure the chatbot is visually and functionally aligned with your requirements.
+
+## Instructions
+
+1.  Review the Chatbot Preview
+    The right panel displays a simulated website with the chatbot embedded.Interact with the assistant by typing a message in the input field to see how it responds.Verify that the UI elements, colors, and avatar (if uploaded) appear correctly.
+2.  Customize Web Chat (Optional)
+    Click "Customize web chat" to modify the chatbot’s appearance further.You can adjust its layout, colors, and positioning based on your website’s design.
+3.  Share the Preview (Optional)
+    Click "Copy link to share" to generate a preview link that you can send to stakeholders for feedback.
+
+![5](../imagesLab7/5.png)
