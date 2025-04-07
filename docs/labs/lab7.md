@@ -18,11 +18,11 @@ TBD
 
 To create an AI Assistant in watsonx Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
 
-1. Log in to IBM watsonx Orchestrate account 
-    Open your web browser and go to the IBM watsonx Orchestrate portal.
-    Enter your IBM credentials and sign in.
+1. Log in to IBM watsonx Orchestrate account.
+ - Open your web browser and go to the IBM watsonx Orchestrate portal.
+ - Enter your IBM credentials and sign in.
 2. Navigate to the Home Page
-    Upon logging in, you will land on the watsonx Orchestrate home page.
+- Upon logging in, you will land on the watsonx Orchestrate home page.
     This page provides options to build AI skills, automate tasks, and explore learning resources.
 3. Access the AI Assistant Builder
     In the "Build" section, find the "AI Assistant Builder" card.
@@ -254,47 +254,46 @@ Create an action from a skill when you want to implement orchestration for speci
 ### Import a skill
 1. Import the customerInfo.json File. Begin by importing the provided customerInfo.json file, which is included as part of this lab exercise.
 2. Navigate to the Watsonx Orchestrate interface via the hamburger menu:
-- Hamburger Menu → Skill Studio → Create → Import API
+**Hamburger Menu → Skill Studio → Create → Import API**
 3. Upload the JSON File as a Skill
 On the **Add Skills** page:
 - Select From a file
 - Browse and select the customerInfo.json file
-- Click Next, then Add
+- Click Next, then **Add**.
 The newly created skill will appear in the **"Ready for Publish"** state.
 4. Locate the skill in the list
 - Click the three-dot menu (⋮) next to the skill
-- Select Enhance the skill, then click Publish.
+- Select **Enhance the skill**, then click **Publish**.
 5. Repeat for customerProfile.json.
-Follow the same process (Steps 1–4) to import and publish the second file, customerProfile.json.
+Follow the same process (Steps 1–4) to import and publish the second file, **customerProfile.json**.
 
 ### Import a skill flow
-1. Import the customerOnboard.json File
+1. Import the **customerOnboard.json** File
 Begin by importing the customerOnboard.json file, which is provided as part of the lab resources.
-2. Access the Skill Studio
-- Navigate through the Watsonx Orchestrate interface:
-- Hamburger Menu → Skill Studio → Create → Import API
-3. Upload the JSON File as a Skill
+2. Access the Skill Studio and import API.
+**Hamburger Menu → Skill Studio → Create → Import API**
+3. Upload the JSON File as a Skill.
 On the Add Skills page:
 - Choose From a file
 - Browse and select the customerOnboard.json file
-- Click Next, then Add
+- Click Next, then **Add**
 The skill will be listed with a **"Ready for Publish"** status
 4. Enhance the Imported Skill
 - Locate the imported skill
 - Click the three-dot menu (⋮) next to the skill
-- Select Enhance the skill
+- Select **Enhance the skill**
 
 ### Connecting to apps 
 By default, the credential type is not specified for an app. Complete the following steps to assign credential preferences for an app and connect to it:
-1.  From the menu , click Skill sets.
-2.  In the drop down select "Fund Management Bot Draft" , select the Connections tab.
+1.  From the menu , click **Skill sets**.
+2.  In the drop down select "Fund Management Bot Draft" , select the **Connections** tab.
 3.  From the drop-down menu with skill sets, select Team skills or an AI assistant or Orchestrate Agent Skillset.
 4.  Search and select the app (Ex. – Customer profile) from the search menu.
 5.  Go to Action column, and click Connect app.
-    set Team credentials:
-        Select the option Team credentials.
-        Click Connect app.
-        Provide the connection details * for the app, and click Connect app.
+    Set Team credentials:
+        - Select the option Team credentials.
+        - Click **Connect app**.
+        - Provide the connection details for the app, and click **Connect app**.
         All your team members can now use the skills that the app offers without providing the connection details.
         The Credential type of the app is set as Team.
         The Connected by column displays the user details of the person who set the team credentials.
@@ -305,14 +304,14 @@ By default, the credential type is not specified for an app. Complete the follow
 ![8](../imagesLab7/8.png)
 
 ### To create a skill-based action, do the following steps:
-1. In AI assistant builder, go to Actions > New action > Skill-based action.
-2. In the Build an action from a skill page, click the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
+1. In AI assistant builder, go to **Actions > New action > Skill-based action**.
+2. In the Build an action from a skill page, select the skill(Customer profile) to which you want to link the action to, making the skill the foundation to your action.
 
 ![9](../imagesLab7/9.png)
 
-3. In the Name your action field, enter a name for your action . Example - Register customer
-4. In the Enter a phrase field, enter the phrase that customers must type or ask to trigger an action for the watsonx Orchestrate skill. Example - Register customer   
-Click the Save button to save the action
+3. In the **Name** your action field, enter a name for your action . Example - Register customer
+4. In the **Enter a phrase** field, enter the phrase that customers must type or ask to trigger an action for the watsonx Orchestrate skill. Example - Register customer   
+5. Click the **Save** button to save the action
 
 ![10](../imagesLab7/10.png)
 
