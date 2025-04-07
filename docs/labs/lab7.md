@@ -9,7 +9,7 @@ TBD
 
 ### Travel planner agent
 
-## Key features 
+## Key features  
 TBD
 
 ## Steps
