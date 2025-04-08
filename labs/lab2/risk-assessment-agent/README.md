@@ -25,9 +25,8 @@ The template builds a simple application with external tool for addressing Web S
 
 The high level structure of the repository is as follows:  
 
-crewai-websearch-agent  
-
- ┣ assistance_crew    
+risk-assessment-agent  
+ ┣ assistance_crew
  ┃     ┣ config  
  ┃     ┣ tools  
  ┃     ┣ \_\_init\_\_.py  
@@ -41,6 +40,7 @@ crewai-websearch-agent
 - `schema` folder: Contains request and response schemas for the `/ai_service` endpoint queries.  
 - `ai_service.py` file: Contains the function to be deployed as an AI service defining the application's logic  
 - `config.toml.example` file: A configuration file with placeholders that stores the deployment metadata. After downloading the template repository, copy the contents of the `config.toml.example` file to the `config.toml` file and fill in the required fields. `config.toml` file can also be used to tweak the model for your use case.
+
 
 ## Prerequisites  
 
@@ -56,9 +56,9 @@ crewai-websearch-agent
 In order not to clone the whole `IBM/watsonx-developer-hub` repository we'll use git's shallow and sparse cloning feature to checkout only the template's directory:  
 
 ```sh
-git clone --no-tags --depth 1 --single-branch --filter=tree:0 --sparse https://github.com/IBM/EEL-agentic-ai-bootcamp.git
-cd EEL-agentic-ai-bootcamp/
-git sparse-checkout add labs/lab2
+git clone --no-tags --depth 1 --single-branch --filter=tree:0 --sparse https://github.com/IBM/watsonx-developer-hub.git
+cd watsonx-developer-hub
+git sparse-checkout add agents/crewai
 ```  
 
 > [!NOTE]
@@ -105,7 +105,7 @@ For detailed description and API please refer to the [IBM watsonx.ai Parameter S
 Sensitive data should not be passed unencrypted, e.g. in the configuration file. The recommended way to handle them is to make use of the [IBM Cloud® Secrets Manager](https://cloud.ibm.com/apidocs/secrets-manager/secrets-manager-v2). The approach to integrating the Secrets Manager's API with the app is for the user to decide on.  
 
 
-The [crew.py](assistance_crew/crew.py) creates an AI crew, which consists of agents and their tasks.
+The [crew.py](src/assistance_crew/crew.py) creates an AI crew, which consists of agents and their tasks.
 For detailed info on how to modify the crew object please refer to [CrewAI's official docs](https://docs.crewai.com/quickstart)  
 
 
@@ -113,8 +113,18 @@ The [ai_service.py](ai_service.py) file encompasses the core logic of the app al
 For a detailed breakdown of the ai-service's implementation please refer the [IBM Cloud docs](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ai-services-create.html?context=wx)  
 
 
-[tools.py](assistance_crew/tools/tools.py) file stores the definition for tools enhancing the chat model's capabilities.  
+[tools.py](src/assistance_crew/tools/tools.py) file stores the definition for tools enhancing the chat model's capabilities.  
 To add a new tool, create a class that extends the `crewai.tools.BaseTool` base class and has a `_run` method defined.
+
+## Testing the template  
+
+The `tests/` directory's structure resembles the repository. Adding new tests should follow this convention.  
+For exemplary purposes only the tools and some general utility functions are covered with unit tests.  
+
+Running the below command will run the complete tests suite:
+```sh
+pytest -r 'fEsxX' tests/
+```  
 
 ## Running the application locally  
 

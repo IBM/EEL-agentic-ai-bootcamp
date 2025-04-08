@@ -1,10 +1,10 @@
+
 def deployable_ai_service(context, **custom):
     """AI service with AI Assistance Crew that can be deployed to a server."""
     from crewai import LLM
     from crewai.agents.parser import AgentAction, AgentFinish
     from crewai.agents.crew_agent_executor import ToolResult
     import os
-
     from assistance_crew.crew import AssistanceAgents
 
     model_id = custom.get("model_id")
@@ -63,8 +63,7 @@ def deployable_ai_service(context, **custom):
             custom_instruction = message["content"]
         inputs = {
             "user_prompt": user_question,
-            "custom_instruction": custom_instruction,
-            "user": "john doe"
+            "custom_instruction": custom_instruction
         }
         llm = LLM(
             model=f"watsonx/{model_id}",
@@ -74,7 +73,7 @@ def deployable_ai_service(context, **custom):
             project_id=project_id,
             ## model params
             temperature=0.7,
-            max_tokens=3000,
+            max_tokens=3000
         )
 
         intermediate_steps: list = []

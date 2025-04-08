@@ -90,7 +90,7 @@ with (root_dir / "schema" / "response.json").open("r", encoding="utf-8") as file
 
 meta_props = {
     client.repository.AIServiceMetaNames.SOFTWARE_SPEC_ID: asset_id,
-    client.repository.AIServiceMetaNames.NAME: "crewAI agent",
+    client.repository.AIServiceMetaNames.NAME: "Risk Assessment Agent",
     client.repository.AIServiceMetaNames.REQUEST_DOCUMENTATION: request_schema,
     client.repository.AIServiceMetaNames.RESPONSE_DOCUMENTATION: response_schema,
     client.repository.AIServiceMetaNames.TAGS: ["wx-agent"],
@@ -102,7 +102,7 @@ stored_ai_service_details = client.repository.store_ai_service(
 ai_service_id = stored_ai_service_details["metadata"].get("id")
 
 meta_props = {
-    client.deployments.ConfigurationMetaNames.NAME: f"Wealth Management Agent with CrewAI - v2",
+    client.deployments.ConfigurationMetaNames.NAME: f"Risk Assessment Agent - CrewAI",
     client.deployments.ConfigurationMetaNames.ONLINE: {},
     client.deployments.ConfigurationMetaNames.CUSTOM: {
         "url": client.credentials.url,

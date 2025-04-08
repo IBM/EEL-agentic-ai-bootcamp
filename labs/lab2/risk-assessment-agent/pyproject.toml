@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "wealth-management-agent"
+name = "risk-assessment-agent"
 version = "0.1.0"
-description = "A crewAI multi-agent."
+description = "A crewAI agent."
 authors = ["Your name <email-id>"]
 license = "MIT"
 readme = "README.md"
@@ -9,12 +9,11 @@ packages = [
     { include = "assistance_crew", from = "." }
 ]
 
-
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
 crewai = "^0.102"
-ibm-watsonx-ai = "^1.3.1"
-tavily-python = "^0.5.1"
+ibm-watsonx-ai = "^1.3.3"
+tavily-python = "^0.5.3"
 
 [tool.poetry.group.dev]
 optional = true
