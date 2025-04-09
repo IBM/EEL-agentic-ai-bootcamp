@@ -49,8 +49,8 @@
   }
 } ```
    - click Execute
-   - Verify you get a stream of outputs under Response body
-   - Copy the full curl request enpoint
+   - Verify you get a stream of outputs under response body
+   - Copy the full curl request endpoint
       - Example: `https://mdm-agent-builder.1sfrdnqsrnj5.us-south.codeengine.appdomain.cloud/chat/completions`
 
 
