@@ -68,11 +68,12 @@ To create an AI Assistant in watsonx Orchestrate, you first need to access the p
 ![2](../imagesLab7/bot2.png)
 
 3. Enter following details in the screen and click on **Create**
-- Assistant name : Fund Management Bot
+- Assistant name : **Fund Management Bot**
 - Description : A chatbot to assist users with fund management queries and investment options.
 - Assistant language - Default (English(US))
 
 ![2](../imagesLab7/bot3.png)
+
  A new Fund Management Bot assistant is created .
 
 4. On the left panel click on **Actions** . Click **Create Action** to create the first action.
@@ -84,7 +85,7 @@ To create an AI Assistant in watsonx Orchestrate, you first need to access the p
 ![1](../imagesLab7/botAction1.png)
 
 Enter following details and click on Save to save the action :
-Phrase : GenAI Chat Action
+Phrase : **GenAI Chat Action**
 
 ![1](../imagesLab7/botAction2.png)
 
@@ -309,9 +310,8 @@ Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json**
  
 ### Connecting to apps 
 
-1. Click on **Skill Sets** . Select the Fund Management Bot draft in the dropdown . 
-Search for skills imported in the previous steps and click on **Connect App** , edit **Team Credentials** and save for both skills .
-All your team members can now use the skills that the app offers without providing the connection details.
+1. Click on **Skill Sets** . Select the **Fund Management Bot draft** in the dropdown . 
+- Search for skills imported in the previous steps and click on **Connect App** , edit **Team Credentials** and save for both skills .
 
 !!! info "Credentials"
     cp4admin / EpZP3ZeTlhgiw0DhCQxQ
@@ -475,33 +475,15 @@ When you publish your content, AI assistant builder creates a snapshot of the dr
 
 3. Select Live environment
 
-![26](../imagesLab7/26.png)
-
 ![27](../imagesLab7/27.png)
 
-Select on **Embed** tab
+Select on **Embed** tab. Copy the **script** tag .
 
 ![28](../imagesLab7/28.png)
 
 ## Embed this code in web html file to run the AI assistant.
 
-Use sample HTML file provided and add the script tag below to render the AI Assistant created in the steps above .
-
-!!! info "Embed on your website"
-
-<script>
-  window.watsonAssistantChatOptions = {
-  integrationID: "211e2f10-115e-410b-92cf-ea2c9c319b7e", // The ID of this integration.
-  region: "wxo-us-south", // The region your integration is hosted in.
-  serviceInstanceID: "b3fd1453-1907-490d-a095-b8e91df6328a", // The ID of your service instance.
-  onLoad: async (instance) => { await instance.render(); }
-};
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-  });
-</script>
+Use sample HTML file provided and add the script tag copied above to render the AI Assistant created in the steps above .
 
 ## Running the AI Assistant in a web page 
 
