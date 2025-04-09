@@ -81,7 +81,7 @@
 1. **In IBM watsonx orchestrate Web UI:**
    - From the top left hamburger menu, select **Agent Configuration**.
    - Select **Chat** from the left-hand navigation.
-   - Type a question that should route to the new agent, like `What is the weather like in Maui?`
+   - Type a question that should route to the new agent, like `Can you give me an advice on John Doe's portfolio`
    - The results from the external agent should be streamed to the IBM watsonx Orchestrate chat window
    - Type a question that should route to the new agent, like `What cards could I use on a trip there?`
    - The results from the external agent should be streamed to the IBM watsonx Orchestrate chat window
