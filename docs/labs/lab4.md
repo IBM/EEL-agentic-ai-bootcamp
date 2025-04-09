@@ -72,7 +72,7 @@
       ```
          About the agent features and capabilities
       ```
-   - **API Key:** Enter `123`
+   - **API Key:** Enter `WATSONX_API_KEY or IBM IAM KEY`
    - **Service Instance URL:** Use the Test URL with `/chat/completions` appended.
      - Example: `https://wxo-agent-test1-app1.1pj4w3r1pi47.us-south.codeengine.appdomain.cloud/chat/completions`
 
