@@ -24,7 +24,13 @@
         "ibmid",
         "venv",
         "apikey",
-        "mattmule"
+        "mattmule",
+        "venv",
+        "tavily",
+        "SPDR",
+        "ELSS",
+        "Skillset",
+        "pytest"
     ],
 
     "flagWords": [
