@@ -96,7 +96,7 @@ Key Features:
 
 ### Deploy the agent to watsonx.ai
 
-1. Now the agent is tested locally, you can deplop the agent on watsonx.ai runtime.
+1. Now the agent is tested locally, you can deploy the agent on watsonx.ai runtime.
 
     ```
     python scripts/deploy.py
@@ -144,7 +144,7 @@ Now that risk assessment agent is ready, you can follow the same steps to deploy
     cd ../wealth-advisor-agent
     ```
 
-1. You have already setup the virtual environemt and created the `config.toml`. Copy the `config.toml` to the `wealth-advisor-agent` directory to use the same credentials.
+1. You have already setup the virtual environment and created the `config.toml`. Copy the `config.toml` to the `wealth-advisor-agent` directory to use the same credentials.
 
     ```
     cp ../risk-assessment-agent/config.toml .
