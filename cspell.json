@@ -19,7 +19,11 @@
         "crewai",
         "pyproject",
         "websearch",
-        "Inferencing"
+        "Inferencing",
+        "IBMID",
+        "ibmid",
+        "venv",
+        "apikey"
     ],
 
     "flagWords": [
