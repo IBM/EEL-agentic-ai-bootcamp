@@ -128,7 +128,7 @@ Key Features:
 
 1. Click on **Test** tab and you can test the service endpoint. Enter the following as a payload and click on **Predict**.
     - role: `user`
-    - content: `S&P 500, Tesla Inc, Microsoft Corporation, Apple Inc, Walmart Inc, Caterpillar Inc, FedEx Corporation, General Motors, Ford Motor Company, Deere & Company, Vanguard Total Bond ETF, SPDR Gold Shares ETF`
+    - content: `Here is John Doe's portfolio: S&P 500, Tesla Inc, Microsoft Corporation, Apple Inc, Walmart Inc, Caterpillar Inc, FedEx Corporation, General Motors, Ford Motor Company, Deere & Company, Vanguard Total Bond ETF, SPDR Gold Shares ETF`
 
     ![lab-2-5](../images/lab2/lab-2-5.png)
 
