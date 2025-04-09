@@ -9,7 +9,7 @@
    - Click 'Applications'
    - Click 'Create'
 
-2. **Creating your Travel Concierge Application:**
+2. **Creating your Application:**
    - Change the name to `${your agent name}-agent`
    - Use an existing container image
    - Click 'Configure image'
@@ -56,7 +56,7 @@
 
 ## Step 2: Register the New Endpoint as an External Agent
 
-### 2A: Create the Agent Endpoint
+### 2A: Create an agent in watsonx Orchestrate
 
 
 1. **In IBM watsonx orchestrate Web UI:**
@@ -66,7 +66,7 @@
    - Select **Agents** from the left-hand navigation.
    - Click the **Add agent** button on the top right.
 
-3. **Enter Details (Travel Concierge):**
+3. **Enter Details (Agent Details):**
    - **Display Name:** e.g., `Risk Assessment Agent`
    - **Description:** Enter a description of capabilities,
       ```
