@@ -1,0 +1,39 @@
+investment_strategy_task:
+  description: >
+    {user_prompt} and extract key insights about the client's investment strategy.
+  expected_output: >
+    A paragraph summarizing the client's investment approach.
+  agent: investment_strategy_agent
+
+asset_allocation_task:
+  description: >
+    Provide asset allocation recommendations based on market conditions and risk appetite.
+  expected_output: >
+    A markdown table suggesting an optimal asset allocation strategy.
+  agent: asset_allocation_agent
+
+impact_assessment_task:
+  description: >
+    Analyze how the identified risks impact the portfolio and highlight investment opportunities.
+  expected_output: >
+    A structured report categorizing risks based on their impact (low, medium, high) and highlighting opportunities.
+  agent: impact_assessment_agent
+
+near_term_recommendation_task:
+  description: >
+    Provide actionable near-term recommendations to mitigate identified risks.
+  expected_output: >
+    A structured list of risk mitigation actions, such as hedging strategies, asset reallocation, and diversification.
+  agent: near_term_recommendation_agent
+
+write_report_task:
+  description: >
+    Compile a markdown report with sections:
+    - Client's Investment Strategy (Paragraph)
+    - Asset Allocation Recommendations (Markdown Table)
+    - Impact Assessment (Structured Risk & Opportunities)
+    - Near-Term Recommendations (Actionable Suggestions)
+    - Write a note in bold this is an AI Generated Report, and the user should consult a licensed financial advisor for personalized advice.
+  expected_output: >
+    A well-structured markdown report summarizing user's portfolio insights.
+  agent: report_writer_agent

@@ -1,2 +1,17 @@
 .DS_Store
 .venv
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# uv
+.python-version
+.env
