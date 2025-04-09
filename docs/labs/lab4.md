@@ -76,7 +76,7 @@
    - **Service Instance URL:** Use the Test URL with `/chat/completions` appended.
      - Example: `https://wxo-agent-test1-app1.1pj4w3r1pi47.us-south.codeengine.appdomain.cloud/chat/completions`
 
-### Step 3: Call the new External Agent from Orchestrate
+## Step 3: Call the new External Agent from Orchestrate
 
 1. **In IBM watsonx orchestrate Web UI:**
    - From the top left hamburger menu, select **Agent Configuration**.
