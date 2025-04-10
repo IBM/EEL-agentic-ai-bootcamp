@@ -1,5 +1,7 @@
 ## Use case : Onboarding Agent 
 
+As organizations expand, one of the key operational activities is in managing the onboarding process efficiently and consistently. The complexity of coordinating multiple stakeholders, systems, and tasks often leads to delays, onboarding,miscommunication, and a fragmented new-orboard experience. With the introduction of Onboarding system and advanced reasoning models, enterprises now have the opportunity to implement a centralized onboarding solution.
+
 ## Problem
 
 Wealth Bank's digital onboarding process faced challenges in efficiently engaging users seeking financial guidance through their online portal. Visitors often arrived with wealth-related queries but left without receiving personalized support or registering for services. Issues include:
