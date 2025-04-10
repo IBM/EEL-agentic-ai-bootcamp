@@ -1,8 +1,20 @@
 # Agentic AI Bootcamp
 
-!!! warning "Draft version"
-    
-    Work in progress!
+
+![Agentic Bootcamp](../docs/images/leadspace_article.jpeg)
+
+In this bootcamp, you will build and deploy an Agentic AI application prototype for an enterprise use case.
+
+* You'll learn the concepts behind Agentic AI workflows.
+* You'll leverage IBM watsonx orchestrate, IBM Cloud pak for Business Automation and open source tools for fast prototyping of the Agentic AI use case.
+* You'll learn how to deploy an Agentic AI application and orchestrate different agents from the unified platform.
+
+ **Use case:** 
+ The enterprise use case used during the bootcamp is Personalized Customer Experience and Wealth Planning with AI Agents
+
+* Intelligent onboarding assistant
+* Risk assessment agent
+* Wealth advisor agent
 
 Build and deploy an Agentic AI application prototype for an enterprise use case
 
