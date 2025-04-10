@@ -305,7 +305,7 @@ Greetings
 2. Divide the Investment Options into Segments: Split investment options according to term; which are
     short-term, medium-term and long-term.
     Give detailed product information with key attributes and benefits highlighted.
-3. Ask for registration if more personalised offer needed or existing customer show the offers. 
+3. Ask for registration if more personalized offer needed or existing customer show the offers. 
 
 ![7](../imagesLab7/7.png)
  
@@ -352,7 +352,7 @@ Click the Save button to save the action
 
 You create a new action from scratch when you want to define each step of your action in your conversation. You can define the steps with or without conditions, which help you to control the customer responses.
 
-You can also use the AI-guided and skill-based actions that you created as subactions for your steps. Its enables to the possibility to pass generated values between these actions to use as you want. For more information about how to use AI-guided and skill-based actions as subactions.
+You can also use the AI-guided and skill-based actions that you created as sub actions for your steps. Its enables to the possibility to pass generated values between these actions to use as you want. For more information about how to use AI-guided and skill-based actions as sub actions.
 
 ## To create an action from scratch, do the following steps:	
 
@@ -401,7 +401,7 @@ Click Define customer response as confirmation
 In the Is taken field, use the value of with conditions. 
     if ask for register is Yes
     In the Assistant says field, type "Please enter your details..."
-Click Define customer response as subaction and select customer form
+Click Define customer response as sub action and select customer form
 
 ![17](../imagesLab7/18.png)
 

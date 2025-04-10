@@ -14,7 +14,7 @@ The Portfolio Risk Assessment Agent supports financial advisors by evaluating in
 Key Features:
 
 - Risk Evaluation per Asset: Assesses each security in the portfolio and assigns a Risk Level (High, Medium, Low) based on exposure and volatility.
-- Diversification & Sector Analysis: Identifies sector overconcentration and diversification gaps that may impact portfolio stability.
+- Diversification & Sector Analysis: Identifies sector over concentration and diversification gaps that may impact portfolio stability.
 - Markdown Risk Report: Generates a clean, structured Markdown table summarizing each asset’s name, value, sector, risk level, and rationale for easy review and reporting.
 
 ### Wealth management agent - Wealth advisor agent
@@ -164,7 +164,7 @@ Now that risk assessment agent is ready, you can follow the same steps to deploy
   
 1. You wil see the Agent's reply.
 
-1. Now that the agent is tested locally, you can deplop the agent on watsonx.ai runtime.
+1. Now that the agent is tested locally, you can deploy the agent on watsonx.ai runtime.
 
     ```
     python scripts/deploy.py
