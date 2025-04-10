@@ -1,6 +1,6 @@
 ## Use case : Personalized Customer Experience and Wealth Planning with AI Agents 
 
-As organizations expand, one of the key operational activities is in managing the onboarding process efficiently and consistently. The complexity of coordinating multiple stakeholders, systems, and tasks often leads to delays, onboarding,miscommunication, and a fragmented new-orboard experience. With the introduction of Onboarding system and advanced reasoning models, enterprises now have the opportunity to implement a centralized onboarding solution.
+As organizations expand, one of the key operational activities is in managing the onboarding process efficiently and consistently. The complexity of coordinating multiple stakeholders, systems, and tasks often leads to delays, onboarding,miscommunication, and a fragmented new-onboard experience. With the introduction of Onboarding system and advanced reasoning models, enterprises now have the opportunity to implement a centralized onboarding solution.
 
 ## Problem
 
@@ -61,7 +61,7 @@ To create an AI Assistant in watsonx Orchestrate, you first need to access the p
 
 ### Create the Fund Management AI Assistant 
 
-1. Click on **Assisstant Builder**
+1. Click on **Assistant Builder**
 
 ![2](../imagesLab7/bot1.png)
 
@@ -91,7 +91,7 @@ Phrase : **GenAI Chat Action**
 
 ![1](../imagesLab7/botAction2.png)
 
-Large Language Moddel : granite-3b-instruct model (recommended)
+Large Language Model : granite-3b-instruct model (recommended)
 
 !!! info "Add Knowledge"
     
@@ -106,7 +106,7 @@ Greetings
 6. Repeat step 5 to create another **AI Guided** Action **Investment Query Classification Prompt**
 
 Action Name : Investment Query Classification Prompt
-Large Language Moddel : granite-3b-instruct model (recommended)
+Large Language Model : granite-3b-instruct model (recommended)
 
 
 !!! info "Add Knowledge"
@@ -276,7 +276,7 @@ Large Language Moddel : granite-3b-instruct model (recommended)
 2. Divide the Investment Options into Segments: Split investment options according to term; which are
     short-term, medium-term and long-term.
     Give detailed product information with key attributes and benefits highlighted.
-3. Ask for registration if more personalised offer needed or existing customer show the offers. 
+3. Ask for registration if more personalized offer needed or existing customer show the offers. 
 
 ![7](../imagesLab7/7.png)
 
@@ -428,7 +428,7 @@ We have expert team of financial advisors, who will work with you to structure y
     
     Please enter your details..."
 
-- Click Define customer response as subaction and select **customer onboard**
+- Click Define customer response as sub-action and select **customer onboard**
 
 ![17](../imagesLab7/18.png)
 
