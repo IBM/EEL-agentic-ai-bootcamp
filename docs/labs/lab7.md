@@ -493,14 +493,23 @@ Use sample HTML file provided and add the script tag copied above to render the 
 
 ![28](../imagesLab7/labchat1.png)
 
-2. Enter query **I would like to invest 100000 for 4 years**
+2. Enter query **I would like to invest 100000 for 4 years** . 
 
 ![28](../imagesLab7/labchat2.png)
 
-3. Enter query **How is the real estate sector performing now ?**
+3. The AI assistant will ask if you want to register , click **Yes** . A form will pop up , fill the details and Click on **Apply**
+
+![28](../imagesLab7/labchat5.png)
+
+![28](../imagesLab7/labchat6.png)
+
+![28](../imagesLab7/labchat7.png)
+
+
+4. Enter query **How is the real estate sector performing now ?**
 
 ![28](../imagesLab7/labchat3.png)
 
-4. Enter query **Do you think infrastructure is good sector to invest at current market conditions**
+5. Enter query **Do you think infrastructure is good sector to invest at current market conditions**
 
 ![28](../imagesLab7/labchat4.png)
