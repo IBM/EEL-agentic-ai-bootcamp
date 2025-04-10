@@ -1,16 +1,18 @@
-# Lab 4: Register your deployed agents into watsonx Orchestrate 
+# Lab 4: Register your external agents into watsonx Orchestrate 
 ---
 ## Step 1: Create the Code Engine Endpoints
 
 ### 1A: Create the Endpoint
 
-1. **Using IBM Cloud Web UI:**
-   - Navigate to [IBM Cloud Code Engine Projects](https://cloud.ibm.com/containers/serverless/projects) and select the project that has been created for you.
+**Using IBM Cloud Web UI:**
+
+* Navigate to [IBM Cloud Code Engine Projects](https://cloud.ibm.com/containers/serverless/projects) and select the project that has been created for you.
    - Click 'Applications'
    - Click 'Create'
 
-2. **Creating your Application:**
-   - Change the name to `${your agent name}-agent`
+ **Creating your Application:**
+
+   - Change the name to `${enter your agent name}-agent`
    - Use an existing container image
    - Click 'Configure image'
    - Click 'Registry server'
@@ -21,14 +23,21 @@
    - Click Done
    - Change 'Autoscaling - instance scaling range'/'Min number of instances to 1' (This avoids timeout errors if your Application scales down to 0 instances)
    - Go to 'Optional settings'/'Environment variables', click 'Add'
-      - Add the following environment variables:
-         - `WATSONX_DEPLOYMENT_ID`
-         - `WATSONX_API_KEY`
-         - `WATSONX_SPACE_ID`
-         - `WATSONX_URL` (optional)
+
+!!! info "**IMPORTANT:** Add the following environment variables"
+  
+    **WATSONX_DEPLOYMENT_ID**
+
+    **WATSONX_SPACE_ID**
+
+    **WATSONX_API_KEY**
+
+    **WATSONX_URL** (optional)
+
    - Click 'Create'
 
-3. **Test Application:**
+**Test Application:**
+
    - Choose **Test application** and click **Application URL**.
    - Append `/docs` to the end of the URL path to view a formatted API page.
      - Example: `https://wxo-agent-test1-app1.1pj4w3r1pi47.us-south.codeengine.appdomain.cloud/docs`
@@ -42,11 +51,7 @@
       "role": "user",
       "content": "your prompt input for agent"
     }
-  ],
-  "stream": true,
-  "extra_body": {
-    "thread_id": "string"
-  }
+  ]
 } ```
    - click Execute
    - Verify you get a stream of outputs under response body
@@ -78,12 +83,10 @@
 
 ## Step 3: Call the new External Agent from Orchestrate
 
-1. **In IBM watsonx orchestrate Web UI:**
-   - From the top left hamburger menu, select **Agent Configuration**.
-   - Select **Chat** from the left-hand navigation.
+ **In IBM watsonx orchestrate Web UI:**
+
+   - From the top left hamburger menu, select **Chat** from the left-hand navigation.
    - Type a question that should route to the new agent, like `Can you give me an advice on John Doe's portfolio`
-   - The results from the external agent should be streamed to the IBM watsonx Orchestrate chat window
-   - Type a question that should route to the new agent, like `What cards could I use on a trip there?`
    - The results from the external agent should be streamed to the IBM watsonx Orchestrate chat window
      
 - Replace image information with the newly created information
