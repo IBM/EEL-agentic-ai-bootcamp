@@ -1,0 +1,1401 @@
+{
+    "skilldata": {
+        "info": {
+            "title": "customer Onboard",
+            "version": "1.0.0",
+            "description": "",
+            "orientation": "vertical",
+            "x-ibm-skill-type": "skill-flow",
+            "x-ibm-annotations": "true",
+            "x-ibm-application-id": "composite_skill",
+            "x-ibm-application-icon": "<svg width=\"30\" height=\"30\" id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 1920 1920\"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#linear-gradient);}.cls-3{fill:url(#linear-gradient-2);}.cls-4{fill:url(#linear-gradient-3);}.cls-5{fill:url(#linear-gradient-4);}.cls-6{mask:url(#mask);}.cls-7{fill:url(#linear-gradient-5);}.cls-8{fill:#001d6c;}</style><linearGradient id=\"linear-gradient\" x1=\"-1049.46\" y1=\"-5211.64\" x2=\"-1049.46\" y2=\"-4742.87\" gradientTransform=\"matrix(1, 0, 0, -1, 1259.46, -3725.36)\" gradientUnits=\"userSpaceOnUse\"><stop offset=\"0\" stop-opacity=\"0\"/><stop offset=\"0.83\"/></linearGradient><linearGradient id=\"linear-gradient-2\" x1=\"-124.2\" y1=\"-5096.73\" x2=\"-315.69\" y2=\"-4765.06\" gradientTransform=\"matrix(1, 0, 0, -1, 1255.54, -3741.25)\" gradientUnits=\"userSpaceOnUse\"><stop offset=\"0\" stop-opacity=\"0\"/><stop offset=\"0.7\"/></linearGradient><linearGradient id=\"linear-gradient-3\" x1=\"-1491.46\" y1=\"-1099.81\" x2=\"-1491.46\" y2=\"-631.03\" gradientTransform=\"matrix(1, 0, 0, -1, 3201.46, -199.48)\" xlink:href=\"#linear-gradient\"/><linearGradient id=\"linear-gradient-4\" x1=\"-566.2\" y1=\"-984.89\" x2=\"-757.69\" y2=\"-653.22\" gradientTransform=\"matrix(-1, 0, 0, 1, 222.46, 1547.25)\" xlink:href=\"#linear-gradient-2\"/><mask id=\"mask\" x=\"0\" y=\"21.37\" width=\"1920\" height=\"1875.09\" maskUnits=\"userSpaceOnUse\"><path class=\"cls-1\" d=\"M1851,841.73H1729.79c-58-364.46-380.59-644.57-769.79-644.57-277.19,0-520.41,142.35-658.78,355.69A485.17,485.17,0,0,1,540,490.15c223.17,0,410.71,149.73,464.2,351.58H879C829.42,705.39,696.39,607.34,540,607.34a360.17,360.17,0,0,0-286.78,141L101.71,699.05C215.43,341.07,556.52,80,960,80,1415.47,80,1792.07,412.42,1851,841.73Zm-184.26,327.74a360.2,360.2,0,0,1-286.78,141c-156.39,0-289.42-98-339-234.39H915.8c53.49,201.85,241,351.58,464.2,351.58a485.17,485.17,0,0,0,238.78-62.7c-138.37,213.34-381.59,355.69-658.78,355.69-389.2,0-711.77-280.11-769.79-644.57H69c59,429.31,435.57,761.76,891,761.76,403.48,0,744.57-261.1,858.29-619.08Z\"/><rect class=\"cls-2\" y=\"1017.52\" width=\"420\" height=\"468.77\"/><polygon class=\"cls-3\" points=\"1260 1046.81 900 1046.81 900 1486.29 1260 1281.2 1260 1046.81\"/><rect class=\"cls-4\" x=\"1500\" y=\"431.55\" width=\"420\" height=\"468.77\" transform=\"translate(3420 1331.87) rotate(-180)\"/><polygon class=\"cls-5\" points=\"660 871.02 1020 871.02 1020 431.55 660 636.64 660 871.02\"/></mask><linearGradient id=\"linear-gradient-5\" x1=\"11.23\" y1=\"1907.69\" x2=\"1908.77\" y2=\"10.15\" gradientUnits=\"userSpaceOnUse\"><stop offset=\"0.1\" stop-color=\"#a56eff\"/><stop offset=\"0.9\" stop-color=\"#0072c3\"/></linearGradient></defs><g class=\"cls-6\"><rect class=\"cls-7\" y=\"21.37\" width=\"1920\" height=\"1875.09\"/></g><ellipse class=\"cls-8\" cx=\"1800\" cy=\"958.92\" rx=\"120\" ry=\"117.19\"/><ellipse class=\"cls-8\" cx=\"120\" cy=\"958.92\" rx=\"120\" ry=\"117.19\"/><ellipse class=\"cls-8\" cx=\"960\" cy=\"958.92\" rx=\"120\" ry=\"117.19\"/></svg>",
+            "x-ibm-application-name": "Skill flows"
+        },
+        "paths": {
+            "/composite": {
+                "post": {
+                    "summary": "customer Onboard",
+                    "responses": {
+                        "200": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "Confirmation": {
+                                                "type": "string",
+                                                "title": "Confirmation",
+                                                "format": "Confirmation",
+                                                "x-ibm-label": "Confirmation"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Successfully executed custom action"
+                        }
+                    },
+                    "description": "",
+                    "operationId": "aa63bb2d9ca84a9f8952eb4857f7d210",
+                    "requestBody": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "Email": {
+                                            "type": "string",
+                                            "title": "Email",
+                                            "format": "",
+                                            "x-ibm-label": "Email"
+                                        },
+                                        "Address": {
+                                            "type": "string",
+                                            "title": "Address",
+                                            "format": "",
+                                            "x-ibm-label": "Address"
+                                        },
+                                        "Last name": {
+                                            "type": "string",
+                                            "title": "Last name",
+                                            "format": "",
+                                            "x-ibm-label": "Last name"
+                                        },
+                                        "First name": {
+                                            "type": "string",
+                                            "title": "First name",
+                                            "format": "",
+                                            "x-ibm-label": "First name"
+                                        },
+                                        "Phone number": {
+                                            "type": "string",
+                                            "title": "Phone number",
+                                            "format": "",
+                                            "x-ibm-label": "Phone number"
+                                        },
+                                        "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail": {
+                                            "type": "boolean",
+                                            "title": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                            "format": "",
+                                            "x-ibm-label": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "x-ibm-components": {
+                        "componentUids": [
+                            "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                            "8c32eda3-cdad-496e-a983-35543d3b2005",
+                            "228e6966-0a24-4ab3-9ca2-b0fd485cc565",
+                            "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                            "5e6da333-74d7-49b1-ad72-bfd808f304b7"
+                        ],
+                        "auxiliarySkills": {
+                            "0f075cbb-a8f3-4f65-b162-ab19d97acfc2": {
+                                "ins": [
+                                    {
+                                        "in": "path",
+                                        "name": "First name",
+                                        "label": "First name",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "First name"
+                                        },
+                                        "required": false,
+                                        "description": "First name",
+                                        "x-ibm-label": "First name"
+                                    },
+                                    {
+                                        "in": "path",
+                                        "name": "Last name",
+                                        "label": "Last name",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Last name"
+                                        },
+                                        "required": false,
+                                        "description": "Last name",
+                                        "x-ibm-label": "Last name"
+                                    },
+                                    {
+                                        "in": "path",
+                                        "name": "Email",
+                                        "label": "Email",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Email"
+                                        },
+                                        "required": false,
+                                        "description": "Email",
+                                        "x-ibm-label": "Email"
+                                    },
+                                    {
+                                        "in": "path",
+                                        "name": "Phone number",
+                                        "label": "Phone number",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Phone number"
+                                        },
+                                        "required": false,
+                                        "description": "Phone number",
+                                        "x-ibm-label": "Phone number"
+                                    },
+                                    {
+                                        "in": "path",
+                                        "name": "Address",
+                                        "label": "Address",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Address"
+                                        },
+                                        "required": false,
+                                        "description": "Address",
+                                        "x-ibm-label": "Address"
+                                    },
+                                    {
+                                        "in": "path",
+                                        "name": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                        "label": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                        "schema": {
+                                            "type": "boolean",
+                                            "format": "",
+                                            "x-ibm-label": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail"
+                                        },
+                                        "required": false,
+                                        "description": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                        "x-ibm-label": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail"
+                                    }
+                                ],
+                                "outs": [
+                                    {
+                                        "name": "First name",
+                                        "label": "First name",
+                                        "title": "First name",
+                                        "format": "",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "First name"
+                                        },
+                                        "description": "First name",
+                                        "x-ibm-label": "First name"
+                                    },
+                                    {
+                                        "name": "Last name",
+                                        "label": "Last name",
+                                        "title": "Last name",
+                                        "format": "",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Last name"
+                                        },
+                                        "description": "Last name",
+                                        "x-ibm-label": "Last name"
+                                    },
+                                    {
+                                        "name": "Email",
+                                        "label": "Email",
+                                        "title": "Email",
+                                        "format": "",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Email"
+                                        },
+                                        "description": "Email",
+                                        "x-ibm-label": "Email"
+                                    },
+                                    {
+                                        "name": "Phone number",
+                                        "label": "Phone number",
+                                        "title": "Phone number",
+                                        "format": "",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Phone number"
+                                        },
+                                        "description": "Phone number",
+                                        "x-ibm-label": "Phone number"
+                                    },
+                                    {
+                                        "name": "Address",
+                                        "label": "Address",
+                                        "title": "Address",
+                                        "format": "",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Address"
+                                        },
+                                        "description": "Address",
+                                        "x-ibm-label": "Address"
+                                    },
+                                    {
+                                        "name": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                        "label": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                        "title": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                        "format": "",
+                                        "schema": {
+                                            "type": "boolean",
+                                            "format": "",
+                                            "x-ibm-label": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail"
+                                        },
+                                        "description": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail",
+                                        "x-ibm-label": "I accept the Terms and Conditions of the Bank and understand that I will be receiving the advice through E-mail"
+                                    }
+                                ],
+                                "type": "input_form"
+                            },
+                            "5e6da333-74d7-49b1-ad72-bfd808f304b7": {
+                                "ins": [
+                                    {
+                                        "in": "path",
+                                        "name": "Confirmation",
+                                        "label": "Confirmation",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "Confirmation",
+                                            "x-ibm-label": "Confirmation"
+                                        },
+                                        "required": false,
+                                        "description": "Confirmation",
+                                        "x-ibm-label": "Confirmation"
+                                    }
+                                ],
+                                "outs": [
+                                    {
+                                        "name": "Confirmation",
+                                        "label": "Confirmation",
+                                        "title": "Confirmation",
+                                        "format": "Confirmation",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "Confirmation",
+                                            "x-ibm-label": "Confirmation"
+                                        },
+                                        "description": "Confirmation",
+                                        "x-ibm-label": "Confirmation"
+                                    }
+                                ],
+                                "type": "output_form"
+                            },
+                            "6ab7a2df-017e-4514-8fab-c2caf94767e8": {
+                                "ins": [
+                                    {
+                                        "in": "path",
+                                        "name": "Confirmation",
+                                        "label": "Confirmation",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Confirmation"
+                                        },
+                                        "required": false,
+                                        "description": "Confirmation",
+                                        "x-ibm-label": "Confirmation"
+                                    }
+                                ],
+                                "outs": [
+                                    {
+                                        "name": "Confirmation",
+                                        "label": "Confirmation",
+                                        "title": "Confirmation",
+                                        "format": "",
+                                        "schema": {
+                                            "type": "string",
+                                            "format": "",
+                                            "x-ibm-label": "Confirmation"
+                                        },
+                                        "description": "Confirmation",
+                                        "x-ibm-label": "Confirmation"
+                                    }
+                                ],
+                                "type": "input_form"
+                            }
+                        },
+                        "componentSkills": [
+                            "digey_innate__1.0.0__data_form_input",
+                            "customerInfo__tipSnapshot__customerInfo",
+                            "Microsoft-Exchange-Messages__2.0.0__SENDOUTLOOK_Messages",
+                            "digey_innate__1.0.0__data_form_input",
+                            "digey_innate__1.0.0__data_form_output"
+                        ],
+                        "uidSkillMapping": {
+                            "0f075cbb-a8f3-4f65-b162-ab19d97acfc2": "digey_innate__1.0.0__data_form_input",
+                            "228e6966-0a24-4ab3-9ca2-b0fd485cc565": "Microsoft-Exchange-Messages__2.0.0__SENDOUTLOOK_Messages",
+                            "5e6da333-74d7-49b1-ad72-bfd808f304b7": "digey_innate__1.0.0__data_form_output",
+                            "6ab7a2df-017e-4514-8fab-c2caf94767e8": "digey_innate__1.0.0__data_form_input",
+                            "8c32eda3-cdad-496e-a983-35543d3b2005": "customerInfo__tipSnapshot__customerInfo"
+                        }
+                    },
+                    "x-ibm-nl-intent-examples": [
+                        "customer Onboard"
+                    ],
+                    "x-ibm-parameter-configurations": {
+                        "mappings": [
+                            {
+                                "mapping": {
+                                    "sourceSkill": "digey_innate__1.0.0__data_form_input",
+                                    "targetSkill": "Microsoft-Exchange-Messages__2.0.0__SENDOUTLOOK_Messages",
+                                    "fieldMapping": [
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "First name",
+                                            "sourceSkill": "First name",
+                                            "targetSkill": "___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___First name",
+                                            "field_mapping_id": "f9b6e1c4-6b89-43ad-84b1-9973346bf4ea"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "First name",
+                                            "sourceSkill": "First name",
+                                            "targetSkill": "___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___First name",
+                                            "field_mapping_id": "74aabf6e-2e5c-4baf-9cb9-ca098508a2de"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Last name",
+                                            "sourceSkill": "Last name",
+                                            "targetSkill": "___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___Last name",
+                                            "field_mapping_id": "74aabf6e-2e5c-4baf-9cb9-ca098508a2de"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Email",
+                                            "sourceSkill": "Email",
+                                            "targetSkill": "toRecipientsRequested",
+                                            "field_mapping_id": "443763ee-44ec-486a-befc-13a36df924a0"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "First name",
+                                            "sourceSkill": "First name",
+                                            "targetSkill": "___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___First name",
+                                            "field_mapping_id": "74aabf6e-2e5c-4baf-9cb9-ca098508a2de"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Last name",
+                                            "sourceSkill": "Last name",
+                                            "targetSkill": "___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___Last name",
+                                            "field_mapping_id": "74aabf6e-2e5c-4baf-9cb9-ca098508a2de"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "First name",
+                                            "sourceSkill": "First name",
+                                            "targetSkill": "___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___First name",
+                                            "field_mapping_id": "74aabf6e-2e5c-4baf-9cb9-ca098508a2de"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Last name",
+                                            "sourceSkill": "Last name",
+                                            "targetSkill": "___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___Last name",
+                                            "field_mapping_id": "74aabf6e-2e5c-4baf-9cb9-ca098508a2de"
+                                        }
+                                    ]
+                                },
+                                "sourceSkillId": "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                "targetSkillId": "228e6966-0a24-4ab3-9ca2-b0fd485cc565"
+                            },
+                            {
+                                "mapping": {
+                                    "sourceSkill": "___literal___",
+                                    "targetSkill": "Microsoft-Exchange-Messages__2.0.0__SENDOUTLOOK_Messages",
+                                    "fieldMapping": [
+                                        {
+                                            "option": "singleLine",
+                                            "sourceSkill": "<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Welcome to Wealth Bank</title>\n</head>\n<body style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #333;\">\n\\r\\n   <p>Dear <strong>{$.___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___First name} {$.___0f075cbb_a8f3_4f65_b162_ab19d97acfc2___Last name} </strong>,</p>\\r\\n<p>Welcome to <strong>Wealth Bank</strong>!</p>\n\n    <p>We are thrilled to have you on board! As your dedicated wealth manager, I am committed to helping you achieve your financial goals and build a brighter financial future.</p>\n\n    <p>To get started, I would like to take a moment to review your investment objectives and risk tolerance. This will help me tailor a personalized investment strategy that aligns with your unique needs and circumstances.</p>\n\n    <p>In the coming days, I will be in touch with you to discuss the following:</p>\n\n    <ul>\n        <li>Your investment goals and risk tolerance</li>\n        <li>Your current financial situation and assets</li>\n        <li>Your investment preferences and expectations</li>\n        <li>A customized investment plan tailored to your needs</li>\n    </ul>\n\n    <p>Thank you for choosing <strong>Wealth Bank</strong>, and I look forward to working with you to achieve your financial goals!</p>\n\n    <p>Best regards,</p>\n    <p><strong>Alex</strong><br>Wealth Manager, Wealth Bank</p>\n\n</body>\n</html>\n\\r\\n\\r\\n",
+                                            "targetSkill": "body.properties.content",
+                                            "field_mapping_id": "74aabf6e-2e5c-4baf-9cb9-ca098508a2de"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "sourceSkill": "HTML",
+                                            "targetSkill": "body.properties.contentType",
+                                            "field_mapping_id": "edcea2fb-8f81-4495-885e-4a169a5725d4"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "sourceSkill": "Welcome to Wealth Bank !",
+                                            "targetSkill": "subject",
+                                            "field_mapping_id": "0a314325-7e8c-47f6-9d8e-7ee2d8e4dc14"
+                                        }
+                                    ]
+                                },
+                                "sourceSkillId": "___literal___",
+                                "targetSkillId": "228e6966-0a24-4ab3-9ca2-b0fd485cc565"
+                            },
+                            {
+                                "mapping": {
+                                    "sourceSkill": "___literal___",
+                                    "targetSkill": "digey_innate__1.0.0__data_form_input",
+                                    "fieldMapping": [
+                                        {
+                                            "option": "singleLine",
+                                            "sourceSkill": "Your on-boarding process has initiated. Please check your registered email for more details.",
+                                            "targetSkill": "Confirmation",
+                                            "field_mapping_id": "2c18b88c-8f2c-4f5f-b2ff-955b6df952b7"
+                                        }
+                                    ]
+                                },
+                                "sourceSkillId": "___literal___",
+                                "targetSkillId": "6ab7a2df-017e-4514-8fab-c2caf94767e8"
+                            },
+                            {
+                                "mapping": {
+                                    "sourceSkill": "digey_innate__1.0.0__data_form_input",
+                                    "targetSkill": "digey_innate__1.0.0__data_form_output",
+                                    "fieldMapping": [
+                                        {
+                                            "option": "singleLine",
+                                            "sourceSkill": "Confirmation",
+                                            "targetSkill": "Confirmation",
+                                            "field_mapping_id": "75491067-3353-4d26-a2e1-6057fcd4e99b"
+                                        }
+                                    ]
+                                },
+                                "sourceSkillId": "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                                "targetSkillId": "5e6da333-74d7-49b1-ad72-bfd808f304b7"
+                            },
+                            {
+                                "mapping": {
+                                    "sourceSkill": "digey_innate__1.0.0__data_form_input",
+                                    "targetSkill": "customerInfo__tipSnapshot__customerInfo",
+                                    "fieldMapping": [
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Email",
+                                            "sourceSkill": "Email",
+                                            "targetSkill": "customeDetails.properties.email",
+                                            "field_mapping_id": "f448e550-cf00-4cd9-bb4c-46c167b66827"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Address",
+                                            "sourceSkill": "Address",
+                                            "targetSkill": "customeDetails.properties.address",
+                                            "field_mapping_id": "d530c1c8-2e5c-4c1e-8a5c-9089ba51bbfd"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Last name",
+                                            "sourceSkill": "Last name",
+                                            "targetSkill": "customeDetails.properties.lastName",
+                                            "field_mapping_id": "2f8eb2b7-ebde-4332-b155-a1c163284a1b"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "First name",
+                                            "sourceSkill": "First name",
+                                            "targetSkill": "customeDetails.properties.firstName",
+                                            "field_mapping_id": "ebb470b9-8e17-41c5-807b-7ef553359227"
+                                        },
+                                        {
+                                            "option": "singleLine",
+                                            "displayName": "Phone number",
+                                            "sourceSkill": "Phone number",
+                                            "targetSkill": "customeDetails.properties.mobileNumber",
+                                            "field_mapping_id": "565bf223-fdba-4855-abcd-3a9c21d383cd"
+                                        }
+                                    ]
+                                },
+                                "sourceSkillId": "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                "targetSkillId": "8c32eda3-cdad-496e-a983-35543d3b2005"
+                            }
+                        ],
+                        "flowMappings": [
+                            {
+                                "sourceSkillUid": "",
+                                "targetSkillUid": "0f075cbb-a8f3-4f65-b162-ab19d97acfc2"
+                            },
+                            {
+                                "sourceSkillUid": "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                "targetSkillUid": "8c32eda3-cdad-496e-a983-35543d3b2005"
+                            },
+                            {
+                                "sourceSkillUid": "8c32eda3-cdad-496e-a983-35543d3b2005",
+                                "targetSkillUid": "228e6966-0a24-4ab3-9ca2-b0fd485cc565"
+                            },
+                            {
+                                "sourceSkillUid": "228e6966-0a24-4ab3-9ca2-b0fd485cc565",
+                                "targetSkillUid": "6ab7a2df-017e-4514-8fab-c2caf94767e8"
+                            },
+                            {
+                                "sourceSkillUid": "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                                "targetSkillUid": "5e6da333-74d7-49b1-ad72-bfd808f304b7"
+                            },
+                            {
+                                "sourceSkillUid": "5e6da333-74d7-49b1-ad72-bfd808f304b7",
+                                "targetSkillUid": ""
+                            }
+                        ],
+                        "branchConfigs": [],
+                        "filterMapping": [],
+                        "componentConfig": {
+                            "0f075cbb-a8f3-4f65-b162-ab19d97acfc2": {
+                                "hideInput": false,
+                                "hideOutput": true
+                            },
+                            "228e6966-0a24-4ab3-9ca2-b0fd485cc565": {
+                                "hideInput": true,
+                                "loopSkill": false,
+                                "hideOutput": true,
+                                "continueOnError": true
+                            },
+                            "5e6da333-74d7-49b1-ad72-bfd808f304b7": {
+                                "hideInput": true,
+                                "hideOutput": false
+                            },
+                            "6ab7a2df-017e-4514-8fab-c2caf94767e8": {
+                                "hideInput": true,
+                                "hideOutput": true
+                            },
+                            "8c32eda3-cdad-496e-a983-35543d3b2005": {
+                                "hideInput": true,
+                                "loopSkill": false,
+                                "hideOutput": true,
+                                "continueOnError": true
+                            },
+                            "aa92ddb0-789f-42c1-bd85-eed3e5a021e1": {
+                                "hideInput": true,
+                                "loopSkill": false,
+                                "hideOutput": true,
+                                "continueOnError": true
+                            }
+                        },
+                        "transformations": {}
+                    }
+                }
+            }
+        },
+        "openapi": "3.0.0"
+    },
+    "__meta": {
+        "flow": {
+            "definitions": {
+                "id": "154b6f21-5bc2-4f97-bb56-ea7e04344c96",
+                "rootElement": [
+                    {
+                        "id": "1866c87a-a2d2-48a2-a131-b945a5ddf2e1",
+                        "name": "flow1",
+                        "laneSet": [
+                            {
+                                "id": "fee60a46-854b-434f-a90e-eea8ba1ed739",
+                                "lane": [
+                                    {
+                                        "id": "5de6dce3-4880-42ed-b7a2-2ba7cb2a58b9",
+                                        "name": "All Users",
+                                        "flowNodeRef": [
+                                            "07a8e41b-71e8-4a87-aea0-96fd7c25845f",
+                                            "a6be9b05-307a-425e-8475-1c912b52dd55",
+                                            "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                            "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                                            "5e6da333-74d7-49b1-ad72-bfd808f304b7",
+                                            "aa92ddb0-789f-42c1-bd85-eed3e5a021e1",
+                                            "228e6966-0a24-4ab3-9ca2-b0fd485cc565",
+                                            "8c32eda3-cdad-496e-a983-35543d3b2005"
+                                        ],
+                                        "declaredType": "lane",
+                                        "otherAttributes": {
+                                            "{http://www.ibm.com/xmlns/prod/bpm/bpmn/ext/process/wle}isSystemLane": "false"
+                                        },
+                                        "extensionElements": {
+                                            "nodeVisualInfo": [
+                                                {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "color": "#F8F8F8",
+                                                    "width": 3000,
+                                                    "height": 175,
+                                                    "declaredType": "TNodeVisualInfo"
+                                                }
+                                            ]
+                                        },
+                                        "partitionElementRef": "24.da7e4d23-78cb-4483-98ed-b9c238308a03"
+                                    },
+                                    {
+                                        "id": "b2f2e62f-657a-4152-92cb-7c0d6c90503b",
+                                        "name": "System",
+                                        "declaredType": "lane",
+                                        "otherAttributes": {
+                                            "{http://www.ibm.com/xmlns/prod/bpm/bpmn/ext/process/wle}isSystemLane": "true"
+                                        },
+                                        "extensionElements": {
+                                            "nodeVisualInfo": [
+                                                {
+                                                    "x": 0,
+                                                    "y": 175,
+                                                    "color": "#F8F8F8",
+                                                    "width": 3000,
+                                                    "height": 200,
+                                                    "declaredType": "TNodeVisualInfo"
+                                                }
+                                            ]
+                                        },
+                                        "partitionElementRef": "24.6fd38d02-81cf-48ab-bd42-8ff4c0a1628b"
+                                    }
+                                ],
+                                "flowNodeRef": [
+                                    "07a8e41b-71e8-4a87-aea0-96fd7c25845f",
+                                    "a6be9b05-307a-425e-8475-1c912b52dd55",
+                                    "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                    "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                                    "5e6da333-74d7-49b1-ad72-bfd808f304b7",
+                                    "228e6966-0a24-4ab3-9ca2-b0fd485cc565",
+                                    "8c32eda3-cdad-496e-a983-35543d3b2005"
+                                ]
+                            }
+                        ],
+                        "isClosed": false,
+                        "flowElement": [
+                            {
+                                "id": "07a8e41b-71e8-4a87-aea0-96fd7c25845f",
+                                "name": "Launch",
+                                "outgoing": [
+                                    "75c6cb70-dfab-4002-9f65-8a4e176e67db"
+                                ],
+                                "declaredType": "startEvent",
+                                "isInterrupting": true,
+                                "parallelMultiple": false,
+                                "extensionElements": {
+                                    "default": [
+                                        "75c6cb70-dfab-4002-9f65-8a4e176e67db"
+                                    ],
+                                    "nodeVisualInfo": [
+                                        {
+                                            "x": 25,
+                                            "y": 80,
+                                            "color": "#F8F8F8",
+                                            "width": 24,
+                                            "height": 24,
+                                            "declaredType": "TNodeVisualInfo"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "a6be9b05-307a-425e-8475-1c912b52dd55",
+                                "name": "End",
+                                "incoming": [
+                                    "bf484104-f29a-464b-b7d7-609f315c7843"
+                                ],
+                                "declaredType": "endEvent",
+                                "extensionElements": {
+                                    "nodeVisualInfo": [
+                                        {
+                                            "x": 189,
+                                            "y": 80,
+                                            "color": "#F8F8F8",
+                                            "width": 24,
+                                            "height": 24,
+                                            "declaredType": "TNodeVisualInfo"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "75c6cb70-dfab-4002-9f65-8a4e176e67db",
+                                "name": "To End",
+                                "sourceRef": "07a8e41b-71e8-4a87-aea0-96fd7c25845f",
+                                "targetRef": "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                "declaredType": "sequenceFlow",
+                                "extensionElements": {
+                                    "happySequence": [
+                                        true
+                                    ],
+                                    "linkVisualInfo": [
+                                        {
+                                            "showLabel": false,
+                                            "declaredType": "TLinkVisualInfo",
+                                            "labelPosition": 0,
+                                            "sourcePortLocation": "rightCenter",
+                                            "targetPortLocation": "leftCenter",
+                                            "saveExecutionContext": false,
+                                            "showCoachControlLabel": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "a72868a0-607f-43bf-bc9e-c3b99d57f8e2",
+                                "name": "To node",
+                                "sourceRef": "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                "targetRef": "8c32eda3-cdad-496e-a983-35543d3b2005",
+                                "declaredType": "sequenceFlow",
+                                "extensionElements": {
+                                    "happySequence": [
+                                        true
+                                    ],
+                                    "linkVisualInfo": [
+                                        {
+                                            "showLabel": false,
+                                            "declaredType": "TLinkVisualInfo",
+                                            "labelPosition": 0,
+                                            "sourcePortLocation": "rightCenter",
+                                            "targetPortLocation": "leftCenter",
+                                            "saveExecutionContext": false,
+                                            "showCoachControlLabel": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "0f075cbb-a8f3-4f65-b162-ab19d97acfc2",
+                                "name": "digey_innate__1.0.0__data_form_input",
+                                "default": "a72868a0-607f-43bf-bc9e-c3b99d57f8e2",
+                                "incoming": [
+                                    "75c6cb70-dfab-4002-9f65-8a4e176e67db"
+                                ],
+                                "outgoing": [
+                                    "a72868a0-607f-43bf-bc9e-c3b99d57f8e2"
+                                ],
+                                "declaredType": "callActivity",
+                                "resourceRole": [
+                                    {
+                                        "name": "Lane",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Team",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Expert",
+                                        "declaredType": "performer"
+                                    }
+                                ],
+                                "startQuantity": 1,
+                                "extensionElements": {
+                                    "activityType": [
+                                        "ServiceTask"
+                                    ],
+                                    "nodeVisualInfo": [
+                                        {
+                                            "x": 555,
+                                            "y": 75,
+                                            "width": 95,
+                                            "height": 70,
+                                            "declaredType": "TNodeVisualInfo"
+                                        }
+                                    ],
+                                    "userTaskSettings": [
+                                        {
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TUserTaskSettings",
+                                            "activityDueDate": {
+                                                "type": "TimeCalculation",
+                                                "dueDate": {
+                                                    "unit": "Hours",
+                                                    "value": "1",
+                                                    "timeOfDay": "00:00"
+                                                },
+                                                "timeZone": {
+                                                    "type": "TimeZone",
+                                                    "value": "(use default)"
+                                                }
+                                            },
+                                            "activityPriority": {
+                                                "type": "Priority",
+                                                "priority": "Normal"
+                                            },
+                                            "activityWorkSchedule": {
+                                                "timezoneType": 0,
+                                                "timeScheduleType": 0,
+                                                "holidayScheduleType": 0
+                                            },
+                                            "activityAssignmentType": "Lane"
+                                        }
+                                    ],
+                                    "activityExtension": [
+                                        {
+                                            "conditional": false,
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityExtension",
+                                            "conditionScript": "",
+                                            "transactionalBehavior": "NotSet"
+                                        }
+                                    ],
+                                    "deleteTaskOnCompletion": [
+                                        true
+                                    ]
+                                },
+                                "isForCompensation": false,
+                                "completionQuantity": 1
+                            },
+                            {
+                                "id": "dcaad1da-0d14-4cdc-991f-6b6c2a6cf80b",
+                                "name": "To node",
+                                "sourceRef": "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                                "targetRef": "5e6da333-74d7-49b1-ad72-bfd808f304b7",
+                                "declaredType": "sequenceFlow",
+                                "extensionElements": {
+                                    "happySequence": [
+                                        true
+                                    ],
+                                    "linkVisualInfo": [
+                                        {
+                                            "showLabel": false,
+                                            "declaredType": "TLinkVisualInfo",
+                                            "labelPosition": 0,
+                                            "sourcePortLocation": "rightCenter",
+                                            "targetPortLocation": "leftCenter",
+                                            "saveExecutionContext": false,
+                                            "showCoachControlLabel": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                                "name": "digey_innate__1.0.0__data_form_input",
+                                "default": "dcaad1da-0d14-4cdc-991f-6b6c2a6cf80b",
+                                "incoming": [
+                                    "5e0942e2-24d9-477f-a89e-8584b1b9b2a8"
+                                ],
+                                "outgoing": [
+                                    "dcaad1da-0d14-4cdc-991f-6b6c2a6cf80b"
+                                ],
+                                "declaredType": "callActivity",
+                                "resourceRole": [
+                                    {
+                                        "name": "Lane",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Team",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Expert",
+                                        "declaredType": "performer"
+                                    }
+                                ],
+                                "startQuantity": 1,
+                                "extensionElements": {
+                                    "activityType": [
+                                        "ServiceTask"
+                                    ],
+                                    "nodeVisualInfo": [
+                                        {
+                                            "x": 555,
+                                            "y": 75,
+                                            "width": 95,
+                                            "height": 70,
+                                            "declaredType": "TNodeVisualInfo"
+                                        }
+                                    ],
+                                    "userTaskSettings": [
+                                        {
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TUserTaskSettings",
+                                            "activityDueDate": {
+                                                "type": "TimeCalculation",
+                                                "dueDate": {
+                                                    "unit": "Hours",
+                                                    "value": "1",
+                                                    "timeOfDay": "00:00"
+                                                },
+                                                "timeZone": {
+                                                    "type": "TimeZone",
+                                                    "value": "(use default)"
+                                                }
+                                            },
+                                            "activityPriority": {
+                                                "type": "Priority",
+                                                "priority": "Normal"
+                                            },
+                                            "activityWorkSchedule": {
+                                                "timezoneType": 0,
+                                                "timeScheduleType": 0,
+                                                "holidayScheduleType": 0
+                                            },
+                                            "activityAssignmentType": "Lane"
+                                        }
+                                    ],
+                                    "activityExtension": [
+                                        {
+                                            "conditional": false,
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityExtension",
+                                            "conditionScript": "",
+                                            "transactionalBehavior": "NotSet"
+                                        }
+                                    ],
+                                    "deleteTaskOnCompletion": [
+                                        true
+                                    ]
+                                },
+                                "isForCompensation": false,
+                                "completionQuantity": 1
+                            },
+                            {
+                                "id": "bf484104-f29a-464b-b7d7-609f315c7843",
+                                "name": "To node",
+                                "sourceRef": "5e6da333-74d7-49b1-ad72-bfd808f304b7",
+                                "targetRef": "a6be9b05-307a-425e-8475-1c912b52dd55",
+                                "declaredType": "sequenceFlow",
+                                "extensionElements": {
+                                    "happySequence": [
+                                        true
+                                    ],
+                                    "linkVisualInfo": [
+                                        {
+                                            "showLabel": false,
+                                            "declaredType": "TLinkVisualInfo",
+                                            "labelPosition": 0,
+                                            "sourcePortLocation": "rightCenter",
+                                            "targetPortLocation": "leftCenter",
+                                            "saveExecutionContext": false,
+                                            "showCoachControlLabel": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "5e6da333-74d7-49b1-ad72-bfd808f304b7",
+                                "name": "digey_innate__1.0.0__data_form_output",
+                                "default": "bf484104-f29a-464b-b7d7-609f315c7843",
+                                "incoming": [
+                                    "dcaad1da-0d14-4cdc-991f-6b6c2a6cf80b"
+                                ],
+                                "outgoing": [
+                                    "bf484104-f29a-464b-b7d7-609f315c7843"
+                                ],
+                                "declaredType": "callActivity",
+                                "resourceRole": [
+                                    {
+                                        "name": "Lane",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Team",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Expert",
+                                        "declaredType": "performer"
+                                    }
+                                ],
+                                "startQuantity": 1,
+                                "extensionElements": {
+                                    "activityType": [
+                                        "ServiceTask"
+                                    ],
+                                    "nodeVisualInfo": [
+                                        {
+                                            "x": 555,
+                                            "y": 75,
+                                            "width": 95,
+                                            "height": 70,
+                                            "declaredType": "TNodeVisualInfo"
+                                        }
+                                    ],
+                                    "userTaskSettings": [
+                                        {
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TUserTaskSettings",
+                                            "activityDueDate": {
+                                                "type": "TimeCalculation",
+                                                "dueDate": {
+                                                    "unit": "Hours",
+                                                    "value": "1",
+                                                    "timeOfDay": "00:00"
+                                                },
+                                                "timeZone": {
+                                                    "type": "TimeZone",
+                                                    "value": "(use default)"
+                                                }
+                                            },
+                                            "activityPriority": {
+                                                "type": "Priority",
+                                                "priority": "Normal"
+                                            },
+                                            "activityWorkSchedule": {
+                                                "timezoneType": 0,
+                                                "timeScheduleType": 0,
+                                                "holidayScheduleType": 0
+                                            },
+                                            "activityAssignmentType": "Lane"
+                                        }
+                                    ],
+                                    "activityExtension": [
+                                        {
+                                            "conditional": false,
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityExtension",
+                                            "conditionScript": "",
+                                            "transactionalBehavior": "NotSet"
+                                        }
+                                    ],
+                                    "deleteTaskOnCompletion": [
+                                        true
+                                    ]
+                                },
+                                "isForCompensation": false,
+                                "completionQuantity": 1
+                            },
+                            {
+                                "id": "5e0942e2-24d9-477f-a89e-8584b1b9b2a8",
+                                "name": "To node",
+                                "sourceRef": "228e6966-0a24-4ab3-9ca2-b0fd485cc565",
+                                "targetRef": "6ab7a2df-017e-4514-8fab-c2caf94767e8",
+                                "declaredType": "sequenceFlow",
+                                "extensionElements": {
+                                    "happySequence": [
+                                        true
+                                    ],
+                                    "linkVisualInfo": [
+                                        {
+                                            "showLabel": false,
+                                            "declaredType": "TLinkVisualInfo",
+                                            "labelPosition": 0,
+                                            "sourcePortLocation": "rightCenter",
+                                            "targetPortLocation": "leftCenter",
+                                            "saveExecutionContext": false,
+                                            "showCoachControlLabel": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "228e6966-0a24-4ab3-9ca2-b0fd485cc565",
+                                "name": "Microsoft-Exchange-Messages__2.0.0__SENDOUTLOOK_Messages",
+                                "default": "5e0942e2-24d9-477f-a89e-8584b1b9b2a8",
+                                "incoming": [
+                                    "acf3abea-fe95-4f00-8bca-9b1ad48f86a7"
+                                ],
+                                "outgoing": [
+                                    "5e0942e2-24d9-477f-a89e-8584b1b9b2a8"
+                                ],
+                                "declaredType": "callActivity",
+                                "resourceRole": [
+                                    {
+                                        "name": "Lane",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Team",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Expert",
+                                        "declaredType": "performer"
+                                    }
+                                ],
+                                "startQuantity": 1,
+                                "extensionElements": {
+                                    "activityType": [
+                                        "ServiceTask"
+                                    ],
+                                    "nodeVisualInfo": [
+                                        {
+                                            "x": 555,
+                                            "y": 75,
+                                            "width": 95,
+                                            "height": 70,
+                                            "declaredType": "TNodeVisualInfo"
+                                        }
+                                    ],
+                                    "userTaskSettings": [
+                                        {
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TUserTaskSettings",
+                                            "activityDueDate": {
+                                                "type": "TimeCalculation",
+                                                "dueDate": {
+                                                    "unit": "Hours",
+                                                    "value": "1",
+                                                    "timeOfDay": "00:00"
+                                                },
+                                                "timeZone": {
+                                                    "type": "TimeZone",
+                                                    "value": "(use default)"
+                                                }
+                                            },
+                                            "activityPriority": {
+                                                "type": "Priority",
+                                                "priority": "Normal"
+                                            },
+                                            "activityWorkSchedule": {
+                                                "timezoneType": 0,
+                                                "timeScheduleType": 0,
+                                                "holidayScheduleType": 0
+                                            },
+                                            "activityAssignmentType": "Lane"
+                                        }
+                                    ],
+                                    "activityExtension": [
+                                        {
+                                            "conditional": false,
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityExtension",
+                                            "conditionScript": "",
+                                            "transactionalBehavior": "NotSet"
+                                        }
+                                    ],
+                                    "deleteTaskOnCompletion": [
+                                        true
+                                    ]
+                                },
+                                "isForCompensation": false,
+                                "completionQuantity": 1
+                            },
+                            {
+                                "id": "acf3abea-fe95-4f00-8bca-9b1ad48f86a7",
+                                "name": "To node",
+                                "sourceRef": "8c32eda3-cdad-496e-a983-35543d3b2005",
+                                "targetRef": "228e6966-0a24-4ab3-9ca2-b0fd485cc565",
+                                "declaredType": "sequenceFlow",
+                                "extensionElements": {
+                                    "happySequence": [
+                                        true
+                                    ],
+                                    "linkVisualInfo": [
+                                        {
+                                            "showLabel": false,
+                                            "declaredType": "TLinkVisualInfo",
+                                            "labelPosition": 0,
+                                            "sourcePortLocation": "rightCenter",
+                                            "targetPortLocation": "leftCenter",
+                                            "saveExecutionContext": false,
+                                            "showCoachControlLabel": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "8c32eda3-cdad-496e-a983-35543d3b2005",
+                                "name": "customerInfo__tipSnapshot__customerInfo",
+                                "default": "acf3abea-fe95-4f00-8bca-9b1ad48f86a7",
+                                "incoming": [
+                                    "a72868a0-607f-43bf-bc9e-c3b99d57f8e2"
+                                ],
+                                "outgoing": [
+                                    "acf3abea-fe95-4f00-8bca-9b1ad48f86a7"
+                                ],
+                                "declaredType": "callActivity",
+                                "resourceRole": [
+                                    {
+                                        "name": "Lane",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Team",
+                                        "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityPerformer",
+                                        "distribution": "None",
+                                        "teamFilterService": {},
+                                        "teamAssignmentType": "Reference"
+                                    },
+                                    {
+                                        "name": "Expert",
+                                        "declaredType": "performer"
+                                    }
+                                ],
+                                "startQuantity": 1,
+                                "extensionElements": {
+                                    "activityType": [
+                                        "ServiceTask"
+                                    ],
+                                    "nodeVisualInfo": [
+                                        {
+                                            "x": 555,
+                                            "y": 75,
+                                            "width": 95,
+                                            "height": 70,
+                                            "declaredType": "TNodeVisualInfo"
+                                        }
+                                    ],
+                                    "userTaskSettings": [
+                                        {
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TUserTaskSettings",
+                                            "activityDueDate": {
+                                                "type": "TimeCalculation",
+                                                "dueDate": {
+                                                    "unit": "Hours",
+                                                    "value": "1",
+                                                    "timeOfDay": "00:00"
+                                                },
+                                                "timeZone": {
+                                                    "type": "TimeZone",
+                                                    "value": "(use default)"
+                                                }
+                                            },
+                                            "activityPriority": {
+                                                "type": "Priority",
+                                                "priority": "Normal"
+                                            },
+                                            "activityWorkSchedule": {
+                                                "timezoneType": 0,
+                                                "timeScheduleType": 0,
+                                                "holidayScheduleType": 0
+                                            },
+                                            "activityAssignmentType": "Lane"
+                                        }
+                                    ],
+                                    "activityExtension": [
+                                        {
+                                            "conditional": false,
+                                            "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TActivityExtension",
+                                            "conditionScript": "",
+                                            "transactionalBehavior": "NotSet"
+                                        }
+                                    ],
+                                    "deleteTaskOnCompletion": [
+                                        true
+                                    ]
+                                },
+                                "isForCompensation": false,
+                                "completionQuantity": 1
+                            }
+                        ],
+                        "processType": "None",
+                        "declaredType": "process",
+                        "resourceRole": [
+                            {
+                                "name": "participantRef",
+                                "resourceRef": "24.da7e4d23-78cb-4483-98ed-b9c238308a03",
+                                "declaredType": "resourceRole"
+                            },
+                            {
+                                "name": "businessDataParticipantRef",
+                                "declaredType": "resourceRole"
+                            },
+                            {
+                                "name": "perfMetricParticipantRef",
+                                "declaredType": "resourceRole"
+                            },
+                            {
+                                "name": "ownerTeamParticipantRef",
+                                "declaredType": "resourceRole"
+                            }
+                        ],
+                        "documentation": [
+                            {
+                                "content": [
+                                    "flowDescription"
+                                ],
+                                "textFormat": "text/plain"
+                            }
+                        ],
+                        "ioSpecification": {
+                            "inputSet": [
+                                {
+                                    "id": "_1d32fca4-687b-4e8b-bace-f096e591dd37"
+                                }
+                            ],
+                            "outputSet": [
+                                {
+                                    "id": "_78b7bb29-ecfc-4b4b-8972-45a420f02216"
+                                }
+                            ]
+                        },
+                        "otherAttributes": {
+                            "{http://www.ibm.com/xmlns/prod/bpm/bpmn/ext/process}executionMode": "longRunning"
+                        },
+                        "extensionElements": {
+                            "bpdExtension": [
+                                {
+                                    "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmwleext.TBPDExtension",
+                                    "instanceName": "\"flow:\" + tw.system.process.instanceId",
+                                    "workSchedule": {
+                                        "timezoneType": 0,
+                                        "timeScheduleType": 0,
+                                        "holidayScheduleType": 0
+                                    },
+                                    "dueDateEnabled": false,
+                                    "enableTracking": true,
+                                    "sboSyncEnabled": true,
+                                    "dueDateSettings": {
+                                        "type": "TimeCalculation",
+                                        "dueDate": {
+                                            "unit": "Hours",
+                                            "value": "8",
+                                            "timeOfDay": "00:00"
+                                        }
+                                    },
+                                    "autoTrackingName": "at1675198607405",
+                                    "atRiskCalcEnabled": true,
+                                    "autoTrackingEnabled": false,
+                                    "allowContentOperations": false,
+                                    "optimizeExecForLatency": false,
+                                    "allowProjectedPathManagement": false
+                                }
+                            ],
+                            "caseExtension": [
+                                {
+                                    "caseFolder": {
+                                        "id": "1bb78fc6-3e1a-498a-bc36-427c42a346ed",
+                                        "allowLocalDoc": false,
+                                        "allowExternalDoc": false,
+                                        "allowExternalFolder": false,
+                                        "allowSubfoldersCreation": false
+                                    },
+                                    "declaredType": "com.ibm.bpmsdk.model.bpmn20.ibmcaseext.TCaseExtension"
+                                }
+                            ],
+                            "isOrchestration": [
+                                true
+                            ],
+                            "isConvergedProcess": [
+                                true
+                            ]
+                        }
+                    },
+                    {
+                        "id": "_d6248401-201b-4423-b674-56edf753cbfd",
+                        "name": "flowInterface",
+                        "declaredType": "interface"
+                    }
+                ],
+                "typeLanguage": "http://www.w3.org/2001/XMLSchema",
+                "targetNamespace": "",
+                "expressionLanguage": "http://www.ibm.com/xmlns/prod/bpm/expression-lang/javascript"
+            }
+        },
+        "components": [
+            {
+                "name": "customerInfo",
+                "id": "customerInfo__tipSnapshot__customerInfo",
+                "type": "imported",
+                "description": "customer info"
+            },
+            {
+                "name": "Send an email",
+                "id": "Microsoft-Exchange-Messages__2.0.0__SENDOUTLOOK_Messages",
+                "type": "primitive",
+                "description": "using Outlook"
+            }
+        ]
+    }
+}

@@ -1,4 +1,4 @@
-## Use case : Onboarding Agent 
+## Use case : Personalized Customer Experience and Wealth Planning with AI Agents 
 
 As organizations expand, one of the key operational activities is in managing the onboarding process efficiently and consistently. The complexity of coordinating multiple stakeholders, systems, and tasks often leads to delays, onboarding,miscommunication, and a fragmented new-orboard experience. With the introduction of Onboarding system and advanced reasoning models, enterprises now have the opportunity to implement a centralized onboarding solution.
 
@@ -10,7 +10,7 @@ Wealth Bank's digital onboarding process faced challenges in efficiently engagin
 - Disconnected experiences between query resolution and registration reduced user engagement.
 - Manual data entry and disjointed processes failed to capture conversation context, limiting personalization.
 
-The AI-powered Onboarding Agent now transforms this experience by handling all interactions in natural language, responding to user queries, maintaining context, and seamlessly registering users for personalized financial advice—directly within the chatbot interface.
+The AI-powered agent now transforms this experience by handling all interactions in natural language, responding to user queries, maintaining context, and seamlessly registering users for personalized financial advice—directly within the chatbot interface.
 
 
 ## Objective
@@ -33,7 +33,7 @@ By automating and personalizing the onboarding journey, Wealth Bank aims to incr
 - Real-time context retention for improved personalization and client satisfaction.
 - Faster onboarding process, leading to quicker access to advisory services.
 
-## Architecture 
+## Architecture To be Updated
 
 ![2](../imagesLab7/archImage.png)
 
@@ -283,6 +283,10 @@ Large Language Moddel : granite-3b-instruct model (recommended)
 
 ### Import the skills in Skill Catalog 
 
+### Pre-requisite
+
+Download the files [CustomerInfo](../files/customerInfo.json) and [Customer Onboard](../files/customerOnboard.json) to proceed with the steps below.
+
 1. Click on **Skill Studio** . Click on **Create** --> **Import API**
 
 ![1](../imagesLab7/skill1.png)
@@ -497,11 +501,13 @@ Use sample HTML file provided and add the script tag copied above to render the 
 
 ![28](../imagesLab7/labchat2.png)
 
-3. The AI assistant will ask if you want to register , click **Yes** . A form will pop up , fill the details and Click on **Apply**
+3. The AI assistant will ask if you want to register , click **Yes** . A form will pop up , fill the details and Click on **Apply** 
 
 ![28](../imagesLab7/labchat5.png)
 
 ![28](../imagesLab7/labchat6.png)
+
+Upon onboarding , user for the registered email would receive an email notification . For 
 
 ![28](../imagesLab7/labchat7.png)
 
