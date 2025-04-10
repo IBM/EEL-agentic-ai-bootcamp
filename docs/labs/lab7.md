@@ -46,52 +46,49 @@ It demonstrates how to implement the use case using watsonx.ai and watsonx Orche
 
 To create an AI Assistant in watsonx Orchestrate, you first need to access the platform and navigate to the AI Assistant Builder.
 
-1. Log in to [ IBM Cloud account](https://cloud.ibm.com/notifications?type=account)
+1. Log in to [ IBM Cloud account](https://cloud.ibm.com/notifications?type=account).
 
-![2](../imagesLab7/login1.png)
+    ![2](../imagesLab7/login1.png)
 
 2. Navigate to the [Resources](https://cloud.ibm.com/resources) Page.
 
-![2](../imagesLab7/login2.png)
+    ![2](../imagesLab7/login2.png)
 
 3. Click on **Launch watsonx orchestrate** , it will take you to the orchestrate interface .
 
-![2](../imagesLab7/login3.png)
-
+    ![2](../imagesLab7/login3.png)
 
 ### Create the Fund Management AI Assistant 
 
 1. Click on **Assistant Builder**
 
-![2](../imagesLab7/bot1.png)
+    ![2](../imagesLab7/bot1.png)
 
 2. Click on **New** to create a new AI Assistant
 
-![2](../imagesLab7/bot2.png)
+    ![2](../imagesLab7/bot2.png)
 
 3. Enter following details in the screen and click on **Create**
 - Assistant name : **Fund Management Bot**
 - Description : A chatbot to assist users with fund management queries and investment options.
 - Assistant language - Default (English(US))
-
-![2](../imagesLab7/bot3.png)
-
- A new Fund Management Bot assistant is created .
+A new Fund Management Bot assistant is created .
+    ![2](../imagesLab7/bot3.png)
 
 4. On the left panel click on **Actions** . Click **Create Action** to create the first action.
 
-![1](../imagesLab7/bot4.png)
+    ![1](../imagesLab7/bot4.png)
 
 5. Click on **AI-Guided** action . 
 
-![1](../imagesLab7/botAction1.png)
+    ![1](../imagesLab7/botAction1.png)
 
-Enter following details and click on Save to save the action :
-Phrase : **GenAI Chat Action**
+6. Enter following details and click on Save to save the action :
+    Phrase : **GenAI Chat Action**
 
-![1](../imagesLab7/botAction2.png)
+    ![1](../imagesLab7/botAction2.png)
 
-Large Language Model : granite-3b-instruct model (recommended)
+    Large Language Model : granite-3b-instruct model (recommended)
 
 !!! info "Add Knowledge"
     
@@ -278,10 +275,10 @@ Large Language Model : granite-3b-instruct model (recommended)
     Give detailed product information with key attributes and benefits highlighted.
 3. Ask for registration if more personalized offer needed or existing customer show the offers. 
 
-![7](../imagesLab7/7.png)
+    ![7](../imagesLab7/7.png)
 
 
-### Import the skills in Skill Catalog 
+## Import the skills in Skill Catalog 
 
 ### Pre-requisite
 
@@ -289,28 +286,23 @@ Download the files [CustomerInfo](../files/customerInfo.json) and [Customer Onbo
 
 1. Click on **Skill Studio** . Click on **Create** --> **Import API**
 
-![1](../imagesLab7/skill1.png)
+    ![1](../imagesLab7/skill1.png)
 
 2. Browse and import customerInfo.json ( provided as part of labs)
 
-![1](../imagesLab7/skill2.png)
+    ![1](../imagesLab7/skill2.png)
 
 3. Enhance and Publish the skill .
-
-![1](../imagesLab7/skill3.png)
  
 4. Go to Skill Catalog search for customerInfo skill and click on **Add Skill** and then **Connect App**. 
 Username : test
 Password : test 
 
-![1](../imagesLab7/skill4.png)
+    ![1](../imagesLab7/skill4.png)
 
-5. In Skill Catalog , search for **Microsoft Outlook** , search for **Send an email** skill click on it . Add the skill.
-Click on **Connect App** . Provide your outlook credentials .
+5. In Skill Catalog , search for **Microsoft Outlook** , search for **Send an email** skill click on it . Click on **Connect App** . Provide your outlook credentials .
 
-
-6. Before importing skill flow , it is essential thats the skills comprising the skill flow are part of skill catalog . 
-Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json**
+6. Before importing skill flow , it is essential thats the skills comprising the skill flow are part of skill catalog . Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json**
 
 7. Enhance the skill flow and publish it . 
  
@@ -323,9 +315,10 @@ Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json**
     cp4admin / EpZP3ZeTlhgiw0DhCQxQ
 
 
-![1](../imagesLab7/skill6.png)
-![1](../imagesLab7/skill7.png)
+    ![1](../imagesLab7/skill6.png)
+    ![1](../imagesLab7/skill7.png)
 
+- Search for **Outlook** and click on **Connect App** . Give your outlook credentials
 
 The skills are ready to be used by the **Fund Management Bot**
 
@@ -333,32 +326,28 @@ The skills are ready to be used by the **Fund Management Bot**
 
 1. Navigation to **Assistant Builder** . Ensure in the top panel **Fund Management Bot** is selected . Click **Create Action** to create the **Skill-based action**
 
-![1](../imagesLab7/skill8.png)
+    ![1](../imagesLab7/skill8.png)
 
 2. Click on **customerInfo** and click on **Next** to create a customerInfo skill based action
-
 Phrase : Register customer
 
-![1](../imagesLab7/skill9.png)
+    ![1](../imagesLab7/skill9.png)
 
 Click on Save to save the action .
 
-![1](../imagesLab7/skill10.png)
-
+    ![1](../imagesLab7/skill10.png)
 
 ### Create a custom-built action
 
 1. Click **Create Action** to create the **Custom-built action**
-
 Phrase : I want help on investment
 
-
-![11](../imagesLab7/11.png)
+    ![11](../imagesLab7/11.png)
 
 2. Click on **New Step +** to add a new step .
-is Taken field : default value **without conditions**
+Set **is Taken** field : default value **without conditions**
 
-![12](../imagesLab7/12.png)
+    ![12](../imagesLab7/12.png)
 
 - Enter value in **Assistant says** field .
 
@@ -366,7 +355,7 @@ is Taken field : default value **without conditions**
 
 Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?
 
-![13](../imagesLab7/13.png)
+    ![13](../imagesLab7/13.png)
 
 
 3. Click on **New step +** button  and name it as **Initial Confirmation**. In the Is taken field, retain default value .
@@ -379,34 +368,34 @@ Please enter your query here...
 
 - Click on Define customer response as free text .
 
-![13](../imagesLab7/13.1.png)
+    ![13](../imagesLab7/lab13.1.png)
 
 - Select Sub action .
 
-![13](../imagesLab7/13.2.png)
+    ![13](../imagesLab7/lab13.2.png)
 
 - Select – **Investment Query Classification prompt** and save the step.
 
-![13](../imagesLab7/13.3.png)
+    ![13](../imagesLab7/lab13.3.png)
 
 
-![14](../imagesLab7/14.png)
+    ![14](../imagesLab7/14.png)
 
 4. Click on **New Step +** . Click on **Set variable values** . Click on **Set value +**
 
-![15](../imagesLab7/15.1.png)
+    ![15](../imagesLab7/lab15.1.png)
 
 - Create a session variable  as **Inventory Query**
 
- ![15](../imagesLab7/15.png)
+    ![15](../imagesLab7/15.png)
 
  - Set **Inventory Query** to 2.Initial Confirmation
 
-![16](../imagesLab7/16.png)
+    ![16](../imagesLab7/16.png)
 
 5. Click on **New Step +** and call it **Ask for Register**
 
-![17](../imagesLab7/17.1.png)
+    ![17](../imagesLab7/lab17.1.png)
 
 - Enter value in **Assistant says** field .
 
@@ -416,7 +405,7 @@ We have expert team of financial advisors, who will work with you to structure y
 
 - Click Define customer response as **confirmation**
 
-![17](../imagesLab7/17.png)
+    ![17](../imagesLab7/17.png)
 
 6. Click on **New Step +** 
 
@@ -430,11 +419,11 @@ We have expert team of financial advisors, who will work with you to structure y
 
 - Click Define customer response as sub-action and select **customer onboard**
 
-![17](../imagesLab7/18.png)
+    ![17](../imagesLab7/18.png)
 
 - Save and exit
 
-![19](../imagesLab7/19.png)
+    ![19](../imagesLab7/19.png)
 
 7. Click on **New Step** . Call it **Upload documents**
  Is Taken Field : default value 
@@ -448,80 +437,89 @@ We have expert team of financial advisors, who will work with you to structure y
  https://cloud-object-storage-cos-wxo.s3.jp-tok.cloud-object-storage.appdomain.cloud/WB_NEW.html
 
 
-![20](../imagesLab7/19.1.png)
+    ![20](../imagesLab7/19.1.png)
 
 
 ## Publish the AI Assistant 
 
 1. Click on **Publish** to publish the chatbot in Live environment. 
 
-![20](../imagesLab7/20.png)
+    ![20](../imagesLab7/20.png)
  
 - Review all draft content
 
-![21](../imagesLab7/21.png)
+    ![21](../imagesLab7/21.png)
 
 - Click on publish 
 
-![22](../imagesLab7/22.png)
+    ![22](../imagesLab7/22.png)
     
 When you publish your content, AI assistant builder creates a snapshot of the draft content, resulting in a version. This version contains all of the content from actions, including settings and variables.
 
-![23](../imagesLab7/23.png)
+    ![23](../imagesLab7/23.png)
 
-## Embedding AI Assistant in a web page
+### Embedding AI Assistant in a web page
 
 1. Click on **Integrations**
 
-![24](../imagesLab7/24.png)
+    ![24](../imagesLab7/24.png)
     
 2. Select **Web Chat** and click on Open
 
-![25](../imagesLab7/25.png)
+    ![25](../imagesLab7/25.png)
 
 3. Select Live environment
 
-![27](../imagesLab7/27.png)
+    ![27](../imagesLab7/27.png)
 
 4. Select on **Embed** tab. Copy the **script** tag .
 
-![28](../imagesLab7/28.png)
+    ![28](../imagesLab7/28.png)
 
 ## Embed this code in web html file to run the AI assistant.
 
 Download the files [FundManager](../files/FundManager.html) and [John Doe Portfolio.pdf](../files/JohnDoePortfolio.pdf) to proceed with the steps below.
 
-Ass the script tag copied in step 4 to render the AI Assistant in the wed page .
+Add the script tag copied in step 4 to render the AI Assistant in the wed page .
 
-## Running the AI Assistant in a web page 
+### Running the AI Assistant in a web page 
 
-1. Enter query **I want help on investment**
+1. Enter query 
+    ```
+    I want help on investment
+    ```
 
-![28](../imagesLab7/labchat1.png)
+    ![28](../imagesLab7/labchat1.png)
 
-2. Enter query **I would like to invest 100000 for 4 years** . 
-
-![28](../imagesLab7/labchat2.png)
+2. Enter query 
+    ```
+    I would like to invest 100000 for 4 years** . 
+    ```
+    ![28](../imagesLab7/labchat2.png)
 
 3. The AI assistant will ask if you want to register , click **Yes** . A form will pop up , fill the details and Click on **Apply** 
 
-![28](../imagesLab7/labchat5.png)
+    ![28](../imagesLab7/labchat5.png)
 
-![28](../imagesLab7/labchat6.png)
+    ![28](../imagesLab7/labchat6.png)
 
 Upon onboarding , registered user would receive an email notification .  
 
-![28](../imagesLab7/labchat7.png)
+    ![28](../imagesLab7/labchat7.png)
 
 Upload the pdf provided in the step above in the **Document Upload** section in the same webpage
 
-![28](../imagesLab7/labchat8.png)
+    ![28](../imagesLab7/labchat8.png)
 
-4. You can ask follow up questions as well like  **How is the real estate sector performing now ?**
-ls
+4. You can ask follow up questions as well like  
+    ```
+    How is the real estate sector performing now ?**
+    ```
 
-![28](../imagesLab7/labchat3.png)
+    ![28](../imagesLab7/labchat3.png)
 
-5. Enter query **Do you think infrastructure is good sector to invest at current market conditions**
-
-![28](../imagesLab7/labchat4.png)
+5. Enter query 
+    ```
+    Do you think infrastructure is good sector to invest at current market conditions**
+    ```
+    ![28](../imagesLab7/labchat4.png)
