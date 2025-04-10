@@ -14,3 +14,7 @@
 **Who’s the audience?**
 
 - Partners interested in leveraging Agentic AI
+
+**Reference Architecture**
+
+![Architecture](images/architecture.png)
