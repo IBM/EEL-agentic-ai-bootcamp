@@ -33,7 +33,7 @@ By automating and personalizing the onboarding journey, Wealth Bank aims to incr
 - Real-time context retention for improved personalization and client satisfaction.
 - Faster onboarding process, leading to quicker access to advisory services.
 
-## Architecture To be Updated
+## Architecture
 
 ![2](../imagesLab7/archImage.png)
 
