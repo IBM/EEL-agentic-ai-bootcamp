@@ -69,10 +69,10 @@ To create an AI Assistant in watsonx Orchestrate, you first need to access the p
     ![2](../imagesLab7/bot2.png)
 
 3. Enter following details in the screen and click on **Create**
-- Assistant name : **Fund Management Bot**
-- Description : A chatbot to assist users with fund management queries and investment options.
-- Assistant language - Default (English(US))
-A new Fund Management Bot assistant is created .
+    - Assistant name : **Fund Management Bot**
+    - Description : A chatbot to assist users with fund management queries and investment options.
+    - Assistant language - Default (English(US))
+    - A new Fund Management Bot assistant is created .
     ![2](../imagesLab7/bot3.png)
 
 4. On the left panel click on **Actions** . Click **Create Action** to create the first action.
@@ -98,13 +98,12 @@ You are digital assistant at Wealth Bank. Your primary responsibility is to assi
     
 Greetings
 
-![1](../imagesLab7/botAction3.png)
+    ![1](../imagesLab7/botAction3.png)
 
 6. Repeat step 5 to create another **AI Guided** Action **Investment Query Classification Prompt**
 
-Action Name : Investment Query Classification Prompt
-Large Language Model : granite-3b-instruct model (recommended)
-
+    - Action Name : Investment Query Classification Prompt
+    - Large Language Model : granite-3b-instruct model (recommended)
 
 !!! info "Add Knowledge"
     
@@ -309,7 +308,7 @@ Password : test
 ### Connecting to apps 
 
 1. Click on **Skill Sets** . Select the **Fund Management Bot draft** in the dropdown . 
-- Search for skills imported in the previous steps and click on **Connect App** , edit **Team Credentials** and save for both skills .
+    - Search for skills imported in the previous steps and click on **Connect App** , edit **Team Credentials** and save for both skills .
 
 !!! info "Credentials"
     cp4admin / EpZP3ZeTlhgiw0DhCQxQ
@@ -318,18 +317,17 @@ Password : test
     ![1](../imagesLab7/skill6.png)
     ![1](../imagesLab7/skill7.png)
 
-- Search for **Outlook** and click on **Connect App** . Give your outlook credentials
-
-The skills are ready to be used by the **Fund Management Bot**
+    - Search for **Outlook** and click on **Connect App** . Give your outlook credentials
+        The skills are ready to be used by the **Fund Management Bot**
 
 ### Create a skill-based action
 
-1. Navigation to **Assistant Builder** . Ensure in the top panel **Fund Management Bot** is selected . Click **Create Action** to create the **Skill-based action**
+1. Navigation to **Assistant Builder** . Ensure in the top panel **Fund Management Bot** is selected. Click **Create Action** to create the **Skill-based action**
 
     ![1](../imagesLab7/skill8.png)
 
-2. Click on **customerInfo** and click on **Next** to create a customerInfo skill based action
-Phrase : Register customer
+2. Click on **customerInfo** and click on **Next** to create a customerInfo skill based action.
+    Phrase : Register customer
 
     ![1](../imagesLab7/skill9.png)
 
@@ -340,16 +338,16 @@ Click on Save to save the action .
 ### Create a custom-built action
 
 1. Click **Create Action** to create the **Custom-built action**
-Phrase : I want help on investment
+    - Phrase : I want help on investment
 
     ![11](../imagesLab7/11.png)
 
 2. Click on **New Step +** to add a new step .
-Set **is Taken** field : default value **without conditions**
+    - Set **is Taken** field : default value **without conditions**
 
     ![12](../imagesLab7/12.png)
 
-- Enter value in **Assistant says** field .
+    - Enter value in **Assistant says** field .
 
 !!! info "Assistant says"
 
@@ -426,16 +424,16 @@ We have expert team of financial advisors, who will work with you to structure y
     ![19](../imagesLab7/19.png)
 
 7. Click on **New Step** . Call it **Upload documents**
- Is Taken Field : default value 
+    - Is Taken Field : default value 
 
  !!! info Assistant says :
 
  Thank you for registering. Please upload your investment portfolio doc here - Upload file 
  
- - Create a link **Upload File** and enter the value 
- 
- https://cloud-object-storage-cos-wxo.s3.jp-tok.cloud-object-storage.appdomain.cloud/WB_NEW.html
-
+    - Create a link **Upload File** and enter the value 
+    ```
+    https://cloud-object-storage-cos-wxo.s3.jp-tok.cloud-object-storage.appdomain.cloud/WB_NEW.html
+    ```
 
     ![20](../imagesLab7/19.1.png)
 
