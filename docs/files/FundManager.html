@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Bank - Your Financial Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #90e0ef;
+            --accent-color: #00b4d8;
+            --light-color: #caf0f8;
+            --dark-color: #03045e;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            height: 100%;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: var(--light-color);
+        }
+        
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--light-color);
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 120px);
+        }
+        
+        .hero {
+            background-color: var(--light-color);
+            padding: 30px 0;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--dark-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .offerings {
+            padding: 30px 0;
+            flex: 2;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+            font-size: 1.8rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+        }
+        
+        .tiles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        
+        .tile {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tile-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .tile i {
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        /* Individual colorful icon backgrounds */
+        .tile:nth-child(1) .tile-icon { background: linear-gradient(45deg, #ff9a8b, #ff6b88); } /* Document Upload */
+        .tile:nth-child(2) .tile-icon { background: linear-gradient(45deg, #4361ee, #3a0ca3); } /* Credit Cards */
+        .tile:nth-child(3) .tile-icon { background: linear-gradient(45deg, #4cc9f0, #4895ef); } /* Mortgages */
+        .tile:nth-child(4) .tile-icon { background: linear-gradient(45deg, #f72585, #b5179e); } /* Investments */
+        .tile:nth-child(5) .tile-icon { background: linear-gradient(45deg, #f8961e, #f3722c); } /* Savings */
+        .tile:nth-child(6) .tile-icon { background: linear-gradient(45deg, #43aa8b, #4d908e); } /* Business */
+        .tile:nth-child(7) .tile-icon { background: linear-gradient(45deg, #577590, #277da1); } /* Insurance */
+        .tile:nth-child(8) .tile-icon { background: linear-gradient(45deg, #90be6d, #43aa8b); } /* Loans */
+        .tile:nth-child(9) .tile-icon { background: linear-gradient(45deg, #7209b7, #560bad); } /* Mobile */
+        
+        .tile h3 {
+            margin: 0 0 10px;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+        }
+        
+        .tile p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .tile .btn {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .tile .btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Upload Modal Styles */
+        .upload-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upload-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        }
+
+        .upload-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .upload-header h3 {
+            margin: 0;
+            color: var(--dark-color);
+        }
+
+        .close-upload {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .upload-area:hover {
+            border-color: var(--accent-color);
+            background-color: rgba(0, 180, 216, 0.05);
+        }
+
+        .upload-area i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .upload-area p {
+            margin: 0;
+            color: #666;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .upload-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .upload-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        #fileList {
+            margin-top: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .file-item i {
+            margin-right: 10px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                overflow: auto;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .tiles-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .upload-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-piggy-bank"></i>
+                <h1>Wealth Bank</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Investments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container main-content">
+        <section class="hero">
+            <h2>Smart Banking for Your Financial Future</h2>
+            <p>At Wealth Bank, we're committed to helping you grow and protect your wealth with innovative financial solutions and personalized service.</p>
+            <a href="#" class="btn">Open an Account</a>
+        </section>
+        
+        <section class="offerings">
+            <h2 class="section-title">Our Financial Offerings</h2>
+            <div class="tiles-container">
+                <!-- Document Upload Tile (now first) -->
+                <div class="tile" id="uploadTile">
+                    <div class="tile-icon">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h3>Document Upload</h3>
+                    <p>Securely submit documents for your account or application.</p>
+                    <button class="btn" onclick="openUploadModal()">Upload</button>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Credit Cards</h3>
+                    <p>Premium benefits with low-interest rates and generous rewards programs.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Mortgages</h3>
+                    <p>Competitive rates for home purchases and refinancing options.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investments</h3>
+                    <p>Expert advice and diverse options to grow your wealth.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Savings</h3>
+                    <p>High-yield accounts to grow your money while keeping it accessible.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business</h3>
+                    <p>Tailored financial solutions for your business needs.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Insurance</h3>
+                    <p>Comprehensive protection for what matters most.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Loans</h3>
+                    <p>Personal and auto loans with flexible terms.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+                
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Banking</h3>
+                    <p>Bank anytime, anywhere with our award-winning app.</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Upload Modal -->
+    <div class="upload-modal" id="uploadModal">
+        <div class="upload-content">
+            <div class="upload-header">
+                <h3>Upload Documents</h3>
+                <button class="close-upload" onclick="closeUploadModal()">&times;</button>
+            </div>
+            <div class="upload-area" id="dropArea">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & drop files here or</p>
+                <button class="btn" onclick="document.getElementById('fileInput').click()">Browse Files</button>
+                <input type="file" id="fileInput" multiple>
+            </div>
+            <div id="fileList"></div>
+            <button class="upload-btn" onclick="submitFiles()">Upload Documents</button>
+        </div>
+    </div>
+
+    <script>
+        // Upload Modal Functions
+        function openUploadModal() {
+            document.getElementById('uploadModal').style.display = 'flex';
+        }
+
+        function closeUploadModal() {
+            document.getElementById('uploadModal').style.display = 'none';
+            document.getElementById('fileList').innerHTML = '';
+            document.getElementById('fileInput').value = '';
+        }
+
+        // File Input Handling
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            displayFiles(files);
+        }
+
+        // Drag and Drop Handling
+        const dropArea = document.getElementById('dropArea');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight() {
+            dropArea.style.borderColor = 'var(--accent-color)';
+            dropArea.style.backgroundColor = 'rgba(0, 180, 216, 0.1)';
+        }
+
+        function unhighlight() {
+            dropArea.style.borderColor = '#ccc';
+            dropArea.style.backgroundColor = 'transparent';
+        }
+
+        dropArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            document.getElementById('fileInput').files = files;
+            displayFiles(files);
+        }
+
+        // Display Selected Files
+        function displayFiles(files) {
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';
+
+            if (files.length > 0) {
+                for (let i = 0; i < files.length; i++) {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    
+                    const fileIcon = document.createElement('i');
+                    fileIcon.className = 'fas fa-file';
+                    
+                    const fileName = document.createElement('span');
+                    fileName.textContent = files[i].name;
+                    
+                    fileItem.appendChild(fileIcon);
+                    fileItem.appendChild(fileName);
+                    fileList.appendChild(fileItem);
+                }
+            }
+        }
+
+        // Submit Files
+        function submitFiles() {
+            const files = document.getElementById('fileInput').files;
+            if (files.length === 0) {
+                alert('Please select at least one file to upload.');
+                return;
+            }
+
+            // Here you would normally handle the file upload to your server
+            // For demonstration, we'll just show the files being processed
+            const fileNames = Array.from(files).map(file => file.name).join('\n• ');
+            alert(`The following files are ready for upload:\n\n• ${fileNames}\n\n(Note: Your portfolio document is under process)`);
+            
+            // Reset the form
+            closeUploadModal();
+        }
+    </script>
+    <!-- Enter the script for web chat here -->
+</body>
+</html>

@@ -483,13 +483,15 @@ When you publish your content, AI assistant builder creates a snapshot of the dr
 
 ![27](../imagesLab7/27.png)
 
-Select on **Embed** tab. Copy the **script** tag .
+4. Select on **Embed** tab. Copy the **script** tag .
 
 ![28](../imagesLab7/28.png)
 
 ## Embed this code in web html file to run the AI assistant.
 
-Use sample HTML file provided and add the script tag copied above to render the AI Assistant created in the steps above .
+Download the files [FundManager](../files/FundManager.html) and [John Doe Portfolio.pdf](../files/JohnDoePortfolio.pdf) to proceed with the steps below.
+
+Ass the script tag copied in step 4 to render the AI Assistant in the wed page .
 
 ## Running the AI Assistant in a web page 
 
@@ -507,12 +509,15 @@ Use sample HTML file provided and add the script tag copied above to render the 
 
 ![28](../imagesLab7/labchat6.png)
 
-Upon onboarding , user for the registered email would receive an email notification . For 
+Upon onboarding , registered user would receive an email notification .  
 
 ![28](../imagesLab7/labchat7.png)
 
+Upload the pdf provided in the step above in the **Document Upload** section in the same webpage
 
-4. Enter query **How is the real estate sector performing now ?**
+![28](../imagesLab7/labchat8.png)
+
+4. You can ask follow up questions as well like  **How is the real estate sector performing now ?**
 
 ![28](../imagesLab7/labchat3.png)
 
