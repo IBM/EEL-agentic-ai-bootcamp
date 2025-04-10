@@ -8,7 +8,7 @@ Wealth Bank's digital onboarding process faced challenges in efficiently engagin
 
 - Lack of instant onboarding led to missed opportunities for client conversion.
 - Disconnected experiences between query resolution and registration reduced user engagement.
-- Manual data entry and disjointed processes failed to capture conversation context, limiting personalization.
+- Manual data entry and disjointed processes failed to capture conversation context, limiting personalization. 
 
 The AI-powered agent now transforms this experience by handling all interactions in natural language, responding to user queries, maintaining context, and seamlessly registering users for personalized financial advice—directly within the chatbot interface.
 
