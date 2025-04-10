@@ -1,7 +1,7 @@
 # Agentic AI Bootcamp
 
 
-![Agentic Bootcamp](../docs/images/leadspace_article.jpeg)
+![Agentic Bootcamp](images/leadspace_article.jpeg)
 
 In this bootcamp, you will build and deploy an Agentic AI application prototype for an enterprise use case.
 
