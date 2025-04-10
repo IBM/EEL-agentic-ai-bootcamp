@@ -28,7 +28,7 @@
          - `WATSONX_URL` (optional)
    - Click 'Create'
 
-3. **Test the Application:**
+3. **Test Application:**
    - Choose **Test application** and click **Application URL**.
    - Append `/docs` to the end of the URL path to view a formatted API page.
      - Example: `https://wxo-agent-test1-app1.1pj4w3r1pi47.us-south.codeengine.appdomain.cloud/docs`
