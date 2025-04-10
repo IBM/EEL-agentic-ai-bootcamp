@@ -5,8 +5,8 @@
 ### 1A: Create the Endpoint
 
 1. **Using IBM Cloud Web UI:**
-   - Navigate to [IBM Cloud Code Engine Projects](https://cloud.ibm.com/containers/serverless/projects) and select the project that has been created for you.
-   - Click 'Applications'
+   -- Navigate to [IBM Cloud Code Engine Projects](https://cloud.ibm.com/containers/serverless/projects) and select the project that has been created for you.
+   -- Click 'Applications'
    - Click 'Create'
 
 2. **Creating your Application:**
