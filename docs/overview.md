@@ -1,9 +1,5 @@
 # Overview
 
-!!! warning "Draft version"
-    
-    Work in progress!
-
 **What is the goal?**
 
 - Show value of IBM (Agentic AI) technology
