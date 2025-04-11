@@ -16,11 +16,6 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 * Risk assessment agent
 * Wealth advisor agent
 
-Build and deploy an Agentic AI application prototype for an enterprise use case
-
-* Learn the top Agentic AI skills and best practices from our team of experts
-* Leverage our watsonx tools for low-code fast prototyping of Agentic workflows
-* Trust your agents with guardrails
 
 ## Agenda
 
