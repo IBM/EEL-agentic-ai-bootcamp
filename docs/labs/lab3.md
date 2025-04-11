@@ -7,7 +7,7 @@
 
 ## Use case
 
-### Wealth management agent - Risk assessment agent
+### Risk assessment agent
 
 The Portfolio Risk Assessment Agent supports financial advisors by evaluating investment portfolios for potential risk exposures. It reviews each asset in the portfolio based on factors like market value concentration, sector distribution, volatility, and overall diversification, delivering a detailed and actionable risk profile.
 
@@ -17,9 +17,21 @@ Key Features:
 - Diversification & Sector Analysis: Identifies sector over concentration and diversification gaps that may impact portfolio stability.
 - Markdown Risk Report: Generates a clean, structured Markdown table summarizing each asset’s name, value, sector, risk level, and rationale for easy review and reporting.
 
-### Wealth management agent - Wealth advisor agent
+### Wealth advisor agent
 
+The Portfolio Insight & Recommendation Agent assists financial advisors by thoroughly analyzing client investment portfolios to provide actionable insights and recommendations. It systematically evaluates the client's investment strategy, asset allocation, risk impact, and offers practical steps to mitigate identified risks, ensuring a comprehensive understanding and optimized portfolio management.
 
+Key Features:
+
+Investment Strategy Analysis: Summarizes the client’s investment approach to capture strategic objectives and underlying methodology clearly.
+
+Asset Allocation Recommendations: Offers tailored suggestions for asset allocation based on current market conditions and individual risk appetite, presented in an easy-to-review markdown table.
+
+Risk Impact & Opportunity Assessment: Identifies and categorizes portfolio risks (Low, Medium, High), highlighting key investment opportunities arising from these risk factors.
+
+Near-Term Actionable Recommendations: Provides explicit, practical steps for risk mitigation, including hedging strategies, asset reallocation, and enhanced diversification measures.
+
+Comprehensive Markdown Report: Generates a structured report clearly divided into sections covering investment strategy, asset allocation, risk assessment, and recommendations, prominently noting that it is AI-generated and recommending consultation with a licensed financial advisor for personalized advice.
 
 ## Steps
 

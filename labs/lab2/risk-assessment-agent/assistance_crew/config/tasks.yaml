@@ -1,3 +1,12 @@
+portfolio_retrieval_task:
+  description: >
+    {user_prompt}
+
+  expected_output: >
+    A markdown table output.
+
+  agent: portfolio_retriever_agent
+
 portfolio_risk_assessment:
   description: >
     Analyze the provided investment portfolio and assess each asset for potential risk factors.
@@ -6,9 +15,6 @@ portfolio_risk_assessment:
     For each asset, assign a Risk Level (High, Medium, Low).
     Your final output MUST be a well-formatted Markdown table with the following columns:
     | Security Name | Market Value (USD) | Sector | Risk Level | Rationale |
-
-    portfolio:
-    {user_prompt}
 
   expected_output: >
     A markdown table assessing each security's risk in the portfolio, clearly formatted with:

@@ -1,7 +1,7 @@
 from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task, after_kickoff
 
-from assistance_crew.tools import WebSearchTool
+from assistance_crew.tools import WebSearchTool, PortfolioFetcherTool
 
 @CrewBase
 class AssistanceAgents:
@@ -19,7 +19,16 @@ class AssistanceAgents:
         # Example of logging results, dynamically changing the output
         print(f"Results: {output}")
         return output
-
+    
+    @agent
+    def portfolio_retriever_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config["portfolio_retriever_agent"], 
+            tools=[PortfolioFetcherTool(), WebSearchTool()], 
+            verbose=True, 
+            llm=self.llm
+        )
+    
     @agent
     def risk_analyst(self) -> Agent:
         return Agent(
@@ -28,6 +37,12 @@ class AssistanceAgents:
             verbose=True,
             llm=self.llm,
             function_calling_llm=self.llm,
+        )
+
+    @task
+    def portfolio_retrieval_task(self) -> Task:
+        return Task(
+            config=self.tasks_config["portfolio_retrieval_task"],
         )
 
     @task
