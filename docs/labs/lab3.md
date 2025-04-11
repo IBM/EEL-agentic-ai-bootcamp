@@ -1,4 +1,4 @@
-# Build and Deploy a risk assessment and wealth advisor agents with watsonx.ai SDKs
+# Build and Deploy a risk assessment and wealth advisor agents with watsonx
 
 !!! info "Agentic AI Framework Details"
 
