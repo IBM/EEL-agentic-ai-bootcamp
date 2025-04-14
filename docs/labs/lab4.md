@@ -90,4 +90,4 @@
    - The results from the external agent should be streamed to the IBM watsonx Orchestrate chat window
      
 - Replace image information with the newly created information
-- Check out https://github.ibm.com/Matthew-Mueller/wxo-external-agent-template/tree/main for an example (crewai)
+- [Check out](https://github.ibm.com/Matthew-Mueller/wxo-external-agent-template/tree/main) for an example (crewai)

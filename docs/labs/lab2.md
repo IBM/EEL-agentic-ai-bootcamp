@@ -2,7 +2,7 @@
 
 As organizations expand, one of the key operational activities is in managing the onboarding process efficiently and consistently. The complexity of coordinating multiple stakeholders, systems, and tasks often leads to delays, onboarding,miscommunication, and a fragmented new-onboard experience. With the introduction of Onboarding system and advanced reasoning models, enterprises now have the opportunity to implement a centralized onboarding solution.
 
-## Problem
+## 🤔 The Problem
 
 Wealth Bank's digital onboarding process faced challenges in efficiently engaging users seeking financial guidance through their online portal. Visitors often arrived with wealth-related queries but left without receiving personalized support or registering for services. Issues include:
 
@@ -13,7 +13,7 @@ Wealth Bank's digital onboarding process faced challenges in efficiently engagin
 The AI-powered agent now transforms this experience by handling all interactions in natural language, responding to user queries, maintaining context, and seamlessly registering users for personalized financial advice—directly within the chatbot interface.
 
 
-## Objective
+## 🎯 Objective
 
 Wealth Bank plans to implement an AI-powered Onboarding Agent to transform how users engage with its digital wealth advisory services. This intelligent assistant will guide users from their initial wealth-related queries to instant registration for personalized financial advice—all through a seamless, conversational interface. The goal is to create an AI-enabled system that enhances user experience and onboarding by:
 
@@ -25,7 +25,7 @@ Wealth Bank plans to implement an AI-powered Onboarding Agent to transform how u
 
 By automating and personalizing the onboarding journey, Wealth Bank aims to increase client conversion, enhance user satisfaction, and streamline the path to financial advisory services.
 
-## Business Value 
+## 📈 Business value
 
 - Reduction in manual onboarding and data entry efforts.
 - Seamless, AI-driven registration through natural language conversations.
@@ -33,11 +33,11 @@ By automating and personalizing the onboarding journey, Wealth Bank aims to incr
 - Real-time context retention for improved personalization and client satisfaction.
 - Faster onboarding process, leading to quicker access to advisory services.
 
-## Architecture
+## 🏛️ Architecture
 
 ![2](../imagesLab7/archImage.png)
 
-## Step-by-step hands-on guide
+## 📄 Hands-on ste-by-step lab
 
 It demonstrates how to implement the use case using watsonx.ai and watsonx Orchestrate, with step-by-step guidance available here.
 

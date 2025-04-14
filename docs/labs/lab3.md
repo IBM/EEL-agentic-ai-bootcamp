@@ -196,4 +196,10 @@ Now that risk assessment agent is ready, you can follow the same steps to deploy
 
     ![lab-2-8](../images/lab2/lab-2-8.png)
 
->Next steps: You will learn how to import this agent in watsonx Orchestrate in Lab 5.
+!!! info "AskHR using Agentic AI"
+
+    **[Build AskHR step by step](https://github.ibm.com/skol/agentic-ai-client-bootcamp/tree/main/usecases/ask-hr)**
+
+    - In this lab, we will see how the out-of-the-box prebuilt skills in watsonx Orchestrate can connect to HR management tools such as Workday, SuccessFactors, etc., or create custom skills to connect to any such systems easily.
+
+> Next steps: You will learn how to import this agent in watsonx Orchestrate in Lab 4.

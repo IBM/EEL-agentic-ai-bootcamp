@@ -20,7 +20,7 @@ Getting started:
  Follow these brief instructions to create an IBMID. These are specifically for our Business Partners and clients who may not have access to a TechZone environment previously. IBM employees do not need to register.
 
 
-1. Start by accessing the [IBMid Registration Page].(https://www.ibm.com/account/reg/signup?formid=urx-19776&)
+1. Start by accessing the [IBMid Registration Page](https://www.ibm.com/account/reg/signup?formid=urx-19776&)
 2. Enter the required information in the fields provided, such as Email address, name, company, and country.
 
 !!! info "**IMPORTANT:** Your email address becomes your IBMid, which you will use to access the bootcamp environment!"
@@ -40,11 +40,11 @@ When you are invited to the class environment, you'll receive an email. This mes
 
 In the email, look for the link in the sentence "Please go HERE to accept your invitation." (Highlighted in the screenshot below.)
 
-![ibmid](../imagesLab7/ibmTZMail.png)
+![ibmid](../imagesLab7/IBMTZMail.png)
 
 Option: If you miss the email or don't receive it for any reason!
 
-You can find the invitation on your [ IBM Cloud account](https://cloud.ibm.com/notifications?type=account)
+You can find the invitation on your [IBM Cloud account](https://cloud.ibm.com/notifications?type=account)
 Please select the Join Now link.
 
 ![ibmid](../imagesLab7/ibmcloudaccount.png)
