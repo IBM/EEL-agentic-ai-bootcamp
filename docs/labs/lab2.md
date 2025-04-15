@@ -502,8 +502,8 @@ Add the script tag copied in step 4 to render the AI Assistant in the wed page .
 
 ### Running the AI Assistant in a web page 
 
-1. Click on **chat** icon from right bottom to start conversation.
-2. In the chat window, either type your query or select from the following options:
+- Click on **chat** icon from right bottom to start conversation.
+- In the chat window, either type your query or select from the following options:
 
     ```
     - Let's talk
@@ -513,37 +513,37 @@ Add the script tag copied in step 4 to render the AI Assistant in the wed page .
 
     ![28](../imagesLab7/chat-start.png)
 
-3.The assistant will greet you and prompt you to enter your query.
+- The assistant will greet you and prompt you to enter your query.
 
    ![29](../imagesLab7/Assistant-AskQuery.png)
 
-4. Type your investment query, for example:
+- Type your investment query, for example:
     ```
     I would like to invest 100000 for 4 years. Could you please suggest something. 
     ```
     ![30](../imagesLab7/EntryQuery.png)
 
-5. The assistant will generate a personalized response using GenAI based on your input.
+- The assistant will generate a personalized response using GenAI based on your input.
 
    ![31](../imagesLab7/Assistant%20provide%20response.png)
 
-6. You can also ask about specific sectors, such as real estate:
+- You can also ask about specific sectors, such as real estate:
 
    ![32](../imagesLab7/entery%20query2.png)
 
-7. The assistant will respond with relevant insights based on your query.
+- The assistant will respond with relevant insights based on your query.
 
    ![32](../imagesLab7/response%20realEstate%20query.png)
 
-8. Try asking about other sectors, like infrastructure:
+- Try asking about other sectors, like infrastructure:
 
    ![32](../imagesLab7/response%20infraQuery.png)
 
-9. Again, the assistant will provide an appropriate response using GenAI.
+- Again, the assistant will provide an appropriate response using GenAI.
 
    ![32](../imagesLab7/response%20infraQuery.png)
 
-10. The assistant will then ask if you'd like to register. Click **Yes** to proceed. A registration form will appear—fill in your details and click  **Apply**.
+- The assistant will then ask if you'd like to register. Click **Yes** to proceed. A registration form will appear—fill in your details and click  **Apply**.
     
     ![33](../imagesLab7/AskforRegistration.png)
 
@@ -551,18 +551,18 @@ Add the script tag copied in step 4 to render the AI Assistant in the wed page .
 
     ![35](../imagesLab7/Enter%20details.png)
 
-11. Once registration is successful, you’ll receive a confirmation email.
+- Once registration is successful, you’ll receive a confirmation email.
 
    ![36](../imagesLab7/onboard-email.png)
 
-12. After onboarding, the assistant will prompt you to upload a PDF document via the **Document Upload** section on the same webpage.
+- After onboarding, the assistant will prompt you to upload a PDF document via the **Document Upload** section on the same webpage.
 
    ![37](../imagesLab7/upload%20option.png)
 
-13. Select the provided PDF from your local device.
+- Select the provided PDF from your local device.
 
    ![38](../imagesLab7/file%20uploaded.png)
 
-14. A confirmation message will appear once the file is successfully uploaded.
+- A confirmation message will appear once the file is successfully uploaded.
 
    ![39](../imagesLab7/file%20upload%20confirmation.png)
