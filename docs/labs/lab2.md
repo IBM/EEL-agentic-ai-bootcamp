@@ -421,24 +421,42 @@ We have expert team of financial advisors, who will work with you to structure y
 
     ![17](../imagesLab7/18.png)
 
+- Click on **New Step** . Call it **Upload documents**
+
 - Save and exit
 
     ![19](../imagesLab7/19.png)
 
 7. Click on **New Step** . Call it **Upload documents**
- Is Taken Field : default value 
 
- !!! info Assistant says :
+   - Click the **"Switch to JSON Editor"** option from the Assistant, as shown below.
 
- Thank you for registering. Please upload your investment portfolio doc here
- 
- - Create a link **Upload File** and enter the value 
- 
- https://cloud-object-storage-cos-wxo.s3.jp-tok.cloud-object-storage.appdomain.cloud/WB_NEW.html
+   ![20](../imagesLab7/switch2JSON.png)
 
+   - Enter the custom code as below
 
-    ![20](../imagesLab7/19.1.png)
+!!! info "Custom Code"
+    
+    {
+       
+        "generic": [
+            {
+            "user_defined": {
+                "user_defined_type": "Upload Your File"
+            },
+            "response_type": "user_defined"
+            }
+        ]
+    }
 
+   - Click the **"Switch to Text Editor"** option from the Assistant, as shown below.
+
+   ![21](../imagesLab7/Switch2Text.png)
+
+   - Select **"End the action"** option as shown below.
+
+   ![22](../imagesLab7/EndAction.png)
+   
 
 ## Publish the AI Assistant 
 
@@ -484,42 +502,67 @@ Add the script tag copied in step 4 to render the AI Assistant in the wed page .
 
 ### Running the AI Assistant in a web page 
 
-1. Enter query 
+1. Click on **chat** icon from right bottom to start conversation.
+2. In the chat window, either type your query or select from the following options:
+
     ```
-    I want help on investment
-    ```
-
-    ![28](../imagesLab7/labchat1.png)
-
-2. Enter query 
-    ```
-    I would like to invest 100000 for 4 years** . 
-    ```
-    ![28](../imagesLab7/labchat2.png)
-
-3. The AI assistant will ask if you want to register , click **Yes** . A form will pop up , fill the details and Click on **Apply** 
-
-    ![28](../imagesLab7/labchat5.png)
-
-    ![28](../imagesLab7/labchat6.png)
-
-Upon onboarding , registered user would receive an email notification .  
-
-    ![28](../imagesLab7/labchat7.png)
-
-Upload the pdf provided in the step above in the **Document Upload** section in the same webpage
-
-    ![28](../imagesLab7/labchat8.png)
-
-4. You can ask follow up questions as well like  
-    ```
-    How is the real estate sector performing now ?**
+    - Let's talk
+    - I need help with investment
+    - Explore investment options
     ```
 
-    ![28](../imagesLab7/labchat3.png)
+    ![28](../imagesLab7/chat-start.png)
 
-5. Enter query 
+3.The assistant will greet you and prompt you to enter your query.
+
+   ![29](../imagesLab7/Assistant-AskQuery.png)
+
+4. Type your investment query, for example:
     ```
-    Do you think infrastructure is good sector to invest at current market conditions**
+    I would like to invest 100000 for 4 years. Could you please suggest something. 
     ```
-    ![28](../imagesLab7/labchat4.png)
+    ![30](../imagesLab7/EntryQuery.png)
+
+5. The assistant will generate a personalized response using GenAI based on your input.
+
+   ![31](../imagesLab7/Assistant%20provide%20response.png)
+
+6. You can also ask about specific sectors, such as real estate:
+
+   ![32](../imagesLab7/entery%20query2.png)
+
+7. The assistant will respond with relevant insights based on your query.
+
+   ![32](../imagesLab7/response%20realEstate%20query.png)
+
+8. Try asking about other sectors, like infrastructure:
+
+   ![32](../imagesLab7/response%20infraQuery.png)
+
+9. Again, the assistant will provide an appropriate response using GenAI.
+
+   ![32](../imagesLab7/response%20infraQuery.png)
+
+10. The assistant will then ask if you'd like to register. Click **Yes** to proceed. A registration form will appear—fill in your details and click  **Apply**.
+    
+    ![33](../imagesLab7/AskforRegistration.png)
+
+    ![34](../imagesLab7/Registration%20form.png)
+
+    ![35](../imagesLab7/Enter%20details.png)
+
+11. Once registration is successful, you’ll receive a confirmation email.
+
+   ![36](../imagesLab7/onboard-email.png)
+
+12. After onboarding, the assistant will prompt you to upload a PDF document via the **Document Upload** section on the same webpage.
+
+   ![37](../imagesLab7/upload%20option.png)
+
+13. Select the provided PDF from your local device.
+
+   ![38](../imagesLab7/file%20uploaded.png)
+
+14. A confirmation message will appear once the file is successfully uploaded.
+
+   ![39](../imagesLab7/file%20upload%20confirmation.png)
