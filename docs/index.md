@@ -41,6 +41,4 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 - **2-days:** Deep dive in learning and discuss your own use cases
 
 **Outcomes:** A functional prototype of an Agentic AI application to address your enterprise use case. 
-The opportunity to continue to work with our AI experts in a longer-term co-creation pilot
-
-Test change
+The opportunity to continue to work with our AI experts in a longer-term co-creation pilot.
