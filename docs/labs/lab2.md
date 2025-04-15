@@ -335,7 +335,7 @@ Phrase : Register customer
 
 Click on Save to save the action .
 
-    ![1](../imagesLab7/skill10.png)
+  ![1](../imagesLab7/skill10.png)
 
 ### Create a custom-built action
 
@@ -355,7 +355,7 @@ Set **is Taken** field : default value **without conditions**
 
 Hello! I'm your digital assistant at Wealth Bank, ready to assist with your financial needs. How can I help you today? Are you interested in investment recommendations, or do you have questions about our investment products?
 
-    ![13](../imagesLab7/13.png)
+  ![13](../imagesLab7/13.png)
 
 
 3. Click on **New step +** button  and name it as **Initial Confirmation**. In the Is taken field, retain default value .
@@ -430,7 +430,7 @@ We have expert team of financial advisors, who will work with you to structure y
 
  !!! info Assistant says :
 
- Thank you for registering. Please upload your investment portfolio doc here - Upload file 
+ Thank you for registering. Please upload your investment portfolio doc here
  
  - Create a link **Upload File** and enter the value 
  
