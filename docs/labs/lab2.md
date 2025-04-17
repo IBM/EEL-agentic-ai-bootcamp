@@ -88,7 +88,7 @@ A new Fund Management Bot assistant is created .
 
     ![1](../imagesLab7/botAction2.png)
 
-    Large Language Model : granite-3b-8-instruct model (recommended)
+    Large Language Model : granite-3-8b-instruct model (recommended)
 
 !!! info "Add Knowledge"
     
@@ -103,7 +103,7 @@ Greetings
 6. Repeat step 5 to create another **AI Guided** Action **Investment Query Classification Prompt**
 
 Action Name : Investment Query Classification Prompt
-Large Language Model : granite-3b-8-instruct model (recommended)
+Large Language Model : granite-3-8b-instruct model (recommended)
 
 
 !!! info "Add Knowledge"
@@ -282,7 +282,7 @@ Large Language Model : granite-3b-8-instruct model (recommended)
 
 ### Pre-requisite
 
-Download the files [CustomerInfo](../files/customerInfo.json) and [Customer Onboard](../files/customerOnboard.json) to proceed with the steps below.
+Click the files [CustomerInfo](../files/customerInfo.json) and [Customer Onboard](../files/customerOnboard.json) and save to proceed with the steps below.
 
 1. Click on **Skill Studio** . Click on **Create** --> **Import API**
 
