@@ -489,6 +489,8 @@ When you publish your content, AI assistant builder creates a snapshot of the dr
 - I need help with investment
 - Explore investment options
 
+  ![41](../imagesLab7/HomeScreen.png)
+
 3. Select **Web Chat** and click on Open
 
     ![25](../imagesLab7/25.png)
@@ -537,6 +539,7 @@ Open **FundManager** in VS-Code and Add the script tag copied in step 4 to the h
    ![31](../imagesLab7/Assistant%20provide%20response.png)
 
 - You can also ask about specific sectors, such as real estate:
+  "How is the real estate sector performing now ?"
 
    ![32](../imagesLab7/entery%20query2.png)
 
@@ -545,6 +548,7 @@ Open **FundManager** in VS-Code and Add the script tag copied in step 4 to the h
    ![32](../imagesLab7/response%20realEstate%20query.png)
 
 - Try asking about other sectors, like infrastructure:
+  "Do you think infrastructure is good sector to invest at current market conditions ?"
 
    ![32](../imagesLab7/response%20infraQuery.png)
 
