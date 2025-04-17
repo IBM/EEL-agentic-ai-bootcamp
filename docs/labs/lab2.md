@@ -506,6 +506,8 @@ When you publish your content, AI assistant builder creates a snapshot of the dr
 Click the files [FundManager](../files/FundManager.html) and [John Doe Portfolio.pdf](../files/JohnDoePortfolio.pdf) and save to proceed with the steps below.
 
 Open **FundManager** in VS-Code and Add the script tag copied in step 4 to the html page code in body.
+![40](../imagesLab7/EmbedCode.png)
+
 
 ### Running the AI Assistant in a web page 
 
