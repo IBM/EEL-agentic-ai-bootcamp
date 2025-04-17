@@ -300,9 +300,9 @@ Password : EpZP3ZeTlhgiw0DhCQxQ
 
     ![1](../imagesLab7/skill4.png)
 
-5. In Skill Catalog , search for **Microsoft Outlook** , search for **Send an email** skill click on it . Click on **Connect App** . Provide your outlook credentials .[wo-test1@ibmappcon.onmicrosoft.com/WatsonTestUser@123456]
+5. In Skill Catalog , search for **Microsoft Outlook** , search for **Send an email** skill click on it and Add skill . Click on **Connect App** . Provide your outlook credentials - wo-test1@ibmappcon.onmicrosoft.com / WatsonTestUser@123456
 
-6. Before importing skill flow , it is essential thats the skills comprising the skill flow are part of skill catalog . Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json**
+6. Before importing skill flow , it is essential thats the skills comprising the skill flow are part of skill catalog . Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json** (provided as part of labs)
 
 7. Enhance the skill flow and publish it . 
  
@@ -318,7 +318,7 @@ Password : EpZP3ZeTlhgiw0DhCQxQ
     ![1](../imagesLab7/skill6.png)
     ![1](../imagesLab7/skill7.png)
 
-- Search for **Outlook** and click on **Connect App** . Give your outlook credentials
+- Search for **Outlook** and click on **Connect App** by using outlook credentials - wo-test1@ibmappcon.onmicrosoft.com / WatsonTestUser@123456
 
 The skills are ready to be used by the **Fund Management Bot**
 
@@ -337,6 +337,8 @@ Click on Save to save the action .
 
   ![1](../imagesLab7/skill10.png)
 
+3.  Create another skill based action for imported skill **Customer Onboard** as well, by repeating the above steps you performed for customer Info. You may use the Phrase : customer onboard.
+   
 ### Create a custom-built action
 
 1. Click **Create Action** to create the **Custom-built action**
@@ -385,11 +387,11 @@ Please enter your query here...
 
     ![15](../imagesLab7/lab15.1.png)
 
-- Create a session variable  as **Inventory Query**
+- Create a session variable  as **Investment Query**
 
     ![15](../imagesLab7/15.png)
 
- - Set **Inventory Query** to 2.Initial Confirmation
+ - Set **Investment Query** to 2.Initial Confirmation (under Action step variable)
 
     ![16](../imagesLab7/16.png)
 
@@ -481,24 +483,29 @@ When you publish your content, AI assistant builder creates a snapshot of the dr
 1. Click on **Integrations**
 
     ![24](../imagesLab7/24.png)
-    
-2. Select **Web Chat** and click on Open
+
+2. Click **Home Screen** and add the Conversation starters below.
+- Let's talk
+- I need help with investment
+- Explore investment options
+
+3. Select **Web Chat** and click on Open
 
     ![25](../imagesLab7/25.png)
 
-3. Select Live environment
+4. Select Live environment
 
     ![27](../imagesLab7/27.png)
 
-4. Select on **Embed** tab. Copy the **script** tag .
+5. Select on **Embed** tab. Copy the **script** tag .
 
     ![28](../imagesLab7/28.png)
 
 ## Embed this code in web html file to run the AI assistant.
 
-Download the files [FundManager](../files/FundManager.html) and [John Doe Portfolio.pdf](../files/JohnDoePortfolio.pdf) to proceed with the steps below.
+Click the files [FundManager](../files/FundManager.html) and [John Doe Portfolio.pdf](../files/JohnDoePortfolio.pdf) and save to proceed with the steps below.
 
-Add the script tag copied in step 4 to render the AI Assistant in the wed page .
+Open **FundManager** in VS-Code and Add the script tag copied in step 4 to the html page code in body.
 
 ### Running the AI Assistant in a web page 
 
