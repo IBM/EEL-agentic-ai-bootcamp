@@ -1,4 +1,4 @@
-## Use case : Personalized Customer Experience and Wealth Planning with AI Agents 1
+## Use case : Personalized Customer Experience and Wealth Planning with AI Agents
 
 As organizations expand, one of the key operational activities is in managing the onboarding process efficiently and consistently. The complexity of coordinating multiple stakeholders, systems, and tasks often leads to delays, onboarding,miscommunication, and a fragmented new-onboard experience. With the introduction of Onboarding system and advanced reasoning models, enterprises now have the opportunity to implement a centralized onboarding solution.
 
