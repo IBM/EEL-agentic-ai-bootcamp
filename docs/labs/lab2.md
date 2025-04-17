@@ -302,14 +302,14 @@ Password : EpZP3ZeTlhgiw0DhCQxQ
 
 5. In Skill Catalog , search for **Microsoft Outlook** , search for **Send an email** skill click on it and Add skill . Click on **Connect App** . Provide your outlook credentials - wo-test1@ibmappcon.onmicrosoft.com / WatsonTestUser@123456
 
-6. Before importing skill flow , it is essential thats the skills comprising the skill flow are part of skill catalog . Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json** (provided as part of labs)
+6. Before importing skill flow , it is essential thats the skills comprising the skill flow are part of skill catalog . Search Skill flow, find  **customer onboard** skill and follow steps 1 and 2 to  import the skill flow **customer Onboard.json** (provided as part of labs)
 
 7. Enhance the skill flow and publish it . 
  
 ### Connecting to apps 
 
 1. Click on **Skill Sets** . Select the **Fund Management Bot draft** in the dropdown . 
-- Search for skills imported in the previous steps and click on **Connect App** , edit **Team Credentials** and save for both skills .
+- Search for **Customer Info** skill imported in the previous steps and click on **Connect App** , edit **Team Credentials** and save.
 
 !!! info "Credentials"
     cp4admin / EpZP3ZeTlhgiw0DhCQxQ
