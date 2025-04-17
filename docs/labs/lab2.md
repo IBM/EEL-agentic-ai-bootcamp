@@ -88,7 +88,7 @@ A new Fund Management Bot assistant is created .
 
     ![1](../imagesLab7/botAction2.png)
 
-    Large Language Model : granite-3b-instruct model (recommended)
+    Large Language Model : granite-3b-8-instruct model (recommended)
 
 !!! info "Add Knowledge"
     
@@ -103,7 +103,7 @@ Greetings
 6. Repeat step 5 to create another **AI Guided** Action **Investment Query Classification Prompt**
 
 Action Name : Investment Query Classification Prompt
-Large Language Model : granite-3b-instruct model (recommended)
+Large Language Model : granite-3b-8-instruct model (recommended)
 
 
 !!! info "Add Knowledge"
@@ -295,12 +295,12 @@ Download the files [CustomerInfo](../files/customerInfo.json) and [Customer Onbo
 3. Enhance and Publish the skill .
  
 4. Go to Skill Catalog search for customerInfo skill and click on **Add Skill** and then **Connect App**. 
-Username : test
-Password : test 
+Username : cp4admin
+Password : EpZP3ZeTlhgiw0DhCQxQ 
 
     ![1](../imagesLab7/skill4.png)
 
-5. In Skill Catalog , search for **Microsoft Outlook** , search for **Send an email** skill click on it . Click on **Connect App** . Provide your outlook credentials .
+5. In Skill Catalog , search for **Microsoft Outlook** , search for **Send an email** skill click on it . Click on **Connect App** . Provide your outlook credentials .[wo-test1@ibmappcon.onmicrosoft.com/WatsonTestUser@123456]
 
 6. Before importing skill flow , it is essential thats the skills comprising the skill flow are part of skill catalog . Now follow steps 1 and 2 to  import the skill flow **customer Onboard.json**
 
