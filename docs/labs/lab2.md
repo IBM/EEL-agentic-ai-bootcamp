@@ -37,7 +37,7 @@ By automating and personalizing the onboarding journey, Wealth Bank aims to incr
 
 ![2](../imagesLab7/archImage.png)
 
-## 📄 Hands-on ste-by-step lab
+## 📄 Hands-on step-by-step lab
 
 It demonstrates how to implement the use case using watsonx.ai and watsonx Orchestrate, with step-by-step guidance available here.
 
