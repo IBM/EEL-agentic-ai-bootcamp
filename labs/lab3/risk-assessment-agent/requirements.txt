@@ -1,7 +1,0 @@
-mkdocs
-mkdocs-material
-mkdocs-material-extensions
-mkdocs_pymdownx_material_extras
-mkdocs-minify-plugin
-jinja2
-git+https://github.com/linkchecker/linkchecker@v10.0.1#egg=linkchecker

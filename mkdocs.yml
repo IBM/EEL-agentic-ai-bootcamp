@@ -1,8 +1,8 @@
-site_name: Agentic AI Bootcamp
+site_name: IBM Agentic AI Bootcamp
 site_description: >-
     IBM watsonx Agentic AI Bootcamp, presented by IBM Ecosystem Engineering Lab, Client Engineering.
 site_url: https://ibm.github.io/EEL-agentic-ai-bootcamp/docs
-site_author: Enter Author Name
+site_author: IBM Ecosystem Engineering Lab
 repo_url: https://github.com/IBM/EEL-agentic-ai-bootcamp
 docs_dir: docs
 site_dir: site
@@ -71,9 +71,29 @@ extra:
 
 nav:
     - Introduction: index.md
-    - Overview: overview.md
-    - Lab 1: labs/lab1.md
-    - Lab 2: labs/lab2.md
-    - Lab 3 (optional): labs/lab3.md
-    - Lab 4: labs/lab4.md
+    - Show and tell: show-and-tell.md
+    - Hands-on labs:
+        - Lab 0 - Environment setup :
+            - Pre-requisites: labs/environment-setup-lab/pre-requisites.md
+            - Create your IBMid: labs/environment-setup-lab/create-ibmid.md
+            - Access your clasic instance: labs/environment-setup-lab/access-env.md
+            - Setup your first project: labs/environment-setup-lab/create-project.md
+            - Create your API key: labs/environment-setup-lab/api_key_project_id_setup.md
+        - Lab 1 - watsonx Orchestrate Agent Builder (low-code): labs/low-code-lab.md
+        - Lab 2 - watsonx Orchestrate Multi-agent (pro-code): labs/pro-code-lab.md
+    - Use cases for labs:
+        - Low-code: 
+            - Vehicle maintenance: use-cases-for-labs/low-code/vehicle-maintenance.md
+            - HR use case: use-cases-for-labs/low-code/hr-use-case.md
+        - Pro-code:
+            - Insurance claim use cases:
+                - Pre authorization for cashless hospitalization: use-cases-for-labs/pro-code/insurance-claim-pre-authorization.md
+                - Post hospitalization claim: use-cases-for-labs/pro-code/insurance-claim-post-hospitalization.md
+            - Financial research and analysis: use-cases-for-labs/pro-code/financial-research-and-analysis.md
+            - Supply chain: use-cases-for-labs/pro-code/supply-chain.md
+    - Demo use cases: 
+        - AI Agent Governance: demo-use-cases/governance-demo.md
+        - Travel planner: demo-use-cases/travel-planner-demo.md
+        - Maximo supply chain: demo-use-cases/maximo-supply-chain-demo.md
+        - HashiCorp vault: demo-use-cases/hashi-demo.md
     - Conclusion: conclusion.md
