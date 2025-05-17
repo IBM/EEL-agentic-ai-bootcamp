@@ -4,12 +4,16 @@
 
 In this Agentic AI Bootcamp, you will build and deploy Agentic AI application prototypes for enterprise use cases.
 
-You will learn about:
+## AGENDA
 
-🚀 IBM Agents & Landscape
+**You will learn about:**
 
-🚀 AI Agents Overview and Market landscape
+🚀 AI Agents and evolving market landscape
 
 🚀 IBM's Vision for Agentic AI
 
-🚀 IBM's Agentic Options
+🚀 IBM's Agenitc AI Solutions and Offerings
+
+🚀 You'll leverage IBM watsonx and open source tools for low-code fast prototyping of Agentic AI workflows.
+
+🚀 You'll learn how to deploy an Agentic AI application and the trust considerations needed to go to production.
