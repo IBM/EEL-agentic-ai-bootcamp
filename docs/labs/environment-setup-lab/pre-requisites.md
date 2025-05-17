@@ -18,4 +18,5 @@ For this bootcamp, we have created the [Agentic AI Bootcamp TechZone bundle](htt
 2. [Access your class instance](access-env.md)
 3. [Setup your first project](create-project.md)
 4. [Create your API key](api_key_project_id_setup.md)
+5. [wxO client setup](wxo-client-setup.md)
  
