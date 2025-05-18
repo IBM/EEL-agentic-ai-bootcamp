@@ -1,5 +1,5 @@
-# Health Insurance Claim - Scenario 2
-This LAB is written to simulate a customer care agent for hospital. Healthcare insurance claims involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system.
+# Health Insurance - Post Hospitalization Claim 
+This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system.  This scenario covers post hospitalisation claim process and more details on the flow are documented below.
 
 <!-- ## REFERENCE ARCHITECTURE - Health Insurance Claim (WIP)
 
@@ -23,17 +23,20 @@ This LAB is written to simulate a customer care agent for hospital. Healthcare i
 5. Create an application connection using these credentials
 ```bash
 orchestrate connections add -a service-now
-orchestrate connections configure -a service-now --env draft --type team --kind basic --url <the instance url>
-orchestrate connections set-credentials -a service-now --env draft -u admin -p <password from modal>
+orchestrate connections configure -a service-now --env live --type team --kind basic --url <the instance url>
+orchestrate connections set-credentials -a service-now --env live -u admin -p <password from modal>
 ```
 6. Run the import all script `./scripts/import-all.sh`
 7. Go to Manage Agents on your Watsonx Orchestrate Instance and make sure you deploy each imported Agent.
 
 ## Test your Agents
 
-[Demo Video](https://ibm.box.com/s/mb1eyz2vebmx0fhxm6nus0lpmd6c8pjj)
+[Demo Video](https://ibm.box.com/s/00xsb9gn53pq02ycqvn2ju9o3p8ei88d)
 
 **Try with generic query - This should use backend knowledge base for generic health insurance queries**
+
+- Below query responses should come from "nsa-health-insurance-basics.pdf" document
+
 ```
 1: Does a Health Plan Typically Pay for Services from Any Doctor?
 2: What are some typically costs that consumers pay when they have insurance ?
