@@ -14,7 +14,7 @@ This LAB is written to simulate a customer care agent for hospitals. Healthcare 
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
-- [Download Lab files](https://ibm.box.com/s/x6hup5ft3qwip2zfzj5dpnaqj4e48nry)
+- [Download files](https://ibm.box.com/s/x6hup5ft3qwip2zfzj5dpnaqj4e48nry)
 
 ## Steps to import
 1. Signup for a Sevice Now account at https://developer.servicenow.com/dev.do
