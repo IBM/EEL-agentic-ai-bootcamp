@@ -29,14 +29,14 @@ Create a tool to call a decision service to calculate the pre-authorised amount.
 Steps - 
 1. create a file *'calculate_preauth_amount.py'*
 2. add following imports to your file
-```
+```python
 from pydantic import Field, BaseModel
 from typing import Optional
 from ibm_watsonx_orchestrate.agent_builder.tools import tool
 import requests
 ```
 3. add following method 
-```
+```python
 def calculate_preauth_amount(
         estimated_treatment_cost: float,
         policy_coverage_limit: float,
@@ -81,7 +81,7 @@ def calculate_preauth_amount(
         )
 ```
 4. add below decorator to *calculate_preauth_amount* method 
-```commandline
+```python
 @tool(name="calculate_preauth_amount", description="Calculates the pre-authorised amount")
 
 ```
@@ -108,7 +108,7 @@ Steps -
 
 1. copy pdf files from lab documents to wxo-agents/knowledge_base/documents
 2. create *medibuddy_claim_process.yaml* file and add following 
-```commandline
+```yaml
 spec_version: v1
 kind: knowledge_base 
 name: medibuddy_claim_process
@@ -117,7 +117,7 @@ documents:
   - documents/medibuddy_guidelines.pdf
 ```
 3. create *users_insurance_policy.yaml* file and add following 
-```commandline
+```yaml
 spec_version: v1
 kind: knowledge_base 
 name: insurance_policy_details
@@ -142,7 +142,7 @@ We are having two types of native agents in our use case.
 Steps -
 
 1. **Create native agents with knowledge_base** - create *policy_support_agent.yaml* file and add below content
-```commandline
+```yaml
 spec_version: v1
 kind: native
 name: policy_support_agent
@@ -163,7 +163,7 @@ knowledge_base:
   - insurance_policy_details
 ```
 2. **Create native agents with tools** - create *claim_adjudication_agent.yaml* and below content
-```commandline
+```yaml
 spec_version: v1
 style: default
 name: claim_adjudication_agent
