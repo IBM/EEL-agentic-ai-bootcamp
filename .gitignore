@@ -1,5 +1,6 @@
 .DS_Store
 .venv
+.idea
 
 # Python-generated files
 __pycache__/

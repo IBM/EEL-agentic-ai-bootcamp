@@ -1,4 +1,4 @@
-# **Lab guide - Cashless claim process: customer support & Pre-authorisation** 
+# **Lab guide - Cashless claim process: customer support & Pre-authorization** 
 
 ---
 This guide will help you to build and test the use case
@@ -24,7 +24,7 @@ Create following folder structure -
 ### **Creating tools**
 There are many tools used in this use-case, however, for lab purpose we will be creating one python tool and will import rest of the required tool.
 
-Create a tool to call a decision service to calculate the pre-authorised amount.
+Create a tool to call a decision service to calculate the pre-authorized amount.
 
 Steps - 
 1. create a file *'calculate_preauth_amount.py'*
@@ -82,7 +82,7 @@ def calculate_preauth_amount(
 ```
 4. add below decorator to *calculate_preauth_amount* method 
 ```python
-@tool(name="calculate_preauth_amount", description="Calculates the pre-authorised amount")
+@tool(name="calculate_preauth_amount", description="Calculates the pre-authorized amount")
 
 ```
 5. copy all the file in tools folder to your 'wxo-agents/tools' folder
@@ -169,13 +169,13 @@ style: default
 name: claim_adjudication_agent
 llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
 description: >
-  your primary goal is to calculate pre-authorised amount based on the information collected and received.
+  your primary goal is to calculate pre-authorized amount based on the information collected and received.
   
   you are an agent responsible for claims adjudication, you use your decision-making capability to evaluate, validate, and settle claims.
   The goal is to balance fair payouts to policyholders while protecting the insurer from unjustified losses. 
   Efficient adjudication improves customer satisfaction and operational accuracy.
   
-  your primary goal is to calculate pre-authorised amount based on the information collected and received.
+  your primary goal is to calculate pre-authorized amount based on the information collected and received.
 
 instructions: >
   
@@ -184,7 +184,7 @@ instructions: >
       1. Use read_email tool to read the email and get the required information
       2. Use get_network_hospitals to get the hospital_tier hospital mentioned in email sent from hospital
       3. Use get_policy_info tool to get the information about policy using customer id passed by user. remove '%' from co payment before passing to calculate_preauth_amount tool.
-      4. Must call calculate_preauth_amount tool  to calculate the pre-authorised amount
+      4. Must call calculate_preauth_amount tool  to calculate the pre-authorized amount
       5. Prepare a summary based on all above information
       6. Transfer to supervisor:
          "observation: send report to customer's email."
@@ -226,5 +226,5 @@ Select 'claim_analyst_agent' from agents menu on left hand-side.
 
 Use below message to trigger the agent 
 ```commandline
-- Calculate pre-authorisation amount for customer CUST001
+- Calculate pre-authorization amount for customer CUST001
 ```
