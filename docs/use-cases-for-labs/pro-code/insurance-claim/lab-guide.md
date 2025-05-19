@@ -1,11 +1,10 @@
+# Insurance claim pre-authorization use case
 # **Lab guide - Cashless claim process: customer support & Pre-authorization** 
 
----
 This guide will help you to build and test the use case
 
 ## ⏳ **Build and run**
 
----
 ### **Download lab files**
 
 Download the required lab files from here. Unzip it to some folder.
@@ -27,65 +26,72 @@ There are many tools used in this use-case, however, for lab purpose we will be 
 Create a tool to call a decision service to calculate the pre-authorized amount.
 
 Steps - 
-1. create a file *'calculate_preauth_amount.py'*
+
+1. create a file `calculate_preauth_amount.py`
+
 2. add following imports to your file
-```python
-from pydantic import Field, BaseModel
-from typing import Optional
-from ibm_watsonx_orchestrate.agent_builder.tools import tool
-import requests
-```
+
+    ```python
+    from pydantic import Field, BaseModel
+    from typing import Optional
+    from ibm_watsonx_orchestrate.agent_builder.tools import tool
+    import requests
+    ```
+
 3. add following method 
-```python
-def calculate_preauth_amount(
-        estimated_treatment_cost: float,
-        policy_coverage_limit: float,
-        disease_category:str,
-        hospital_tier: int,
-        co_payment_percentage: float,
-) -> dict:
-    """
-    Calculate pre-authorization amount for insurance claims.
-    Accepts parameters as keyword arguments which will be converted to ClaimPreauthAmountRequest.
-    """
-    try:
 
-        req = {
-            "estimated_treatment_cost": estimated_treatment_cost,
-            "policy_coverage_limit": policy_coverage_limit,
-            "disease_category": disease_category,
-            "co_payment_percentage": co_payment_percentage,
-            "hospital_tier": hospital_tier
-        }
-        base_url = "https://preauthorisation-ordermanagement.cp4bautomation-685c4d909dba5536870f4da931535b5a-0000.eu-de.containers.appdomain.cloud/preauth/calculate"
-        headers = {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
+    ```python
+    def calculate_preauth_amount(
+            estimated_treatment_cost: float,
+            policy_coverage_limit: float,
+            disease_category:str,
+            hospital_tier: int,
+            co_payment_percentage: float,
+    ) -> dict:
+        """
+        Calculate pre-authorization amount for insurance claims.
+        Accepts parameters as keyword arguments which will be converted to ClaimPreauthAmountRequest.
+        """
+        try:
 
-        response = requests.post(
-            base_url,
-            headers=headers,
-            json=req
-        )
-        response.raise_for_status()
+            req = {
+                "estimated_treatment_cost": estimated_treatment_cost,
+                "policy_coverage_limit": policy_coverage_limit,
+                "disease_category": disease_category,
+                "co_payment_percentage": co_payment_percentage,
+                "hospital_tier": hospital_tier
+            }
+            base_url = "https://preauthorisation-ordermanagement.cp4bautomation-685c4d909dba5536870f4da931535b5a-0000.eu-de.containers.appdomain.cloud/preauth/calculate"
+            headers = {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
 
-        response_data = response.json()
-        return response_data
+            response = requests.post(
+                base_url,
+                headers=headers,
+                json=req
+            )
+            response.raise_for_status()
 
-    except Exception as e:
-        return dict(
-            approved_amount=0,
-            currency="INR",
-            message=f"Error: {str(e)}"
-        )
-```
+            response_data = response.json()
+            return response_data
+
+        except Exception as e:
+            return dict(
+                approved_amount=0,
+                currency="INR",
+                message=f"Error: {str(e)}"
+            )
+    ```
+
 4. add below decorator to *calculate_preauth_amount* method 
 ```python
 @tool(name="calculate_preauth_amount", description="Calculates the pre-authorized amount")
 
 ```
 5. copy all the file in tools folder to your 'wxo-agents/tools' folder
+
 6. add followings to your *'requirements.txt'*
 ```commandline
 TBD

@@ -1,5 +1,6 @@
+# Insurance claim pre-authorization use case
 
-<img src="ICP_pre_hosp_main.png" alt="ICP" style="width:100px;"/>
+![img.png](../../../images/ICP_pre_hosp_main.jpg)
 
 This use case demonstrates the deployment of AI Agents to enhance the cashless hospitalization experience by streamlining both customer interaction and backend claim processing.
 
@@ -8,9 +9,6 @@ At the hospital front desk, an AI-powered virtual agent acts as the first point 
 Simultaneously, a background AI claim analyst agent is triggered to proactively evaluate the claim, verify policy entitlements, and calculate the pre-authorized amount based on policy rules and treatment details. Once reviewed, it automatically notifies the customer via email with the approval status and next steps.
 
 In certain scenarios, this claim analyst agent can also be manually triggered by a TPA desk agent
-
-
----
 
 ## 🧾 **The Problem**
 
@@ -29,9 +27,7 @@ As a result, **hospitals, insurers, and patients** face significant friction due
 * 💸 **High operational costs** from repetitive, rule-based tasks performed by human agents
 
 ### **As-Is Architecture**
- ![img.png](../../images/ICP_Pre_Hosp_img.png)
-
----
+ ![img.png](../../../images/ICP_Pre_Hosp_img.png)
 
 ## 🎯 **Objective**
 
@@ -39,15 +35,11 @@ The objective is to design an **Agentic AI solution** that automates and streaml
 
 ### ✅ **Key Highlights**
 
----
-
 ### 🤖 **1. Front Desk AI Agent for Customer Support & Collaboration**
 
 * Deploy an **AI-powered Front Desk Agent** to serve as the primary interface to the customer.
 * This agent delivers **human-like, real-time support** for customer queries related to policy details, claim process, and documentation.
 * It actively **collaborates with other specialized AI agents**, such as those responsible for **claim intake and document verification**, to ensure a smooth and accurate initiation of the claim process.
-
-
 
 ### 🤖 **2. Claim Analyst AI Agent for Proactive Claim Processing**
 
@@ -58,14 +50,10 @@ The objective is to design an **Agentic AI solution** that automates and streaml
     * Generate a detailed report
 * Once processed, it **automatically notifies the customer via email**, ensuring transparency and speed.
 
-
-
 ### 🛠️ **3. Intelligent Access to Enterprise Systems**
 
 * Provide AI agents with **secure and intelligent access** to relevant enterprise systems and data repositories.
 * Enables agents to **fetch contextual information in real time**, supporting more accurate decision-making and faster response times.
-
----
 
 ## 🚀 **Business values**
 
@@ -77,29 +65,20 @@ The objective is to design an **Agentic AI solution** that automates and streaml
 6. **Auto pre-authorization** speeds up approvals and reduces manual work.
 7. **No more manual document uploads** means fewer frustrations and faster claims.
 
----
-
 ## **To-Be Architecture**
 
-![img.png](../../images/ICP_pre_hosp_tba_img.png)
+![img.png](../../../images/ICP_pre_hosp_tba_img.png)
 
 ### **AI Agents working model**
 
 The diagram below demonstrates the AI agent's reasoning capabilities in processing insurance claims for pre-authorization amount
 
-![img.png](../../images/ICP_agent_wm_img.png)
+![img.png](../../../images/ICP_agent_wm_img.png)
 
----
+## Step by step hands-on instructions
 
-## **Step-by-step Hands-on Instructions**
-
----
-
-You can find step-by-step instructions in this document. It shows how you can implement the use case using watsonx.ai and watsonx Orchestrate.
-
----
+- Please find the step by step hands-on instructions to execute this lab here: [Lab-guide](lab-guide.md)
 
 ## **Demo video**
 
----
-[ICP_Pre_Hosp_Demo.mp4](../../videos/ICP_Pre_Hosp_Demo.mp4)
+[ICP_Pre_Hosp_Demo.mp4](../../../videos/ICP_Pre_Hosp_Demo.mp4)

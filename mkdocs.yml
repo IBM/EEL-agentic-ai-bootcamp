@@ -83,14 +83,26 @@ nav:
         - Lab 2 - watsonx Orchestrate Multi-agent (pro-code): labs/pro-code-lab.md
     - Use cases for labs:
         - Low-code: 
-            - Vehicle maintenance: use-cases-for-labs/low-code/vehicle-maintenance.md
-            - HR use case: use-cases-for-labs/low-code/hr-use-case.md
+            - Vehicle maintenance: 
+                - Use case details: use-cases-for-labs/low-code/automobile/vehicle-maintenance.md
+                - Lab guide: use-cases-for-labs/low-code/automobile/lab-guide.md
+            - HR use case: 
+                - Use case details: use-cases-for-labs/low-code/chro/hr-use-case.md
+                - Lab guide: use-cases-for-labs/low-code/hr/chro/lab-guide.md
         - Pro-code:
-            - Insurance claim use cases:
-                - Pre authorization for cashless hospitalization: use-cases-for-labs/pro-code/insurance-claim-pre-authorization.md
-                - Post hospitalization claim: use-cases-for-labs/pro-code/insurance-claim-post-hospitalization.md
-            - Financial research and analysis: use-cases-for-labs/pro-code/financial-research-and-analysis.md
-            - Supply chain: use-cases-for-labs/pro-code/supply-chain.md
+            - Insurance claim:
+                - Pre authorization for cashless hospitalization: 
+                    - Use case details: use-cases-for-labs/pro-code/insurance-claim/insurance-claim-pre-authorization.md
+                    - Lab guide: use-cases-for-labs/pro-code/insurance-claim/lab-guide.md
+                - Post hospitalization claim: 
+                    - Use case details: use-cases-for-labs/pro-code/insurance-claim-post/insurance-claim-post-hospitalization.md
+                    - Lab guide: use-cases-for-labs/pro-code/insurance-claim/insurance-claim-post/lab-guide.md
+            - Financial research and analysis: 
+                - Use case details: use-cases-for-labs/pro-code/bfsi/financial-research-and-analysis.md
+                - Lab guide: use-cases-for-labs/pro-code/bfsi/lab-guide.md
+            - Supply chain: 
+                - Use case details: use-cases-for-labs/pro-code/supply-chain/supply-chain.md
+                - Lab guide: use-cases-for-labs/pro-code/supply-chain/lab-guide.md
     - Demo use cases: 
         - AI Agent Governance: demo-use-cases/governance-demo.md
         - Travel planner: demo-use-cases/travel-planner-demo.md
