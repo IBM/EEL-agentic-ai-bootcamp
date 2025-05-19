@@ -5,9 +5,26 @@ This guide will help you to build and test the use case
 
 ## ⏳ **Build and run**
 
-### **Download lab files**
+### Pre-requisites:
 
-Download the required lab files from here. Unzip it to some folder.
+- Make sure you've already setup the environment:
+- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
+
+ **Steps to connect with service-now**
+1. Sign-up for a Service Now account at https://developer.servicenow.com/dev.do
+2. Validate your email address (check email)
+3. On the landing page click start building. This will allocate a new instance of SNOW for you.
+4. Back on the landing page, click your profile icon on the top right and under "My instance" click manage instance password.
+5. Create an application connection using these credentials
+```bash
+orchestrate connections add -a service-now
+orchestrate connections configure -a service-now --env live --type team --kind basic --url <the instance url>
+orchestrate connections set-credentials -a service-now --env live -u admin -p <password from modal>
+```
+**Download lab files**
+
+Download the required lab files from [here](https://ibm.box.com/s/em1p0uhoi56ixjym3ig8ql3j7vgnyg2d). Unzip it to some folder.
 
 ### **Create project structure**
 
