@@ -10,8 +10,6 @@ Simultaneously, a background AI claim analyst agent is triggered to proactively 
 In certain scenarios, this claim analyst agent can also be manually triggered by a TPA desk agent
 
 
-Here's your **Problem Statement** rewritten in clean and structured **Markdown format**:
-
 ---
 
 ## 🧾 **The Problem**
@@ -81,7 +79,7 @@ The objective is to design an **Agentic AI solution** that automates and streaml
 
 ---
 
- ## **To-Be Architecture**
+## **To-Be Architecture**
 
 ![img.png](../../images/ICP_pre_hosp_tba_img.png)
 
