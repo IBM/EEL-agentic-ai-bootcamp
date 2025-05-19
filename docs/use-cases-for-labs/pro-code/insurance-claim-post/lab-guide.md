@@ -2,15 +2,6 @@
 
 This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims post hospitalisation scenario that involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system. 
 
-<!-- ## REFERENCE ARCHITECTURE - Health Insurance Claim (WIP)
-
-<p align="center">
-
-  <img width="800" src="../../../docs/WxOAgents_V1.jpg">
-
-</p> -->
-
-
 ## Pre-requisites:
 
 - Make sure you've already setup the environment:
