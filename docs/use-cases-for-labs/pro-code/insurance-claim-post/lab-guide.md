@@ -59,13 +59,14 @@ orchestrate connections set-credentials -a service-now --env live -u admin -p <p
 I need to submit a new claim for a doctor's visit.
 ```
 
-- Agent should ask about memberId and date of birth 
+- Agent should ask about memberId and date of birth to verify/authenticate the member details
 
 ```
 My MemberId is MEMBER456 and date of birth is: 1985-07-22
 ```
 
-- After authentication Agent should ask for other details for initiating the claim process
+- Authentication would be done by calling **authentication tool**
+- After authentication, Agent should ask for other details for initiating the claim process
 - User should response one of the below bases on what Agent asks for:
 
 - If agent asks for name of the patient:
@@ -98,4 +99,14 @@ Service Code (CPT): 80053 (Lab Panel), Provider: Quest Diagnostics, NPI: 0987654
 
 ```
 
+- You can see the reasoning done by LLM used by respective Agent and check each step processed by different collaborator agents calling different tools. Output of each tool call is shown under each step.
 
+- Go to your [ServiceNow instance](https://developer.servicenow.com/dev.do) developer portal and from "workspaces" menu, click on "Service Operations Workspace" to see all the incidents:
+
+![img.png](../../../images/SNOW_DeveloperPortal.jpg)
+
+- Here you should see the created Incident:
+
+![img.png](../../../images/SNOW_incidents.jpg)
+
+- Here Clinical Review & Fraud Detection along with Payment processing can be done by Human-in-the-loop.
