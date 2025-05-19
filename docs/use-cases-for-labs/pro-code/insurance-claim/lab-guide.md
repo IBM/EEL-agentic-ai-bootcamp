@@ -1,7 +1,35 @@
-# Insurance claim pre-authorization use case
-# **Lab guide - Cashless claim process: customer support & Pre-authorization** 
+# Cashless claim process: customer support & Pre-authorization
 
-This guide will help you to build and test the use case
+## 🛠️ **Lab guide -  Use Case Implementation Guide** 
+
+
+
+This guide provides step-by-step instructions for building and testing the use case.
+
+### 📌 Use Case Summary
+
+The use case outlines two key stages in the **cashless hospitalization claim process**:
+
+1. **📞 Customer Support**
+   - Assist policyholders with claim-related inquiries.
+   - Clarify policy benefits and processing steps.
+
+2. **⚙️ Pre-Authorization Calculation**
+   - Automated back-end process for insurers.
+   - Determines approved coverage based on hospital treatment estimates.
+
+### 🎯 Scenario
+
+A policyholder seeks treatment with an active insurance policy but faces uncertainties:
+
+- ❓ **Unclear on coverage & cashless claims**
+- 💸 **Concerned about out-of-pocket expenses**
+
+**Key Requirements:**  
+✔️ Transparent policy benefits explanation.  
+✔️ Clear breakdown of insurer-approved amount vs. hospital treatment cost.
+
+This use case ensures a **seamless customer experience** while optimizing insurer workflows.
 
 ## ⏳ **Build and run**
 
