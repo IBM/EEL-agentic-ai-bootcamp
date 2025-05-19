@@ -37,7 +37,17 @@
         "telematics",
         "CHRO",
         "BFSI",
-        "itzcos"
+        "itzcos",
+        "pydantic",
+        "Milvus",
+        "medibuddy",
+        "aadhar",
+        "CUST",
+        "Superbill",
+        "PBAA",
+        "CIVA",
+        "CRFDA",
+        "Agenitc"
     ],
 
     "flagWords": [

@@ -1,5 +1,5 @@
 # Health Insurance - Post Hospitalization Claim 
-This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system.  This scenario covers post hospitalisation claim process and more details on the flow are documented below.
+This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system.  This scenario covers post hospitalization claim process and more details on the flow are documented below.
 
 <!-- ## REFERENCE ARCHITECTURE - Health Insurance Claim (WIP)
 
@@ -14,9 +14,10 @@ This LAB is written to simulate a customer care agent for hospitals. Healthcare 
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
+- [Download files](https://ibm.box.com/s/x6hup5ft3qwip2zfzj5dpnaqj4e48nry)
 
 ## Steps to import
-1. Signup for a Sevice Now account at https://developer.servicenow.com/dev.do
+1. Sign-up for a Service Now account at https://developer.servicenow.com/dev.do
 2. Validate your email address (check email)
 3. On the landing page click start building. This will allocate a new instance of SNOW for you. 
 4. Back on the landing page, click your profile icon on the top right and under "My instance" click manage instance password.
@@ -122,7 +123,7 @@ We'll define a few agents, each with a specific role and toolset. There will als
         *   **Basic Rules Engine:** For initial validation checks (e.g., "Is date of service in the past?", "Are cost fields numeric?").
 
 3.  **Policy & Benefits Adjudication Agent (PBAA)**
-    *   **Role:** Takes validated claim information. Determines coverage based on Sarah's specific policy, applies benefits (deductibles, copays, coinsurance), and checks for pre-authorization requirements.
+    *   **Role:** Takes validated claim information. Determines coverage based on Sarah's specific policy, applies benefits (deductibles, co-pays, coinsurance), and checks for pre-authorization requirements.
     *   **Tools:**
         *   **Core Policy Management System API:** Accesses detailed policy terms, coverage limits, accumulator status (deductible met, out-of-pocket max).
         *   **Benefits Engine/Calculator:** Applies financial rules based on the policy.
@@ -132,7 +133,7 @@ We'll define a few agents, each with a specific role and toolset. There will als
 4.  **Clinical Review & Fraud Detection Agent (CRFDA) - (Optional, for complex cases or high-value claims)**
     *   **Role:** Performs deeper clinical review for medical necessity, appropriateness of codes, and potential fraud, waste, or abuse. This agent might be triggered if certain thresholds or flags are met.
     *   **Tools:**
-        *   **Advanced Medical Coding & Billing Edit Software (e.g., ClaimScrubber functionality):** Detects unbundling, upcoding, incorrect modifiers.
+        *   **Advanced Medical Coding & Billing Edit Software (e.g., ClaimScrubber functionality):** Detects un-bundling, up-coding, incorrect modifiers.
         *   **Predictive Analytics & Machine Learning Models:** Trained on historical claim data to identify patterns indicative of fraud or abuse.
         *   **Clinical Expert System/Knowledge Base:** More in-depth medical necessity guidelines and treatment protocols.
         *   **Case Management System API:** To flag claims for human review if AI confidence is low or a significant issue is detected.

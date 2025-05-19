@@ -85,7 +85,7 @@ The objective is to design an **Agentic AI solution** that automates and streaml
 
 ### **AI Agents working model**
 
-The diagram below demonstrates the AI agent's reasoning capabilities in processing insurance claims for pre-authorisation amount
+The diagram below demonstrates the AI agent's reasoning capabilities in processing insurance claims for pre-authorization amount
 
 ![img.png](../../images/ICP_agent_wm_img.png)
 
