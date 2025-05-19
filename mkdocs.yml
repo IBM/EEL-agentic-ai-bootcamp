@@ -79,6 +79,7 @@ nav:
             - Access your clasic instance: labs/environment-setup-lab/access-env.md
             - Setup your first project: labs/environment-setup-lab/create-project.md
             - Create your API key: labs/environment-setup-lab/api_key_project_id_setup.md
+            - watsonx Orchestrate client setup: labs/environment-setup-lab/wxo-client-setup.md
         - Lab 1 - watsonx Orchestrate Agent Builder (low-code): labs/low-code-lab.md
         - Lab 2 - watsonx Orchestrate Multi-agent (pro-code): labs/pro-code-lab.md
     - Use cases for labs:

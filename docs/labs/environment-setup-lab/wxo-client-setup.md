@@ -1,6 +1,7 @@
 # Lab 0 - Environment setup: running wxo-client adk locally
 
 !!! note
+
     Follow these instructions for running wxo-client ADK locally in order to successfully complete the Agentic AI pro-code bootcamp labs.
 
 ## Installing the ADK
@@ -20,19 +21,20 @@ Install the IBM watsonx Orchestrate ADK on your computer.
 
 - Install the ADK with pip.
 
-```
-pip install ibm-watsonx-orchestrate
-
-```
+    ```
+    pip install ibm-watsonx-orchestrate
+    ```
 
 - Test the installation:
 
-```
-orchestrate --help
+    ```
+    orchestrate --help
 
-```
+    ```
 
-!!! Note: Use the --help argument to get information about each command and its arguments in the ADK CLI.
+!!! note
+
+    Use the **--help** argument to get information about each command and its arguments in the ADK CLI.
 
 ## Enabling the Bootcamp Environment
 
@@ -41,3 +43,53 @@ orchestrate env add --name bootcamp --url <REPLACE_WITH_WXO_INSTANCE_URL> -t ibm
 orchestrate env activate bootcamp
 
 ```
+
+## Deploy a hello world agent to start the watsonx Orchestrate UI
+
+- Based on your operating system, run the below command to setup a basic agent.
+
+<details><summary>Linux/macOS</summary>
+
+```
+cat <<EOF > agent.yaml
+spec_version: v1
+kind: native
+name: ibm_agent
+description: >
+  You are an helpful agent respond in a friendly conversational tone.
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+style: default
+EOF
+
+orchestrate agents import -f agent.yaml
+rm agent.yaml
+```
+
+</details>
+
+<details><summary>Windows</summary>
+
+```
+@"
+spec_version: v1
+kind: native
+name: ibm_agent
+description: >
+  You are an helpful agent respond in a friendly conversational tone.
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+style: default
+"@ | Set-Content -Path "$env:TEMP\agent.yaml"
+
+orchestrate agents import -f "$env:TEMP\agent.yaml"
+Remove-Item "$env:TEMP\agent.yaml"
+```
+
+</details>
+
+- Once the agent is setup, run the following command to bring up the watsonx Orchestrate UI.
+
+```
+orchestrate chat start
+```
+
+- You should now see watsonx Orchestrate running on <http://localhost:3000>
