@@ -29,10 +29,6 @@
          <lastmod>2025-05-19</lastmod>
     </url>
     <url>
-         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/lab-guides/pro-code/insurance-claim-post-hospitalization-guide/</loc>
-         <lastmod>2025-05-19</lastmod>
-    </url>
-    <url>
          <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/labs/low-code-lab/</loc>
          <lastmod>2025-05-19</lastmod>
     </url>
@@ -65,27 +61,51 @@
          <lastmod>2025-05-19</lastmod>
     </url>
     <url>
-         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/low-code/hr-use-case/</loc>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/low-code/automobile/lab-guide/</loc>
          <lastmod>2025-05-19</lastmod>
     </url>
     <url>
-         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/low-code/vehicle-maintenance/</loc>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/low-code/automobile/vehicle-maintenance/</loc>
          <lastmod>2025-05-19</lastmod>
     </url>
     <url>
-         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/financial-research-and-analysis/</loc>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/low-code/chro/hr-use-case/</loc>
          <lastmod>2025-05-19</lastmod>
     </url>
     <url>
-         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/insurance-claim-post-hospitalization/</loc>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/low-code/chro/lab-guide/</loc>
          <lastmod>2025-05-19</lastmod>
     </url>
     <url>
-         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/insurance-claim-pre-authorization/</loc>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/bfsi/financial-research-and-analysis/</loc>
          <lastmod>2025-05-19</lastmod>
     </url>
     <url>
-         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/supply-chain/</loc>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/bfsi/lab-guide/</loc>
+         <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/insurance-claim/insurance-claim-pre-authorization/</loc>
+         <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/insurance-claim/lab-guide/</loc>
+         <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/insurance-claim-post/insurance-claim-post-hospitalization/</loc>
+         <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/insurance-claim-post/lab-guide/</loc>
+         <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/supply-chain/lab-guide/</loc>
+         <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/EEL-agentic-ai-bootcamp/docs/use-cases-for-labs/pro-code/supply-chain/supply-chain/</loc>
          <lastmod>2025-05-19</lastmod>
     </url>
 </urlset>
