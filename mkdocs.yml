@@ -89,7 +89,7 @@ nav:
                 - Lab guide: use-cases-for-labs/low-code/automobile/lab-guide.md
             - HR use case: 
                 - Use case details: use-cases-for-labs/low-code/chro/hr-use-case.md
-                - Lab guide: use-cases-for-labs/low-code/hr/chro/lab-guide.md
+                - Lab guide: use-cases-for-labs/low-code/chro/lab-guide.md
         - Pro-code:
             - Insurance claim:
                 - Pre authorization for cashless hospitalization: 
@@ -97,7 +97,7 @@ nav:
                     - Lab guide: use-cases-for-labs/pro-code/insurance-claim/lab-guide.md
                 - Post hospitalization claim: 
                     - Use case details: use-cases-for-labs/pro-code/insurance-claim-post/insurance-claim-post-hospitalization.md
-                    - Lab guide: use-cases-for-labs/pro-code/insurance-claim/insurance-claim-post/lab-guide.md
+                    - Lab guide: use-cases-for-labs/pro-code/insurance-claim-post/lab-guide.md
             - Financial research and analysis: 
                 - Use case details: use-cases-for-labs/pro-code/bfsi/financial-research-and-analysis.md
                 - Lab guide: use-cases-for-labs/pro-code/bfsi/lab-guide.md
