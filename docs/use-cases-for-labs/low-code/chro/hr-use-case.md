@@ -20,7 +20,7 @@ In this lab, we will see how the out-of-the-box prebuilt tools in watsonx Orches
 
 ## 📈 Business value
 
-The usage of an AI-backed system to optimize the HR process can have multi-dimensional impacts, such as quicker resolution time, higher user satisfaction, increased revenue, and reduction in employee burnout, which ultimately positively impacts your business value. On the other hand, leveraging the Agentic capablities will come with its own additional set of values viz, improved data safety, and more grounded responses without hallucinations, thereby improving brand experience.
+The usage of an AI-backed system to optimize the HR process can have multi-dimensional impacts, such as quicker resolution time, higher user satisfaction, increased revenue, and reduction in employee burnout, which ultimately positively impacts your business value. On the other hand, leveraging the Agentic capabilities will come with its own additional set of values viz, improved data safety, and more grounded responses without hallucinations, thereby improving brand experience.
 
 ## 🏛️ Architecture
 

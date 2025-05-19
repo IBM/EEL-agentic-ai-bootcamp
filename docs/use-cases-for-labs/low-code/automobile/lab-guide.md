@@ -97,7 +97,7 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 
         Every agent developed on watsonx Orchestrate will support Retrieval Augmented Generation (RAG) out of the box!
 
-- For the Vehicle maintenance agent, we'll upload some documents such as vehicle's user manual and diagnostic trouble codes (DTC). We have selected publically available data such as Jeep Compass user manual and DTC codes list.
+- For the Vehicle maintenance agent, we'll upload some documents such as vehicle's user manual and diagnostic trouble codes (DTC). We have selected publicly available data such as Jeep Compass user manual and DTC codes list.
 
 - Add a description and upload the files from the downloaded `knowledge_bases/` directory:
 
@@ -110,7 +110,7 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 
         You can also connect to external repository to add knowledge base. Currently supported external repositories are:
         
-        - Milvis
+        - Milvus
         - Elastic search
 
     ![knowledge](../../../images/knowledge.png)
@@ -144,7 +144,7 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 - We will be using the **Add from local instance**. Click on **Add agent** and select **Add from local instance**.
 
 - Select the agent:
-    - **vehicle_telematics_agnt**
+    - **vehicle_telematics_agent**
 
 ![toolsets](../../../images/toolsets.png)
 
