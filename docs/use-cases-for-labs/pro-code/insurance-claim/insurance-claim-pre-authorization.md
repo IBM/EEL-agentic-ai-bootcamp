@@ -81,4 +81,4 @@ The diagram below demonstrates the AI agent's reasoning capabilities in processi
 
 ## **Demo video**
 
-[ICP_Pre_Hosp_Demo.mp4](../../../videos/ICP_Pre_Hosp_Demo.mp4)
+[ICP_Pre_Hosp_Demo.mp4](https://ibm.box.com/s/fwb1rbnzsfrdjlyd403waw299ct6i5ri)

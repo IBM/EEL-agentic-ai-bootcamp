@@ -1,6 +1,6 @@
 # Health Insurance - Post Hospitalization Claim LAB Guide
 
-This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims post hospitalisation scenario that involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system. 
+This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims post hospitalization scenario that involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system. 
 
 ## Pre-requisites:
 

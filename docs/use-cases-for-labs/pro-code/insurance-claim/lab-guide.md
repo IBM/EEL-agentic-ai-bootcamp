@@ -1,13 +1,58 @@
-# Insurance claim pre-authorization use case
-# **Lab guide - Cashless claim process: customer support & Pre-authorization** 
+# Cashless claim process: customer support & Pre-authorization
 
-This guide will help you to build and test the use case
+## 🛠️ **Lab guide -  Use Case Implementation Guide** 
+
+
+
+This guide provides step-by-step instructions for building and testing the use case.
+
+### 📌 Use Case Summary
+
+The use case outlines two key stages in the **cashless hospitalization claim process**:
+
+1. **📞 Customer Support**
+   - Assist policyholders with claim-related inquiries.
+   - Clarify policy benefits and processing steps.
+
+2. **⚙️ Pre-Authorization Calculation**
+   - Automated back-end process for insurers.
+   - Determines approved coverage based on hospital treatment estimates.
+
+### 🎯 Scenario
+
+A policyholder seeks treatment with an active insurance policy but faces uncertainties:
+
+- ❓ **Unclear on coverage & cashless claims**
+- 💸 **Concerned about out-of-pocket expenses**
+
+**Key Requirements:**  
+✔️ Transparent policy benefits explanation.  
+✔️ Clear breakdown of insurer-approved amount vs. hospital treatment cost.
+
+This use case ensures a **seamless customer experience** while optimizing insurer workflows.
 
 ## ⏳ **Build and run**
 
-### **Download lab files**
+### Pre-requisites:
 
-Download the required lab files from here. Unzip it to some folder.
+- Make sure you've already setup the environment:
+- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
+
+ **Steps to connect with service-now**
+1. Sign-up for a Service Now account at https://developer.servicenow.com/dev.do
+2. Validate your email address (check email)
+3. On the landing page click start building. This will allocate a new instance of SNOW for you.
+4. Back on the landing page, click your profile icon on the top right and under "My instance" click manage instance password.
+5. Create an application connection using these credentials
+```bash
+orchestrate connections add -a service-now
+orchestrate connections configure -a service-now --env live --type team --kind basic --url <the instance url>
+orchestrate connections set-credentials -a service-now --env live -u admin -p <password from modal>
+```
+**Download lab files**
+
+Download the required lab files from [here](https://ibm.box.com/s/em1p0uhoi56ixjym3ig8ql3j7vgnyg2d). Unzip it to some folder.
 
 ### **Create project structure**
 
