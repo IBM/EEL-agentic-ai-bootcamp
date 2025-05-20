@@ -137,7 +137,7 @@ Suppose the specialist claim was for a very expensive, unusual procedure.
 
 This multi-agent system allows for a sophisticated, automated, yet adaptable claims processing workflow.
 
-## Important things to consider
+**Important things to consider**
 
 - Make sure you go through the Agents and Tools files from the downloaded artifacts
 - This use case is built using all native Agents and tools in Watsonx Orchestrate
