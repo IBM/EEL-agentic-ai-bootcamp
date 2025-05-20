@@ -53,6 +53,10 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
     ```
 
     ```bash
+    orchestrate knowledge-bases import -f knowledge_bases/knowledge.yaml
+    ```
+
+    ```bash
     orchestrate agents import -f agents/vehicle_telematics.yaml
     ```
 
