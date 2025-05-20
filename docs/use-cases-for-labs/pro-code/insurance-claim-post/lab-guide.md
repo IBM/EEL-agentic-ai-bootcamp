@@ -60,15 +60,10 @@ My MemberId is MEMBER456 and date of birth is: 1985-07-22
 - After authentication, Agent should ask for other details for initiating the claim process
 - User should response one of the below bases on what Agent asks for:
 
-- If agent asks for name of the patient:
-```
-Name of the patient is Sarah Johnson
-```
-
-- If Agent asks for date of service
+- Next, if Agent asks for the name of the patient and date of service
 
 ```
-Yes, Dr. Emily Carter on October 26th, 2023. And I also had some lab tests done at Quest Diagnostics the same day.
+Name of the patient is Sarah Johnson. Dr. Emily Carter on October 26th, 2023. And I also had some lab tests done at Quest Diagnostics the same day.
 ```
 
 - If Agent asks for description of the services or charges
