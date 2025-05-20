@@ -98,7 +98,7 @@ Service Code (CPT): 80053 (Lab Panel),
 
 - Here Clinical Review & Fraud Detection along with Payment processing can be done by Human-in-the-loop.
 
-## Important things to consider
+**Important things to consider**
 
 - Make sure you go through the Agents and Tools files from the downloaded artifacts
 - This use case is built using all native Agents and tools in Watsonx Orchestrate
