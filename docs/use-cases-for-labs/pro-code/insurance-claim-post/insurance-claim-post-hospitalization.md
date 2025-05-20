@@ -137,3 +137,11 @@ Suppose the specialist claim was for a very expensive, unusual procedure.
 
 This multi-agent system allows for a sophisticated, automated, yet adaptable claims processing workflow.
 
+**Important things to consider**
+
+- Make sure you go through the Agents and Tools files from the downloaded artifacts
+- This use case is built using all native Agents and tools in Watsonx Orchestrate
+- Agents and respective tools are deployed within wxO instance and AgentOps is taken careof.
+- For adding Observability, you can integrate it with Langfuse and that would show all the traces, sessions, observations and more from all Agents, LLMs, Thinking process and much more on the dashboard.
+- For further Agentic AI Governance, this can be integrated with IBM Watsonx Governance.
+

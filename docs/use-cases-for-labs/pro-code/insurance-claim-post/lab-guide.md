@@ -81,7 +81,8 @@ Patient: Sarah Johnson (ID: MEMBER456)
 Date of Service: 2023-10-26
 Provider: Dr. Emily Carter, NPI: 1234567890
 Service Code (CPT): 99214, Diagnosis (ICD-10): M54.5, Charge: $250.00
-Service Code (CPT): 80053 (Lab Panel), Provider: Quest Diagnostics, NPI: 0987654321, Charge: $120.00
+Provider: Quest Diagnostics, NPI: 0987654321, Charge: $120.00
+Service Code (CPT): 80053 (Lab Panel), 
 
 ```
 
@@ -96,3 +97,11 @@ Service Code (CPT): 80053 (Lab Panel), Provider: Quest Diagnostics, NPI: 0987654
 ![img.png](../../../images/SNOW_incidents.jpg)
 
 - Here Clinical Review & Fraud Detection along with Payment processing can be done by Human-in-the-loop.
+
+**Important things to consider**
+
+- Make sure you go through the Agents and Tools files from the downloaded artifacts
+- This use case is built using all native Agents and tools in Watsonx Orchestrate
+- Agents and respective tools are deployed within wxO instance and AgentOps is taken careof.
+- For adding Observability, you can integrate it with Langfuse and that would show all the traces, sessions, observations and more from all Agents, LLMs, Thinking process and much more on the dashboard.
+- For further Agentic AI Governance, this can be integrated with IBM Watsonx Governance.
