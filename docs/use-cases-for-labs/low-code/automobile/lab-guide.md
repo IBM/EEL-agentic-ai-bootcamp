@@ -181,7 +181,7 @@ You are also working with a tool get_nearest_service_center that takes lat & lon
 
     ![op-1](../../../images/op-1.png)
 
-2. **Help me diagnose my car. It is shaking and I have the engine temperature warning light on.** -> Troubleshoot agent will transfer the control to Telematics data analyzer agent which will ask follow-up questions if required and give a car health report. The car report is read, and a suggestion is provided by the Troubleshoot agent.
+2. **My car is shaking and I have the engine temperature warning light on can you diagnose it?** -> Troubleshoot agent will transfer the control to Telematics data analyzer agent which will ask follow-up questions if required and give a car health report. The car report is read, and a suggestion is provided by the Troubleshoot agent.
 
     ![op-2](../../../images/op-2.png)
     ![op-3](../../../images/op-3.png)
