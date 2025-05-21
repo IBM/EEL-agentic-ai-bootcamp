@@ -7,7 +7,7 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 ## Pre-requisites
 
 - Make sure you've already setup the environment:
-- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
+- [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
 - [Download files](https://ibm.box.com/s/dj71leot5628prjg033rxt0avphmrnft)
 
@@ -189,3 +189,7 @@ You are also working with a tool get_nearest_service_center that takes lat & lon
 3. **Where is the nearest service center?** -> Troubleshoot agent will invoke the Get nearest service center tool and pass the lat & long received from the Telematics data analyzer agent (assumption is that car will send the current lat & long data as part of telematics data.) and get the nearest service centers from the list of service centers.
 
     ![op-4](../../../images/op-4.png)
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉

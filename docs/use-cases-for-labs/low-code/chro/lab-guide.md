@@ -2,10 +2,9 @@
 
 ## Pre-requisites
 
-- Check with your instructor to make sure **all systems** are up and running before you continue.
-- Validate that you have access to the right techzone environment for this lab.
-- Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
-- If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
+- Make sure you've already setup the environment:
+- [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
 
 ## Step by step instructions to build the HR Agent
 
@@ -63,7 +62,7 @@
 
 13. Select all the operations and click on **Done**:
 
-    ![img.png](../../../images/hr/hr_step11.png)
+    ![img.png](../../../images/hr/step-import.jpg)
 
 14. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
 
@@ -117,3 +116,7 @@
 16. Make sure **HR Agent** is selected. You can now test your agent:
 
     ![img.png](../../../images/hr/hr_step16.png)
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉

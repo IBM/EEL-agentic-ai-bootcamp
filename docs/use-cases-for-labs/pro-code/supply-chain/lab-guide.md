@@ -541,3 +541,7 @@ Your WXO-powered multi-agent supply chain simulation is now up and running!
 ---
 
 Feel free to update the guide as your implementation evolves!
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉

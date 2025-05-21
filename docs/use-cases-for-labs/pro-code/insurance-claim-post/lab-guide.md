@@ -2,10 +2,10 @@
 
 This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims post hospitalization scenario that involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system. 
 
-## Pre-requisites:
+## Pre-requisites
 
 - Make sure you've already setup the environment:
-- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
+- [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
 - [Download files](https://ibm.ent.box.com/folder/321723563348?s=ip9fq5u0b8pty8dvrlza8ikrs8cel4xg)
 - Download the zip file from Lab2 folder
@@ -106,3 +106,8 @@ Service Code (CPT): 80053 (Lab Panel),
 - Agents and respective tools are deployed within wxO instance and AgentOps is taken care of.
 - For adding Observability, you can integrate it with Langfuse and that would show all the traces, sessions, observations and more from all Agents, LLMs, Thinking process and much more on the dashboard.
 - For further Agentic AI Governance, this can be integrated with IBM Watsonx Governance.
+
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉

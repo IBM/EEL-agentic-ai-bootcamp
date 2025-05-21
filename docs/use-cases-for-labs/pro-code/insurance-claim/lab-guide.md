@@ -284,3 +284,7 @@ Use below message to trigger the agent
 ```commandline
 - Calculate pre-authorization amount for customer CUST001
 ```
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉
