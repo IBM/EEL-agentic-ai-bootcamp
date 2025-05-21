@@ -63,8 +63,7 @@ Create following folder structure -
                   |---tools
                   |---knowledge_base
                       |---documents
-                  |---requirements.txt
-                  |---.importAll.sh
+
 ### **Creating tools**
 There are many tools used in this use-case, however, for lab purpose we will be creating one python tool and will import rest of the required tool.
 
@@ -72,7 +71,7 @@ Create a tool to call a decision service to calculate the pre-authorized amount.
 
 Steps - 
 
-1. create a file `calculate_preauth_amount.py`
+1. create a file in **tools** directory called `calculate_preauth_amount.py`
 
 2. add following imports to your file
 
@@ -139,14 +138,20 @@ Steps -
 
 6. add followings to your *'requirements.txt'*
 ```commandline
-TBD
+requests
 ```
-7. use below command to import your tools
+7. You can use below command to import your tools
 ```commandline
 $ orchestrate tools import -k python \
     -f "<path-to-your-tool>/<tool-file-name>.py" \
     -r "requirements.txt"
 ```
+
+8. However, we have provided shell/bat scripts to automate this step. Run the script:
+```
+./import-tools.sh
+```
+
 
 ### **Creating knowledge**
 In watsonx Orchestrate, agents can use knowledge bases to search for user requests and return relevant, grounded content or answers.
