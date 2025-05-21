@@ -41,15 +41,11 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 - From the root of the downloaded files, run the following commands to deploy the toolsets:
 
     ```bash
-    orchestrate tools import -k python \
-        -f "tools/get_nearest_service_center.py" \
-        -r "tools/requirements.txt"
+    orchestrate tools import -k python -f "tools/get_nearest_service_center.py" -r "tools/requirements.txt"
     ```
 
     ```bash
-    orchestrate tools import -k python \
-        -f "tools/get_vehicle_telematics.py" \
-        -r "tools/requirements.txt"
+    orchestrate tools import -k python -f "tools/get_vehicle_telematics.py" -r "tools/requirements.txt"
     ```
 
     ```bash

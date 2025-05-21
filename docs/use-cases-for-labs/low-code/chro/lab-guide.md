@@ -1,6 +1,4 @@
-
 # 🧑‍💼 AskHR: Automate HR tasks with Agentic AI
-
 
 ## Pre-requisites
 
@@ -9,115 +7,113 @@
 - Validate that you have access to a credentials file that you instructor will share with you before starting the labs.
 - If you're an instructor running this lab, check the **Instructor's guides** to set up all environments and systems.
 
-
-
-
-## Step by step instructions to build the HR Agent:
+## Step by step instructions to build the HR Agent
 
 1. When you launch watsonx Orchestrate, you'll be directed to this page. Click on the hamburger menu in the top left corner:
 
-![img.png](../../../images/hr/step1.png)
+    ![img.png](../../../images/hr/step1.png)
 
-2. Click on the down arrow next to **Build**.  Then click on **Agent Builder**:
+2. Click on the down arrow next to **Build**. Then click on **Agent Builder**:
 
-![img.png](../../../images/hr/step2.png)
+    ![img.png](../../../images/hr/step2.png)
 
 3. Click on **Create agent +**:
 
-![img.png](../../../images/hr/step3.png)
+    ![img.png](../../../images/hr/step3.png)
 
 4. Select "Create from scratch", give your agent a name, e.g. "HR Agent", and fill in the description as shown below:
 
-```
-You are an agent who handles employee HR queries.  You provide short and crisp responses, keeping the output to 200 words or less.  You can help users check their profile data, retrieve latest time off balance, update title or address, and request time off. You can also answer general questions about company benefits.
-```  
-Click on **Create**:
+    ```
+    You are an agent who handles employee HR queries.  You provide short and crisp responses, keeping the output to 200 words or less.  You can help users check their profile data, retrieve latest time off balance, update title or address, and request time off. You can also answer general questions about company benefits.
+    ```  
 
-![img.png](../../../images/hr/hr_step4.png)
+5. Click on **Create**
 
-5. Scroll down the screen to the **Knowledge** section. Copy the following description into the **Knowledge Description** section:
+    ![img.png](../../../images/hr/hr_step4.png)
 
-```
-This knowledge base addresses the company's employee benefits, including parental leaves, pet policy, flexible work arrangements, and student loan repayment.
-```
+6. Scroll down the screen to the **Knowledge** section. Copy the following description into the **Knowledge Description** section:
 
-Click on **Upload files**:
+    ```
+    This knowledge base addresses the company's employee benefits, including parental leaves, pet policy, flexible work arrangements, and student loan repayment.
+    ```
 
-![img.png](../../../images/hr/hr_step5.png)
+7. Click on **Upload files**
 
-6. Drag and drop the [Employee Benefits.pdf](https://ibm.box.com/s/7job9kl0lt78pqiihdg7z018e1ivun1i) and click on **Upload**:
+    ![img.png](../../../images/hr/hr_step5.png)
 
-![img.png](../../../images/hr/hr_step6.png)  
+8. Drag and drop the [Employee Benefits.pdf](https://ibm.box.com/s/7job9kl0lt78pqiihdg7z018e1ivun1i) and click on **Upload**:
 
-7. Wait until the file has been uploaded successfully and double check that it is now shown in the Knowledge section:
+    ![img.png](../../../images/hr/hr_step6.png)  
 
-![img.png](../../../images/hr/hr_step7.png)  
+9. Wait until the file has been uploaded successfully and double check that it is now shown in the Knowledge section:
 
-8. Scroll down to the **Toolset** section. Click on **Add tool +**:
+    ![img.png](../../../images/hr/hr_step7.png)  
 
-![img.png](../../../images/hr/hr_step8.png)
+10. Scroll down to the **Toolset** section. Click on **Add tool +**:
 
-9. Select **Import**:
+    ![img.png](../../../images/hr/hr_step8.png)
 
-![img.png](../../../images/hr/step13.png)
+11. Select **Import**:
 
-10. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
+    ![img.png](../../../images/hr/step13.png)
 
-![img.png](../../../images/hr/hr_step10.png)    
+12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
 
-11. Select all the operations and click on **Done**:
+    ![img.png](../../../images/hr/hr_step10.png)
 
-![img.png](../../../images/hr/hr_step11.png)
+13. Select all the operations and click on **Done**:
 
-12. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
+    ![img.png](../../../images/hr/hr_step11.png)
 
-```
-Use your knowledge base to answer general questions about employee benefits. 
+14. Scroll down to the **Behavior** section. Insert the instructions below into the **Instructions** field:
 
-Use the tools to get or update user specific information.
+    ```
+    Use your knowledge base to answer general questions about employee benefits. 
 
-When user asks to show profile data or check time off balance or update title/address or request time off for the very first time,  first ask the user for their name,  then invoke the tool and then use the same name in the whole session without asking for the name again.
+    Use the tools to get or update user specific information.
 
-When the user requests time off, convert the dates to YYYY-MM-DD format, e.g. 5/22/2025 should be converted to 2025-05-22 before passing the date to the post_request_time_off tool.
- ```
+    When user asks to show profile data or check time off balance or update title/address or request time off for the very first time,  first ask the user for their name,  then invoke the tool and then use the same name in the whole session without asking for the name again.
 
- ![img.png](../../../images/hr/hr_step12.png)
+    When the user requests time off, convert the dates to YYYY-MM-DD format, e.g. 5/22/2025 should be converted to 2025-05-22 before passing the date to the post_request_time_off tool.
+    ```
+
+    ![img.png](../../../images/hr/hr_step12.png)
 
 13. Test your agent in the preview chat on the right side by asking the following questions and validating the responses.  They should look similar to what is shown in the screenshots below:
 
-```
-1. What is the pet policy? 
+    ```
+    1. What is the pet policy? 
 
-2. Show me my profile data.
+    2. Show me my profile data.
 
-3. I'd like to update my title. 
+    3. I'd like to update my title. 
 
-4. Update my address
+    4. Update my address
 
-5. What is my time off balance?
+    5. What is my time off balance?
 
-6. Request time off
+    6. Request time off
 
-7. Show my profile data.
+    7. Show my profile data.
 
-```
+    ```
 
-![img.png](../../../images/hr/hr_step13.png)
+    ![img.png](../../../images/hr/hr_step13.png)
 
-![img.png](../../../images/hr/hr_step13_2.png)
+    ![img.png](../../../images/hr/hr_step13_2.png)
 
-![img.png](../../../images/hr/hr_step13_3.png)
+    ![img.png](../../../images/hr/hr_step13_3.png)
 
-![img.png](../../../images/hr/hr_step13_4.png)
+    ![img.png](../../../images/hr/hr_step13_4.png)
 
 14. Once you have validated the answers, click on **Deploy** in the top right corner to deploy your agent:
 
-![img.png](../../../images/hr/hr_step14.png)
+    ![img.png](../../../images/hr/hr_step14.png)
 
 15. Click on the hamburger menu in the top left corner and then click on **Chat**:
 
-![img.png](../../../images/hr/hr_step15.png)
+    ![img.png](../../../images/hr/hr_step15.png)
 
 16. Make sure **HR Agent** is selected. You can now test your agent:
 
-![img.png](../../../images/hr/hr_step16.png)
+    ![img.png](../../../images/hr/hr_step16.png)
