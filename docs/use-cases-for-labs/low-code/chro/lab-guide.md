@@ -5,6 +5,7 @@
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
+- [Download files](https://ibm.box.com/s/nju5fgpae4qtk3a1adajq7hbmzklxjxt){:target="_blank"}
 
 ## Step by step instructions to build the HR Agent
 
@@ -40,7 +41,7 @@
 
     ![img.png](../../../images/hr/hr_step5.png)
 
-8. Drag and drop the [Employee Benefits.pdf](https://ibm.box.com/s/7job9kl0lt78pqiihdg7z018e1ivun1i) and click on **Upload**:
+8. Upload the **Employee Benefits.pdf** and click on **Upload**:
 
     ![img.png](../../../images/hr/hr_step6.png)  
 
@@ -52,9 +53,9 @@
 
     ![img.png](../../../images/hr/hr_step8.png)
 
-11. Select **Import**:
+11. Select **Import**
 
-    ![img.png](../../../images/hr/step13.png)
+    <!-- ![img.png](../../../images/hr/step13.png) -->
 
 12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
 

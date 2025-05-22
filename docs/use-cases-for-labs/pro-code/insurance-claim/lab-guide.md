@@ -2,8 +2,6 @@
 
 ## 🛠️ **Lab guide -  Use Case Implementation Guide** 
 
-
-
 This guide provides step-by-step instructions for building and testing the use case.
 
 ### 📌 Use Case Summary
