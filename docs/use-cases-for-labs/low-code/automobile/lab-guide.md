@@ -8,8 +8,8 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
-- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
-- [Download files](https://ibm.box.com/s/dj71leot5628prjg033rxt0avphmrnft)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
+- [Download files](https://ibm.box.com/s/dj71leot5628prjg033rxt0avphmrnft){:target="_blank"}
 
 ## Reference Architecture
 

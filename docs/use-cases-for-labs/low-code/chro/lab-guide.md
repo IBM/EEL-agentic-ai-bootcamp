@@ -4,7 +4,7 @@
 
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
-- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
 
 ## Step by step instructions to build the HR Agent
 
