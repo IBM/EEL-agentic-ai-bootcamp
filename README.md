@@ -3,6 +3,6 @@
 
 >!work in progress
 
-Documentation can be found at the link below:
+Documentation can be found at the link below: 
 
 [https://ibm.github.io/EEL-agentic-ai-bootcamp](https://ibm.github.io/EEL-agentic-ai-bootcamp)
