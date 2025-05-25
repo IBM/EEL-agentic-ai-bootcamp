@@ -122,7 +122,7 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 
 - You can add tools from any of the following methods:
     1. Add from catalog: Choose from a catalog of existing tools.
-    1. Add from local instance: Choose from a lost of tools available on this instance.
+    1. Add from local instance: Choose from a host of tools available on this instance.
     1. Import: Import an external tool.
     1. Create a new flow: Use the tool builder to create a sequence of steps.
 
