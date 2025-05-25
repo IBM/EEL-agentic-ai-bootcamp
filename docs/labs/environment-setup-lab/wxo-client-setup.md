@@ -38,16 +38,12 @@ Install the IBM watsonx Orchestrate ADK on your computer.
 
 ## Enabling the Bootcamp Environment
 
-- You need to enter your IBM Cloud API Key to activate "bootcamp" environment.
-- To run the below commands you would need your Watsonx Orchestrate Instance URL. Make sure you copy it from your wxO instance UI under the settings.
+- You would need following properties to activate "bootcamp" environment:
 
-```
-orchestrate env add --name bootcamp --url <REPLACE_WITH_WXO_INSTANCE_URL> -t ibm_iam
-orchestrate env activate bootcamp
+    - IBM Cloud API Key
+    - WXO_INSTANCE_URL (Make sure you copy it from your wxO instance UI under the settings.)
 
-```
-
-### Steps to get your wxO instance URL and API_Key
+### Steps to get your wxO instance URL and IBM Cloud API Key
 
 - After login to <https://cloud.ibm.com>, go to resources page by clicking on the left side menu
 - Under the **AI/Machine Learning** click on your Watsonx Orchestrate Instance.
@@ -65,6 +61,16 @@ orchestrate env activate bootcamp
 
 ---
 
+ - Run below commands to activate "bootcamp" environment and provide your IBM Cloud API Key once asked for the input.
+
+```
+orchestrate env add --name bootcamp --url <REPLACE_WITH_WXO_INSTANCE_URL> -t ibm_iam
+orchestrate env activate bootcamp
+
+```
+
+---
+
 !!! warning "Do not get confused with these credentials and DO NOT COPY THEM!"
 
-    ![tz](../../images/tz/tz2.png)
+![tz](../../images/tz/tz2.png)
