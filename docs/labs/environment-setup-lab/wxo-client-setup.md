@@ -61,6 +61,7 @@ Install the IBM watsonx Orchestrate ADK on your computer.
 
 ---
 
+
  - Run below commands to activate "bootcamp" environment and provide your IBM Cloud API Key once asked for the input.
 
 ```
@@ -69,8 +70,9 @@ orchestrate env activate bootcamp
 
 ```
 
+
 ---
 
 !!! warning "Do not get confused with these credentials and DO NOT COPY THEM!"
 
-![tz](../../images/tz/tz2.png)
+    ![tz](../../images/tz/tz2.png)
