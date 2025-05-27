@@ -73,13 +73,7 @@ nav:
     - Introduction: index.md
     - Show and tell: show-and-tell.md
     - Hands-on labs:
-        - Lab 0 - Environment setup :
-            - Pre-requisites: labs/environment-setup-lab/pre-requisites.md
-            - Create your IBMid: labs/environment-setup-lab/create-ibmid.md
-            - Access your clasic instance: labs/environment-setup-lab/access-env.md
-            - Setup your first project: labs/environment-setup-lab/create-project.md
-            - Create your API key: labs/environment-setup-lab/api_key_project_id_setup.md
-            - watsonx Orchestrate client setup: labs/environment-setup-lab/wxo-client-setup.md
+        - Lab 0 - Environment setup : labs/env-setup-lab.md
         - Lab 1 - watsonx Orchestrate Agent Builder (low-code): labs/low-code-lab.md
         - Lab 2 - watsonx Orchestrate Multi-agent (pro-code): labs/pro-code-lab.md
     - Use cases for labs:

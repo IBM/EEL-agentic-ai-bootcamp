@@ -2,12 +2,12 @@
 
 This LAB is written to simulate a customer care agent for hospitals. Healthcare insurance claims post hospitalization scenario that involve multiple steps, data sources, and decision points, making it ideal for a multi-agent system. 
 
-## Pre-requisites:
+## Pre-requisites
 
 - Make sure you've already setup the environment:
-- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
-- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
-- [Download files](https://ibm.ent.box.com/folder/321723563348?s=ip9fq5u0b8pty8dvrlza8ikrs8cel4xg)
+- [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
+- [Download files](https://ibm.ent.box.com/folder/321723563348?s=ip9fq5u0b8pty8dvrlza8ikrs8cel4xg){:target="_blank"}
 - Download the zip file from Lab2 folder
 
 ## Steps to import
@@ -22,7 +22,8 @@ orchestrate connections configure -a service-now --env live --type team --kind b
 orchestrate connections set-credentials -a service-now --env live -u admin -p <password from modal>
 ```
 6. Run the import all script `./scripts/import-all.sh`
-7. Go to Manage Agents on your Watsonx Orchestrate Instance and make sure you deploy each imported Agent.
+7. Go to Manage Agents on your Watsonx Orchestrate Instance and make sure you **deploy** each imported Agent.
+8. Come back to the home/chat page and make sure you've selected "frontend_conversational" from the left drop down of Agents.
 
 ## Test your Agents
 
@@ -81,7 +82,8 @@ Patient: Sarah Johnson (ID: MEMBER456)
 Date of Service: 2023-10-26
 Provider: Dr. Emily Carter, NPI: 1234567890
 Service Code (CPT): 99214, Diagnosis (ICD-10): M54.5, Charge: $250.00
-Service Code (CPT): 80053 (Lab Panel), Provider: Quest Diagnostics, NPI: 0987654321, Charge: $120.00
+Provider: Quest Diagnostics, NPI: 0987654321, Charge: $120.00
+Service Code (CPT): 80053 (Lab Panel), 
 
 ```
 
@@ -96,3 +98,16 @@ Service Code (CPT): 80053 (Lab Panel), Provider: Quest Diagnostics, NPI: 0987654
 ![img.png](../../../images/SNOW_incidents.jpg)
 
 - Here Clinical Review & Fraud Detection along with Payment processing can be done by Human-in-the-loop.
+
+**Important things to consider**
+
+- Make sure you go through the Agents and Tools files from the downloaded artifacts
+- This use case is built using all native Agents and tools in Watsonx Orchestrate
+- Agents and respective tools are deployed within wxO instance and AgentOps is taken care of.
+- For adding Observability, you can integrate it with Langfuse and that would show all the traces, sessions, observations and more from all Agents, LLMs, Thinking process and much more on the dashboard.
+- For further Agentic AI Governance, this can be integrated with IBM Watsonx Governance.
+
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉

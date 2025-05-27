@@ -41,7 +41,7 @@ A user submits a request to fulfill an order of 500 units:
 ### 🧠 Scenario 2: Predictive Planning
 - User: "What’s the demand forecast for Product Y next month?"
 - Forecast Agent predicts using past sales.
-- Inventory Agent alerts on overstock/understock.
+- Inventory Agent alerts on overstock/under-stock.
 
 ### 📋 Scenario 3: Compliance Check
 - User: "Is our supplier list aligned with ISO standards?"
@@ -541,3 +541,7 @@ Your WXO-powered multi-agent supply chain simulation is now up and running!
 ---
 
 Feel free to update the guide as your implementation evolves!
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉

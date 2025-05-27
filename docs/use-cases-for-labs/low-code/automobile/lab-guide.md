@@ -7,12 +7,9 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 ## Pre-requisites
 
 - Make sure you've already setup the environment:
-- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
-- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing)
-- [Download files](https://ibm.box.com/s/a0jk8tep96yk2decqts4kakeqbho5ejd)
-
-!!! success "Password to download the files"
-    Instructors will provide you the password to download the files.
+- [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
+- [Download files](https://ibm.box.com/s/dj71leot5628prjg033rxt0avphmrnft){:target="_blank"}
 
 ## Reference Architecture
 
@@ -41,15 +38,11 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 - From the root of the downloaded files, run the following commands to deploy the toolsets:
 
     ```bash
-    orchestrate tools import -k python \
-        -f "tools/get_nearest_service_center.py" \
-        -r "tools/requirements.txt"
+    orchestrate tools import -k python -f "tools/get_nearest_service_center.py" -r "tools/requirements.txt"
     ```
 
     ```bash
-    orchestrate tools import -k python \
-        -f "tools/get_vehicle_telematics.py" \
-        -r "tools/requirements.txt"
+    orchestrate tools import -k python -f "tools/get_vehicle_telematics.py" -r "tools/requirements.txt"
     ```
 
     ```bash
@@ -129,7 +122,7 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 
 - You can add tools from any of the following methods:
     1. Add from catalog: Choose from a catalog of existing tools.
-    1. Add from local instance: Choose from a lost of tools available on this instance.
+    1. Add from local instance: Choose from a host of tools available on this instance.
     1. Import: Import an external tool.
     1. Create a new flow: Use the tool builder to create a sequence of steps.
 
@@ -159,63 +152,9 @@ This LAB is written to simulate a vehicle troubleshooting scenario. Here the sce
 ```
 You are an expert Vehicle maintenance assistant. Your job is to help car owners diagnose and understand vehicle issues by analyzing telematics data and referring to the official user manual. VIN Number: 1HGBH41JXMN109186
 
-  Your Tasks:
+You are working with a vehicle_telematics_agent. This agent can get you a summary of vehicle telematics data.
 
-  1. **Analyze Telematics Data** - Use Vehicle Telematics Agent
-    - Extract insights from:
-      - `engine_temp`: Flag overheating if temperature exceeds normal range.
-      - `battery_voltage`: Identify low or irregular voltage patterns.
-      - `dtc_codes`: Decode Diagnostic Trouble Codes using the DTC codes manual.
-      - `odometer_km` & `last_service_km`: Check if service is overdue (interval: 15,000 km).  
-        If overdue, inform the user with:
-        - Current odometer reading
-        - Kilometers overdue
-
-  2. **Consult the Vehicle Manual**
-    - Refer to the car user manual for servicing the car related details
-
-  3. **Explain Clearly**
-    - Structure your response in **markdown format**.
-    - Use a tone that is:
-      - **Technically sound** for experienced drivers
-      - **Easy to understand** for novice drivers
-    - Keep the explanation helpful, informative, and action-oriented.
-
-  ---
-
-  ### Output Format:
-
-  ````markdown
-  ## Vehicle Health Report
-
-  ### Diagnostic Trouble Codes (DTC)
-  - **PXXXX** - [Meaning from DTC manual]  
-    _Recommended Action: [Steps from car manual]_
-
-  ### Engine Temperature
-  - Current Temp: XX°C  
-    _[Normal/Overheating]_ - [Explanation and suggestions]
-
-  ### Battery Voltage
-  - Voltage: XX.XV  
-    _[Normal/Low]_ - [Explanation and actions if needed]
-
-  ### Service Status
-  - Odometer: XX,XXX km  
-  - Last Service: XX,XXX km  
-  - **[Service Due / Not Due]**
-    - _Service is due after 15,000 km. Please schedule maintenance._
-
-  ---
-
-  ### Manual Insights
-  [Summarized relevant information from the vehicle manual]
-
-  ---
-
-  ### Recommendations
-  - [Prioritized action list]
-  ````
+You are also working with a tool get_nearest_service_center that takes lat & lon to give a list of service centers.
 ```
 
 ![behavior](../../../images/behavior.png)
@@ -242,7 +181,7 @@ You are an expert Vehicle maintenance assistant. Your job is to help car owners 
 
     ![op-1](../../../images/op-1.png)
 
-2. **Help me diagnose my car. It is shaking and I have the engine temperature warning light on.** -> Troubleshoot agent will transfer the control to Telematics data analyzer agent which will ask follow-up questions if required and give a car health report. The car report is read, and a suggestion is provided by the Troubleshoot agent.
+2. **My car is shaking and I have the engine temperature warning light on can you diagnose it?** -> Troubleshoot agent will transfer the control to Telematics data analyzer agent which will ask follow-up questions if required and give a car health report. The car report is read, and a suggestion is provided by the Troubleshoot agent.
 
     ![op-2](../../../images/op-2.png)
     ![op-3](../../../images/op-3.png)
@@ -250,3 +189,7 @@ You are an expert Vehicle maintenance assistant. Your job is to help car owners 
 3. **Where is the nearest service center?** -> Troubleshoot agent will invoke the Get nearest service center tool and pass the lat & long received from the Telematics data analyzer agent (assumption is that car will send the current lat & long data as part of telematics data.) and get the nearest service centers from the list of service centers.
 
     ![op-4](../../../images/op-4.png)
+
+!!! success "Conclusion"
+
+    👏 Congratulations on completing the lab! 🎉
