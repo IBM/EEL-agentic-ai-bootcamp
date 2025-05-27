@@ -23,6 +23,6 @@ These measurements help ensure that generated responses adhere to company guidel
 
 ## 🎥 Watch the Demo
 
-👉 [Click on this link to watch the complete demo](https://ibm.box.com/s/x1udjey43aoltpjudrxv25ev5tlmszgx)
+👉 [Click on this link to watch the complete demo](https://ibm.box.com/s/nvr9u7y8iqmp0fkk63ezs95h98kkrvp1)
 
 ---
