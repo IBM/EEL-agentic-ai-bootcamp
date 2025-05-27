@@ -4,6 +4,14 @@
 
 This guide provides step-by-step instructions for building and testing the use case.
 
+### Pre-requisitess
+
+- Make sure you've already setup the environment:
+- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
+- [Download files](https://ibm.ent.box.com/s/ip9fq5u0b8pty8dvrlza8ikrs8cel4xg){:target="_blank"}
+- Download the zip file from Lab2 folder
+
 ### 📌 Use Case Summary
 
 The use case outlines two key stages in the **cashless hospitalization claim process**:
@@ -30,13 +38,6 @@ A policyholder seeks treatment with an active insurance policy but faces uncerta
 This use case ensures a **seamless customer experience** while optimizing insurer workflows.
 
 ## ⏳ **Build and run**
-
-### Pre-requisitess
-
-- Make sure you've already setup the environment:
-- [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)
-- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
-- [Download files](https://ibm.box.com/s/kvok9rnlabxgfqmgcyp31r1995wf6tu8){:target="_blank"}
 
  **Steps to connect with service-now**
 
