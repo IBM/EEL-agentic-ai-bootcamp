@@ -1,8 +1,4 @@
-# Agentic AI Governance Demo
-
-## Title
-
-**Governing Agentic AI in Clinical Trials with watsonx.governance**
+# Governing Agentic AI in Clinical Trials with watsonx.governance
 
 ## Description
 

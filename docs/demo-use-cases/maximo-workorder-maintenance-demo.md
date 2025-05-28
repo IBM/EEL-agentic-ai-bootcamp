@@ -1,6 +1,4 @@
-## Title
-
-**Maximo Agentic Solution: AI-Driven Work Order Optimization**
+# Maximo Agentic Solution: AI-Driven Work Order Optimization
 
 ## Description
 
@@ -17,7 +15,7 @@ The solution features three specialized agents:
 * **Labor Agent**
   Determines the skill or craft needed for the task, verifies qualified labor availability, and assigns them to the work order—reducing scheduling overhead and ensuring the right personnel are deployed.
 
-Together, these agents streamline the end-to-end work order process—reducing manual effort, minimizing errors, and enabling intelligent, context-aware decision-making within Maximo. 
+Together, these agents streamline the end-to-end work order process—reducing manual effort, minimizing errors, and enabling intelligent, context-aware decision-making within Maximo.
 
 ---
 
