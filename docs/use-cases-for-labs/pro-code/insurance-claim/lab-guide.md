@@ -4,7 +4,7 @@
 
 This guide provides step-by-step instructions for building and testing the use case.
 
-### Pre-requisitess
+### Pre-requisites
 
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup: Pre-requisites](../../labs/environment-setup-lab/)

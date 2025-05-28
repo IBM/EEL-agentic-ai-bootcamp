@@ -25,5 +25,5 @@ For this bootcamp, we have created the [Agentic AI Bootcamp TechZone bundle](htt
 <!-- 1. [Access your class instance](access-env.md)
 1. [Setup your first project](create-project.md)
 1. [Create your API key](api_key_project_id_setup.md) -->
-- [Setup watsox Orchestrate Agent Development Kit (ADK)](environment-setup-lab/wxo-client-setup.md)
+- [Setup watsonx Orchestrate Agent Development Kit (ADK)](environment-setup-lab/wxo-client-setup.md)
  
