@@ -101,6 +101,6 @@ nav:
     - Demo use cases: 
         - AI Agent Governance: demo-use-cases/governance-demo.md
         - Travel planner: demo-use-cases/travel-planner-demo.md
-        - Maximo supply chain: demo-use-cases/maximo-supply-chain-demo.md
+        - Maximo Workorder Maintenance: demo-use-cases/maximo-workorder-maintenance-demo.md
         - HashiCorp vault: demo-use-cases/hashi-demo.md
     - Conclusion: conclusion.md
