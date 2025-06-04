@@ -27,7 +27,7 @@ orchestrate connections set-credentials -a service-now --env live -u admin -p <p
 
 ## Test your Agents
 
-[Demo Video](https://ibm.box.com/s/00xsb9gn53pq02ycqvn2ju9o3p8ei88d)
+[Demo Video](https://ibm.box.com/s/a1jedzud4c2zlwc5odzv7zbkib2ort2s)
 
 **Try with generic query - This should use backend knowledge base for generic health insurance queries**
 
