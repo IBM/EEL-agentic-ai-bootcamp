@@ -9,7 +9,6 @@ For this bootcamp, we have created the [Agentic AI Bootcamp TechZone bundle](htt
 - Cloud Object Storage (COS) & watsonx.ai Runtime (formerly WML)
 - watsonx Orchestrate
 - IBM CodeEngine
-- Container Registry
 - watsonx.governance (for the demo)
 
 **Reserve any of the following instance to get started.**

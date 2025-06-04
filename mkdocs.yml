@@ -104,3 +104,4 @@ nav:
         - Maximo Workorder Maintenance: demo-use-cases/maximo-workorder-maintenance-demo.md
         - HashiCorp vault: demo-use-cases/hashi-demo.md
     - Conclusion: conclusion.md
+    - Troubleshooting: troubleshooting.md

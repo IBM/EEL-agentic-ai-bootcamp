@@ -59,12 +59,33 @@ A user submits a request to fulfill an order of 500 units:
 
 ## ⚙️ Step 1: Environment Setup
 
+### 📦 Create and Activate Virtual Environment
+
 ```bash
 # Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# Activate virtual environment
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 📜 `requirements.txt`
+
+```text
+# Core packages
+pandas
+
+# Forecasting
+prophet  # Use 'fbprophet' if needed for compatibility
+
+# Date utilities
+python-dateutil
+
+```
+
+### 📥 Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
