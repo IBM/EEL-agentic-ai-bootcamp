@@ -66,7 +66,7 @@ Install the IBM watsonx Orchestrate ADK on your computer.
 
 ```
 orchestrate env add --name bootcamp --url <REPLACE_WITH_WXO_INSTANCE_URL> -t ibm_iam
-orchestrate env activate bootcamp
+orchestrate env activate bootcamp --apikey <YOUR_API_KEY>
 
 ```
 
