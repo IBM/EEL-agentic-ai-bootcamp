@@ -145,7 +145,7 @@ $ orchestrate tools import -k python \
     -r "requirements.txt"
 ```
 
-8. However, we have provided shell/bat scripts to automate this step. Run the script:
+8. However, we have provided shell/bat scripts to automate this step. Copy script file to 'wxo-agents' folder and run the script from 'wxo-agents' folder:
 ```
 ./import-tools.sh
 ```
