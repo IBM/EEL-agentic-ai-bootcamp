@@ -257,6 +257,11 @@ tools:
 ```commandline
 orchestrate agents import -f <path to .yaml/.json/.py file>
 ```
+## **Deploy the agents**
+
+1. Open orchestrate web interface
+2. Click on the 'Manage agents' and then click on the imported agent. 
+3. Click on 'Deploy' button to deploy the agents
 
 ## **Test the use case**
 

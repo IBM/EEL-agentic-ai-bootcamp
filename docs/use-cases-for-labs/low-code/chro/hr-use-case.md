@@ -53,7 +53,7 @@ RAG Agent retrieves relevant information from documents to answer user queries
 
 ## 🎥 Demo
 
-[askHR demo](https://ibm.box.com/s/oiaj1vcpp0u19j7g479wyhdwf9d0r3zd)
+[askHR demo](https://ibm.seismic.com/Link/Content/DCmQ7p3mCR3gbGCFhQhbh9TM4R8B)
 
 
 > [!IMPORTANT]
