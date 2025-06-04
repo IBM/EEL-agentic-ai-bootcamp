@@ -16,18 +16,20 @@ This LAB is written to simulate a customer care agent for hospitals. Healthcare 
 3. On the landing page click start building. This will allocate a new instance of SNOW for you. 
 4. Back on the landing page, click your profile icon on the top right and under "My instance" click manage instance password.
 5. Create an application connection using these credentials
+   
 ```bash
 orchestrate connections add -a service-now
 orchestrate connections configure -a service-now --env live --type team --kind basic --url <the instance url>
 orchestrate connections set-credentials -a service-now --env live -u admin -p <password from modal>
 ```
-6. Run the import all script `./scripts/import-all.sh`
-7. Go to Manage Agents on your Watsonx Orchestrate Instance and make sure you **deploy** each imported Agent.
-8. Come back to the home/chat page and make sure you've selected "frontend_conversational" from the left drop down of Agents.
+
+1. Run the import all script `./scripts/import-all.sh`
+2. Go to Manage Agents on your Watsonx Orchestrate Instance and make sure you **deploy** each imported Agent.
+3. Come back to the home/chat page and make sure you've selected "frontend_conversational" from the left drop down of Agents.
 
 ## Test your Agents
 
-[Demo Video](https://ibm.box.com/s/a1jedzud4c2zlwc5odzv7zbkib2ort2s)
+[Demo Video](https://ibm.box.com/s/a1jedzud4c2zlwc5odzv7zbkib2ort2s) 
 
 **Try with generic query - This should use backend knowledge base for generic health insurance queries**
 
