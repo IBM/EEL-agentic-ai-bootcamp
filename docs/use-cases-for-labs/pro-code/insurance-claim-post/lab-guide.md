@@ -23,7 +23,13 @@ orchestrate connections configure -a service-now --env live --type team --kind b
 orchestrate connections set-credentials -a service-now --env live -u admin -p <password from modal>
 ```
 
-1. Run the import all script `./scripts/import-all.sh`
+1. Run the import all script
+   
+```bash
+cd scripts
+bash ./import-all.sh
+```
+
 2. Go to Manage Agents on your Watsonx Orchestrate Instance and make sure you **deploy** each imported Agent.
 3. Come back to the home/chat page and make sure you've selected "frontend_conversational" from the left drop down of Agents.
 
