@@ -41,15 +41,11 @@ This use case ensures a **seamless customer experience** while optimizing insure
 
  **Steps to connect with service-now**
 
-1. Sign-up for a Service Now account at <https://developer.servicenow.com/dev.do>{:target="_blank"}
-2. Validate your email address (check email)
-3. On the landing page click start building. This will allocate a new instance of SNOW for you.
-4. Back on the landing page, click your profile icon on the top right and under **My instance** click manage instance password.
 5. Create an application connection using these credentials
 ```bash
 orchestrate connections add -a service-now
-orchestrate connections configure -a service-now --env live --type team --kind basic --url <the instance url>
-orchestrate connections set-credentials -a service-now --env live -u admin -p <password from modal>
+orchestrate connections configure -a service-now --env live --type team --kind basic --url https://tz-snow-appp01/service-now-dev
+orchestrate connections set-credentials -a service-now --env live -u admin -p p@ssw0rd01
 ```
 
 ### **Create project structure**
@@ -103,7 +99,7 @@ Steps -
                 "co_payment_percentage": co_payment_percentage,
                 "hospital_tier": hospital_tier
             }
-            base_url = "https://preauthorisation-ordermanagement.cp4bautomation-685c4d909dba5536870f4da931535b5a-0000.eu-de.containers.appdomain.cloud/preauth/calculate"
+            base_url = "https://application-2a.1f0o357viivn.us-south.codeengine.appdomain.cloud/preauth/calculate"
             headers = {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -179,7 +175,7 @@ description: This knowledge addresses the user's insurance policy details.
 documents:
   - documents/Comprehensive_health_policy.pdf
 ```
-4. Import both the knowledge-base using below command
+4. Import both the knowledge-base using below command (run this from 'knowledge_base' folder)
 ```commandline
 orchestrate knowledge-bases import -f <knowledge-base-file-path>
 ```
