@@ -5,8 +5,10 @@
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
-- [Download files](https://ibm.ent.box.com/s/ip9fq5u0b8pty8dvrlza8ikrs8cel4xg){:target="_blank"}
-- Download the zip file from Lab1 folder
+- [Download files](https://ibm.ent.box.com/s/ip9fq5u0b8pty8dvrlza8ikrs8cel4xg){:target="_blank"} 
+- Download the zip file from Lab1 folder <br>
+Note: If you are an instructor, complete the instructor guide and update the url in hr.yaml. If you are a practitioner, obtain the updated hr.yaml file from your instructor. Do not directly use the yaml file to import into Orchestrate. 
+- If you are an instructor, complete the [instructor set-up guide](https://ibm.github.io/EEL-agentic-ai-bootcamp/use-cases-for-labs/low-code/chro/lab-guide/) and update the hr.yaml with new url after completing the setup. 
 
 ## Step by step instructions to build the HR Agent
 
@@ -58,7 +60,8 @@
 
     <!-- ![img.png](../../../images/hr/step13.png) -->
 
-12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**:
+12. Drag and drop or click to upload the **hr.yaml** file (provided to you by the instructor), then click on **Next**: <br>
+Note: Instructors make sure the url in the hr.yaml is updated after [instructor set up](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/tree/main/usecase-setup/askhr) before providing to clients. 
 
     ![img.png](../../../images/hr/hr_step10.png)
 
