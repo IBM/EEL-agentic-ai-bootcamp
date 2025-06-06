@@ -32,6 +32,7 @@ theme:
     features:
         - navigation.instant
         - navigation.tracking
+        - content.code.copy
 use_directory_urls: true
 plugins:
     - search:
