@@ -101,5 +101,5 @@ Follow the lab guide to build this system: [📘 Lab Guide](lab-guide.md)
 
 ## 🎥 Demo Video
 
-Watch a walkthrough of this solution in action: [Supply Chain Agent Demo](https://ibm.box.com/s/yhr9651ytspa7re75sup62zb33jqnybm)
+Watch a walkthrough of this solution in action: [Supply Chain Agent Demo](https://ibm.box.com/s/oen2xdusg77m15jcx9r7n24jctfdqfne)
 
