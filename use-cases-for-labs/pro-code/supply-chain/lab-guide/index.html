@@ -169,7 +169,37 @@ python-dateutil
 
 <span class=nt>tools</span><span class=p>:</span>
 <span class=w>  </span><span class="p p-Indicator">-</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">generate_procurement_plan</span>
-</code></pre></div></p> <hr> <h2 id=step-4-define-tool-logic>🔹 Step 4: Define Tool Logic<a class=headerlink href=#step-4-define-tool-logic title="Permanent link">&para;</a></h2> <p>Each tool file implements the logic invoked by the respective agent.</p> <h3 id=toolscompliance_toolpy>tools/compliance_tool.py<a class=headerlink href=#toolscompliance_toolpy title="Permanent link">&para;</a></h3> <p>Enforces business rules and audits operations. <div class=highlight><pre><span></span><code><span class=c1># Paste compliance tool code here</span>
+</code></pre></div></p> <hr> <h2 id=step-4-define-tool-logic>🔹 Step 4: Define Tool Logic<a class=headerlink href=#step-4-define-tool-logic title="Permanent link">&para;</a></h2> <p>Each tool file implements the logic invoked by the respective agent.</p> <h3 id=toolscompliance_toolpy>tools/compliance_tool.py<a class=headerlink href=#toolscompliance_toolpy title="Permanent link">&para;</a></h3> <p>Enforces business rules and audits operations. <div class=highlight><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>ibm_watsonx_orchestrate.agent_builder.tools</span><span class=w> </span><span class=kn>import</span> <span class=n>tool</span>
+
+<span class=nd>@tool</span><span class=p>(</span><span class=n>description</span><span class=o>=</span><span class=s2>&quot;Verify supplier compliance based on certification, ESG adherence, and blacklist status.&quot;</span><span class=p>)</span>
+<span class=k>def</span><span class=w> </span><span class=nf>verify_compliance</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>:</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<span class=sd>    Check whether suppliers are compliant based on certification, ESG status, and blacklist inclusion.</span>
+
+<span class=sd>    Returns:</span>
+<span class=sd>    - A list of dictionaries with:</span>
+<span class=sd>        - &#39;supplier&#39;</span>
+<span class=sd>        - &#39;certified&#39;</span>
+<span class=sd>        - &#39;blacklisted&#39;</span>
+<span class=sd>        - &#39;esg_compliant&#39;</span>
+<span class=sd>        - &#39;status&#39; (Approved or Blocked)</span>
+<span class=sd>    &quot;&quot;&quot;</span>
+    <span class=k>try</span><span class=p>:</span>
+        <span class=n>suppliers_data</span> <span class=o>=</span> <span class=p>[</span>
+            <span class=p>{</span><span class=s2>&quot;supplier&quot;</span><span class=p>:</span> <span class=s2>&quot;Supplier A&quot;</span><span class=p>,</span> <span class=s2>&quot;certified&quot;</span><span class=p>:</span> <span class=s2>&quot;Yes&quot;</span><span class=p>,</span> <span class=s2>&quot;blacklisted&quot;</span><span class=p>:</span> <span class=s2>&quot;No&quot;</span><span class=p>,</span> <span class=s2>&quot;esg_compliant&quot;</span><span class=p>:</span> <span class=s2>&quot;Yes&quot;</span><span class=p>},</span>
+            <span class=p>{</span><span class=s2>&quot;supplier&quot;</span><span class=p>:</span> <span class=s2>&quot;Supplier E&quot;</span><span class=p>,</span> <span class=s2>&quot;certified&quot;</span><span class=p>:</span> <span class=s2>&quot;Yes&quot;</span><span class=p>,</span> <span class=s2>&quot;blacklisted&quot;</span><span class=p>:</span> <span class=s2>&quot;No&quot;</span><span class=p>,</span> <span class=s2>&quot;esg_compliant&quot;</span><span class=p>:</span> <span class=s2>&quot;Yes&quot;</span><span class=p>},</span>
+        <span class=p>]</span>
+
+        <span class=k>for</span> <span class=n>row</span> <span class=ow>in</span> <span class=n>suppliers_data</span><span class=p>:</span>
+            <span class=k>if</span> <span class=n>row</span><span class=p>[</span><span class=s2>&quot;certified&quot;</span><span class=p>]</span> <span class=o>!=</span> <span class=s2>&quot;Yes&quot;</span> <span class=ow>or</span> <span class=n>row</span><span class=p>[</span><span class=s2>&quot;esg_compliant&quot;</span><span class=p>]</span> <span class=o>!=</span> <span class=s2>&quot;Yes&quot;</span> <span class=ow>or</span> <span class=n>row</span><span class=p>[</span><span class=s2>&quot;blacklisted&quot;</span><span class=p>]</span> <span class=o>==</span> <span class=s2>&quot;Yes&quot;</span><span class=p>:</span>
+                <span class=n>row</span><span class=p>[</span><span class=s2>&quot;status&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&quot;Blocked&quot;</span>
+            <span class=k>else</span><span class=p>:</span>
+                <span class=n>row</span><span class=p>[</span><span class=s2>&quot;status&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&quot;Approved&quot;</span>
+
+        <span class=k>return</span> <span class=n>suppliers_data</span>
+
+    <span class=k>except</span> <span class=ne>Exception</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+        <span class=k>return</span> <span class=p>[{</span><span class=s2>&quot;error&quot;</span><span class=p>:</span> <span class=nb>str</span><span class=p>(</span><span class=n>e</span><span class=p>)}]</span>
 </code></pre></div></p> <h3 id=toolsforecast_toolpy>tools/forecast_tool.py<a class=headerlink href=#toolsforecast_toolpy title="Permanent link">&para;</a></h3> <p>Forecasts demand for products over time. <div class=highlight><pre><span></span><code><span class=kn>from</span><span class=w> </span><span class=nn>ibm_watsonx_orchestrate.agent_builder.tools</span><span class=w> </span><span class=kn>import</span> <span class=n>tool</span>
 <span class=kn>from</span><span class=w> </span><span class=nn>prophet</span><span class=w> </span><span class=kn>import</span> <span class=n>Prophet</span>
 <span class=kn>import</span><span class=w> </span><span class=nn>pandas</span><span class=w> </span><span class=k>as</span><span class=w> </span><span class=nn>pd</span>
