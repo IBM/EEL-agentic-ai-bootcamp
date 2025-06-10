@@ -84,6 +84,9 @@ nav:
             - HR use case: 
                 - Use case details: use-cases-for-labs/low-code/chro/hr-use-case.md
                 - Lab guide: use-cases-for-labs/low-code/chro/lab-guide.md
+            - Intelligent Assistant Use Case:
+                - Use case details: use-cases-for-labs/low-code/intelligent-assistant/use-case.md
+                - Lab guide: use-cases-for-labs/low-code/intelligent-assistant/lab-guide.md
         - Pro-code:
             - Insurance claim:
                 - Pre authorization for cashless hospitalization: 
