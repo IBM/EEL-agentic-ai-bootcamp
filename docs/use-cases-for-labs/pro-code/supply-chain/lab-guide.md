@@ -37,7 +37,7 @@ A user submits a request to fulfill an order of 500 units:
 - Inventory Agent checks for stock availability.
 - Procurement Agent raises a PO for the shortfall.
 - Logistics Agent schedules the delivery.
-- Complaince agent checks the valid list of vendors
+- Compliance agent checks the valid list of vendors
 
 ### 🧠 Scenario 2: Predictive Planning
 - User: "What’s the demand forecast for Product Y next month?"

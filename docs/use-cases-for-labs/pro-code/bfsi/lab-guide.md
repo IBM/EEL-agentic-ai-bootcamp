@@ -206,11 +206,11 @@ Now you can chat with the agent with the suggested script below.
 
 Select the `financial_research_and_analysis_agent`.
 
-1. **Generate a portfolio report on John Doe's securities** -> The financial research and analysis agent will perfrom the following tasks to get the report:
+1. **Generate a portfolio report on John Doe's securities** -> The financial research and analysis agent will perform the following tasks to get the report:
     - Get the portfolio of John Doe from a SQL database.
     - Transfer the control to the Report generator agent.
     - The report generator agent will search each of the security performance on web using web search tool.
-    - The report generator agent will summarzie everything and generate a report.
+    - The report generator agent will summarize everything and generate a report.
 
         ![image](../../../images/bfsi/op1.png)
 

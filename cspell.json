@@ -61,7 +61,13 @@
         "yhat",
         "pharma",
         "strptime",
-        "Decisioning"
+        "Decisioning",
+        "Langchain",
+        "Sach's",
+        "fbprophet",
+        "dateutil",
+        "restockable"
+
     ],
 
     "flagWords": [
