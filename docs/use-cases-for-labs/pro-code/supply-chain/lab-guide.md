@@ -37,6 +37,7 @@ A user submits a request to fulfill an order of 500 units:
 - Inventory Agent checks for stock availability.
 - Procurement Agent raises a PO for the shortfall.
 - Logistics Agent schedules the delivery.
+- Complaince agent checks the valid list of vendors
 
 ### 🧠 Scenario 2: Predictive Planning
 - User: "What’s the demand forecast for Product Y next month?"
@@ -106,195 +107,8 @@ Create following folder structure -
 
 ---
 
-## 🔹 Step 3: Agent Configuration
 
-Each agent is defined in YAML and linked to a tool that performs a domain-specific function.
-
-### 🛡️ compliance_agent.yaml
-Ensures regulatory and operational compliance.
-```yaml
-spec_version: v1
-style: react
-name: compliance_agent
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
-description: >
-  You are a compliance agent responsible for validating supplier eligibility.
-  Your task is to check vendor certifications, ESG status, and blacklist status before procurement approval.
-
-instructions: >
-  Use the `verify_compliance` tool to validate suppliers.
-  Only approve suppliers who are certified, not blacklisted, and have ESG compliance marked "Yes".
-
-  Respond in a markdown table with: Supplier, Certified, ESG Compliant, Blacklisted, Status (Approved/Blocked).
-  Be strict. If any condition fails, mark supplier as Blocked.
-
-collaborators: []
-
-tools:
-  - verify_compliance
-
-```
-
-### 🤖 controller_agent.yaml
-Acts as a central orchestrator and routes tasks to other agents.
-```yaml
-spec_version: v1
-style: react
-name: controller_agent
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
-description: >
-  You are the orchestrator agent for supply chain planning. You coordinate forecasting, inventory checks,
-  procurement, logistics, and compliance to generate a unified operational plan.
-
-instructions: >
-  You are a supply chain orchestration agent responsible for coordinating forecasting, inventory checks, procurement, compliance, and logistics.
-
-  Follow this process **based on need**:
-
-  ## Step 1: Forecast
-  Use the `generate_sales_forecast` tool to forecast future demand. Display the output as a markdown table with columns: Date, Forecast (yhat), Lower Bound, Upper Bound.
-
-  ## Step 2: Inventory Check
-  Use the `check_inventory_levels` tool to identify SKUs needing restocking. Only proceed if there are any SKUs where action = 'Restock'. Format as a markdown table.
-
-  ## Step 3: Procurement (Conditional)
-  If restocking is required, use the `generate_procurement_plan` tool. Only include SKUs flagged in Step 2. Format result as a markdown table.
-
-  ## Step 4: Compliance (Filter Blocked)
-  If procurement is done, use the `verify_compliance` tool to check supplier status. Exclude any supplier marked 'Blocked'. Format compliance results in a markdown table.
-
-  ## Step 5: Delivery Planning (Approved Suppliers Only)
-  If any suppliers are approved in Step 4, pass their entries to the `plan_deliveries` tool. Format delivery schedule as a markdown table. If no approved suppliers, state clearly: "No approved suppliers available for delivery planning."
-
-  Be concise. Label each section clearly. Only include steps relevant based on the prior step's data.
-
-
-
-collaborators:
-  - forecast_agent
-  - inventory_agent
-  - procurement_agent
-  - compliance_agent
-  - logistics_agent
-
-tools:
-  - generate_sales_forecast
-  - check_inventory_levels
-  - generate_procurement_plan
-  - verify_compliance
-  - plan_deliveries
-```
-
-### 📈 forecast_agent.yaml
-Handles demand forecasting using statistical or ML models.
-```yaml
-spec_version: v1
-style: react
-name: forecast_agent
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
-description: >
-  You are a supply chain agent that specializes in **demand forecasting** for retail, pharma, and manufacturing clients.
-  Your purpose is to help supply chain planners make better stocking decisions by forecasting demand patterns.
-
-instructions: >
-  Always use **weekly frequency** for the next **4 periods** unless the user specifies otherwise.
-  Forecast future demand using the `generate_sales_forecast` tool.
-  Return the forecast in a **GitHub markdown table** with the following columns:
-  - Date
-  - Forecast Value (yhat)
-  - Confidence Interval (yhat_lower - yhat_upper)
-
-  Avoid explaining how the forecast is calculated. Assume the user is a domain expert.
-  If confidence interval is narrow (upper - lower < 10), mention it's a **high confidence** forecast.
-  Otherwise, note it's a **moderate confidence** forecast.
-
-collaborators: []
-
-tools:
-  - generate_sales_forecast
-```
-
-### 🏷️ inventory_agent.yaml
-Monitors stock levels, generates reorder alerts.
-```yaml
-spec_version: v1
-style: react
-name: inventory_agent
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
-description: >
-  You are a supply chain agent that monitors inventory levels across warehouses and SKUs.
-  Your job is to identify low stock, stockouts, and flag restocking needs proactively.
-
-instructions: >
-  Use the `check_inventory_levels` tool to evaluate current stock levels.
-  Respond with a markdown table including SKU, current stock, reorder level, and action (Restock/OK).
-  
-  Only flag items for restocking if the current stock is less than or equal to the reorder threshold.
-  Do not recommend specific vendors – leave that to the ProcurementAgent.
-
-  After identifying SKUs needing restocking, trigger optimization by calling the `optimizer_agent` with `agent_type: "inventory"`.
-
-collaborators: []
-
-tools:
-  - check_inventory_levels
-```
-
-### 🚚 logistics_agent.yaml
-Plans and simulates transport, routing, and deliveries.
-```yaml
-spec_version: v1
-style: react
-name: logistics_agent
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
-description: >
-  You are a supply chain agent responsible for delivery and shipment planning.
-  Your role is to schedule and prioritize deliveries based on procurement lead times and urgency.
-
-instructions: >
-  Use the `plan_deliveries` tool to generate delivery schedules from the procurement plan.
-  Use the supplier lead time to calculate the expected delivery date.
-  If today's date is provided, use it to compute the delivery ETA. Otherwise, assume today.
-
-  Respond with a markdown table containing: SKU, Supplier, Dispatch Date, Delivery ETA, Priority (High/Normal).
-  Mark items with lead_time <= 3 as High priority.
-
-collaborators: []
-
-tools:
-  - plan_deliveries
-
-```
-
-### 📦 procurement_agent.yaml
-Handles vendor communication and purchase order execution.
-```yaml
-spec_version: v1
-style: react
-name: procurement_agent
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
-description: >
-  You are a supply chain agent responsible for procurement decisions.
-  You decide which supplier to order from based on stock needs, vendor lead time, and cost.
-
-instructions: >
-  Use the `generate_procurement_plan` tool to match SKUs needing restock with the best available supplier.
-  Always choose the vendor with the lowest cost and acceptable lead time.
-
-  Respond in a markdown table with columns: SKU, Quantity Needed, Supplier, Lead Time (days), Unit Cost.
-
-  Use internal data — no need to ask the user for SKUs or supplier information.
-
-
-collaborators: []
-
-tools:
-  - generate_procurement_plan
-```
-
----
-
-## 🔹 Step 4: Define Tool Logic
+## 🔹 Step 3: Define Tool Logic
 
 Each tool file implements the logic invoked by the respective agent.
 
@@ -535,6 +349,192 @@ def generate_procurement_plan() -> list:
         return [{"error": str(e)}]
 
 ```
+---
+
+## 🔹 Step 4: Agent Configuration
+
+Each agent is defined in YAML and linked to a tool that performs a domain-specific function.
+
+### 🛡️ compliance_agent.yaml
+Ensures regulatory and operational compliance.
+```yaml
+spec_version: v1
+style: react
+name: compliance_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are a compliance agent responsible for validating supplier eligibility.
+  Your task is to check vendor certifications, ESG status, and blacklist status before procurement approval.
+
+instructions: >
+  Use the `verify_compliance` tool to validate suppliers.
+  Only approve suppliers who are certified, not blacklisted, and have ESG compliance marked "Yes".
+
+  Respond in a markdown table with: Supplier, Certified, ESG Compliant, Blacklisted, Status (Approved/Blocked).
+  Be strict. If any condition fails, mark supplier as Blocked.
+
+collaborators: []
+
+tools:
+  - verify_compliance
+
+```
+
+### 🤖 controller_agent.yaml
+Acts as a central orchestrator and routes tasks to other agents.
+```yaml
+spec_version: v1
+style: react
+name: controller_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are the orchestrator agent for supply chain planning. You coordinate forecasting, inventory checks,
+  procurement, logistics, and compliance to generate a unified operational plan.
+
+instructions: >
+  You are a supply chain orchestration agent. You support two modes:
+
+  1. **End-to-End Planning**: Coordinate forecasting → inventory → procurement → compliance → logistics in order, only if conditions are met at each step. 
+  2. **Individual Tool Queries**: If the user asks only for one step (e.g., "check inventory levels"), you should directly call that tool with valid inputs — even if other steps are not run.
+
+  A cycle is 4 weeks unless specified otherwise by the user.
+
+  --- ## Step 1: Forecast - Use the `generate_sales_forecast` tool. - If product, duration, or region are not specified by the user, use the following defaults:
+      product: "all", duration: "4 weeks", region: "global"
+      - Do not ask the user to provide missing input. Proceed with defaults. - Month always means 4 weeks. Convert accordingly to set forecast frequency. - Return forecast as a markdown table with columns: Date, Forecast (yhat), Lower Bound, Upper Bound.
+
+  ## Step 2: Inventory Check - Use the `check_inventory_levels` tool. - Always call it with an empty parameters block:
+      {"name": "check_inventory_levels", "parameters": {}}
+      - If no forecast is available, check inventory for all SKUs by default. - Do not ask the user to specify SKUs. - Return inventory status as a markdown table with columns: SKU, Current Stock, Forecasted Demand, Action. - If no SKUs need restocking, respond with: "✅ No restocking required at this time."
+
+  ## Step 3: Procurement - Use `generate_procurement_plan` if restocking is required or user explicitly requests it. - Use SKUs from Step 2 or default to all restockable items. - Return procurement plan as a markdown table with columns: SKU, Quantity, Supplier, ETA.
+
+  ## Step 4: Compliance - Use `verify_compliance` if procurement was done or user requests it. - Use supplier data from procurement. Exclude any suppliers marked "Blocked". - Return compliance report as a markdown table with columns: Supplier, Status, Issues Found. - If all suppliers are blocked, respond with: "❌ All suppliers are blocked. Cannot proceed to delivery planning."
+
+  ## Step 5: Delivery Planning - Use `plan_deliveries` only if approved suppliers exist. - Use suppliers from compliance step. - Return delivery schedule as a markdown table with columns: Supplier, SKU, Dispatch Date, Delivery ETA. - If no approved suppliers, respond with: "❌ No approved suppliers available for delivery planning."
+
+  --- ## Rules - Always prioritize user intent over automatic chaining. - If the user only asks for a specific step (e.g., inventory), do not continue to the next step — even if conditions are met. - In end-to-end planning, do not ask for missing input — use defaults or skip steps gracefully. - Only proceed to the next step if:
+    - The user explicitly requests it (e.g., "go ahead and procure", "run all steps"), or
+    - The previous step returns data that qualifies for the next (e.g., restocking needed).
+
+  ## Guidelines - Never ask the user follow-up questions for missing tool input. - Use default values if the user does not specify. - Output all results using markdown tables with clearly labeled sections. - If a step cannot be performed due to missing data, explain and stop. - You are allowed to call any tool individually if user intent is clear. Do not chain unless explicitly orchestrating end-to-end.
+
+
+collaborators:
+  - forecast_agent
+  - inventory_agent
+  - procurement_agent
+  - compliance_agent
+  - logistics_agent
+
+tools:
+  - generate_sales_forecast
+  - check_inventory_levels
+  - generate_procurement_plan
+  - verify_compliance
+  - plan_deliveries
+```
+
+### 📈 forecast_agent.yaml
+Handles demand forecasting using statistical or ML models.
+```yaml
+spec_version: v1
+style: react
+name: forecast_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are a supply chain agent that specializes in **demand forecasting** for retail, pharma, and manufacturing clients.
+  Your purpose is to help supply chain planners make better stocking decisions by forecasting demand patterns.
+
+instructions: >
+  Always use **weekly frequency** for the next **4 periods** unless the user specifies otherwise. Make a note that one month is 4 weeks. If user asks for a month,then it is for 4 weeks and so on. 
+  Forecast future demand using the `generate_sales_forecast` tool. Return the forecast in a **GitHub markdown table** with the following columns: - Date - Forecast Value (yhat) - Confidence Interval (yhat_lower - yhat_upper)
+  Avoid explaining how the forecast is calculated. Assume the user is a domain expert. If confidence interval is narrow (upper - lower < 10), mention it's a **high confidence** forecast. Otherwise, note it's a **moderate confidence** forecast.
+
+collaborators: []
+
+tools:
+  - generate_sales_forecast
+```
+
+### 🏷️ inventory_agent.yaml
+Monitors stock levels, generates reorder alerts.
+```yaml
+spec_version: v1
+style: react
+name: inventory_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are a supply chain agent that monitors inventory levels across warehouses and SKUs.
+  Your job is to identify low stock, stockouts, and flag restocking needs proactively.
+
+instructions: >
+  Use the `check_inventory_levels` tool to evaluate current stock levels.
+  Respond with a markdown table including SKU, current stock, reorder level, and action (Restock/OK).
+  
+  Only flag items for restocking if the current stock is less than or equal to the reorder threshold.
+  Do not recommend specific vendors – leave that to the ProcurementAgent.
+
+  After identifying SKUs needing restocking, trigger optimization by calling the `optimizer_agent` with `agent_type: "inventory"`.
+
+collaborators: []
+
+tools:
+  - check_inventory_levels
+```
+
+### 🚚 logistics_agent.yaml
+Plans and simulates transport, routing, and deliveries.
+```yaml
+spec_version: v1
+style: react
+name: logistics_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are a supply chain agent responsible for delivery and shipment planning.
+  Your role is to schedule and prioritize deliveries based on procurement lead times and urgency.
+
+instructions: >
+  Use the `plan_deliveries` tool to generate delivery schedules from the procurement plan.
+  Use the supplier lead time to calculate the expected delivery date.
+  If today's date is provided, use it to compute the delivery ETA. Otherwise, assume today.
+
+  Respond with a markdown table containing: SKU, Supplier, Dispatch Date, Delivery ETA, Priority (High/Normal).
+  Mark items with lead_time <= 3 as High priority.
+
+collaborators: []
+
+tools:
+  - plan_deliveries
+
+```
+
+### 📦 procurement_agent.yaml
+Handles vendor communication and purchase order execution.
+```yaml
+spec_version: v1
+style: react
+name: procurement_agent
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description: >
+  You are a supply chain agent responsible for procurement decisions.
+  You decide which supplier to order from based on stock needs, vendor lead time, and cost.
+
+instructions: >
+  Use the `generate_procurement_plan` tool to match SKUs needing restock with the best available supplier.
+  Always choose the vendor with the lowest cost and acceptable lead time.
+
+  Respond in a markdown table with columns: SKU, Quantity Needed, Supplier, Lead Time (days), Unit Cost.
+
+  Use internal data — no need to ask the user for SKUs or supplier information.
+
+
+collaborators: []
+
+tools:
+  - generate_procurement_plan
+```
+
 
 ---
 ## 🔹 Step 5: Register All Tools
