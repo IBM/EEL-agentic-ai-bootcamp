@@ -125,7 +125,8 @@ We have developed a Risk Assessment Agent using LangGraph and integrated it as a
 
     **Pre-requisites**:
     
-    1. watsonx.ai API Key, Space ID & Project ID.
+    1. watsonx.ai API Key & Space ID.
+    1. Generate a new task credential API key <https://dataplatform.cloud.ibm.com/settings/user-api-key?context=wx>
     1. Tavily API Key. [https://app.tavily.com/home](https://app.tavily.com/home){:target="_blank"}
     
     **Steps to deploy the external agent**:
@@ -156,7 +157,7 @@ We have developed a Risk Assessment Agent using LangGraph and integrated it as a
         
         !!! danger "Rotate your API Key after every Bootcamp!"
 
-            Since you shared the API Key with participants, it is a good to rotate the API key after the bootcamp.
+            Since you shared the API Key with participants, it must be rotated after the bootcamp.
 
     **Troubleshooting:**
 
