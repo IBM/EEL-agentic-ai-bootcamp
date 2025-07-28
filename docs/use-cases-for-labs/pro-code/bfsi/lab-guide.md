@@ -181,10 +181,6 @@ Now that you have obtained the deployed api url from instructor and patched the 
 orchestrate agents import -f collaborators/external_agent.yaml
 ```
 
-```bash
-orchestrate agents import -f collaborators/risk_assessment_agent.yaml
-```
-
 At this point, the external agents are deployed to watsonx Orchestrate.
 
 ### 4. Deploy supervisor and collaborative agents
