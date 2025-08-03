@@ -8,7 +8,7 @@
 - [Download files](https://ibm.ent.box.com/s/ip9fq5u0b8pty8dvrlza8ikrs8cel4xg){:target="_blank"} 
 - Download the zip file from Lab1 folder <br>
 Note: If you are an instructor, complete the instructor guide and update the url in hr.yaml. If you are a practitioner, obtain the updated hr.yaml file from your instructor. Do not directly use the yaml file to import into Orchestrate. 
-- If you are an instructor, complete the [instructor set-up guide](https://ibm.github.io/EEL-agentic-ai-bootcamp/use-cases-for-labs/low-code/chro/lab-guide/) and update the hr.yaml with new url after completing the setup. 
+- If you are an instructor, complete the [instructor set-up guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/usecase-setup/askhr/DEPLOY_MANUAL.md) and update the hr.yaml with new url after completing the setup. 
 
 ## Step by step instructions to build the HR Agent
 
