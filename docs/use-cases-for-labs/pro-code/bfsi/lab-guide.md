@@ -9,7 +9,7 @@ A financial advisor must go through various data points before meeting a client 
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
-- [Download files](https://ibm.ent.box.com/s/ip9fq5u0b8pty8dvrlza8ikrs8cel4xg){:target="_blank"}
+- [Download files](https://ibm.box.com/s/n0pkqfjzwxi3cvzaq8msaclfnf7mbwro){:target="_blank"}
 - Download the **financial_research_and_analysis_agent.zip** file from Lab2 folder.
 
 ## Reference Architecture

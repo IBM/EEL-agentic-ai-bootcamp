@@ -5,7 +5,7 @@
 - Make sure you've already setup the environment:
 - [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
-- [Download files](https://ibm.ent.box.com/s/ip9fq5u0b8pty8dvrlza8ikrs8cel4xg){:target="_blank"} 
+- [Download files](https://ibm.box.com/s/n0pkqfjzwxi3cvzaq8msaclfnf7mbwro){:target="_blank"} 
 - Download the zip file from Lab1 folder <br>
 Note: If you are an instructor, complete the instructor guide and update the url in hr.yaml. If you are a practitioner, obtain the updated hr.yaml file from your instructor. Do not directly use the yaml file to import into Orchestrate. 
 - If you are an instructor, complete the [instructor set-up guide](https://github.ibm.com/skol/agentic-ai-client-bootcamp-instructors/blob/main/usecase-setup/askhr/DEPLOY_MANUAL.md) and update the hr.yaml with new url after completing the setup. 
