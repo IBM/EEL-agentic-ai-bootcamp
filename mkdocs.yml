@@ -78,7 +78,10 @@ nav:
         - Lab 1 - watsonx Orchestrate Agent Builder (low-code): labs/low-code-lab.md
         - Lab 2 - watsonx Orchestrate Multi-agent (pro-code): labs/pro-code-lab.md
     - Use cases for labs:
-        - Low-code: 
+        - Low-code:
+            - Customer service: 
+                - Use case details: use-cases-for-labs/low-code/ai-powered-customer-service/customer-service.md
+                - Lab guide: use-cases-for-labs/low-code/ai-powered-customer-service/lab-guide.md
             - Vehicle maintenance: 
                 - Use case details: use-cases-for-labs/low-code/automobile/vehicle-maintenance.md
                 - Lab guide: use-cases-for-labs/low-code/automobile/lab-guide.md
