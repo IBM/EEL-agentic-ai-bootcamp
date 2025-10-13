@@ -167,7 +167,10 @@ Below is a description of each section:
 
 !!! tip "Tip"
 
-        You can also to raise a return request.
+        You can also raise a return request by typing:
+
+        - Customer wants to return a product
+        - Please initiate a return request for order ORD1004
 
 ### Deploy the agent
 
