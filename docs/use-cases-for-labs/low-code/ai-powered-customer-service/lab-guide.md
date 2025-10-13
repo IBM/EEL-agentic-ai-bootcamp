@@ -13,6 +13,30 @@ We will focus on a simple data model with two main entities Customer and Order l
 - [Download files](https://ibm.box.com/s/n0pkqfjzwxi3cvzaq8msaclfnf7mbwro){:target="_blank"}
 - Download the zip file from Lab1 folder
 
+??? caution "INSTRUCTORS TO SETUP THE CUSTOMER SERVICE APIs"
+
+    Instructors need to setup the Customer services API in order for the tools to work.
+
+    1. Login to IBM Cloud and goto Code Engine <cloud.ibm.com/containers/serverless>.
+    1. Create a serverless project.
+    1. Create an application with the following details:
+    ![schema](../../../images/cs/is-2.png)
+        1. **Name**: `customer-service`
+        1. **Image Reference**: `docker.io/manojjahgirdar/customer-service:latest`
+        1. **CPU & Memory**: `2 vCPU / 4 GB`
+        1. **Min number of instances**: `3`
+    1. Click on create.
+    1. Once deployed you should get an url something like this: <https://customer-service.21amjp16vv3s.us-east.codeengine.appdomain.cloud>
+    1. Open the URL and append `/docs` to see the APIs.
+    ![schema](../../../images/cs/is-3.png)
+    1. In the `customer-services.json` file, update the server url with the above URL and share with participants.
+    ![schema](../../../images/cs/is-4.png)
+
+!!! warning "Participants to update the OpenAPI Spec file before getting started"
+
+    In the `customer-services.json` file, update the server url with the URL provided by Instructors.
+    ![schema](../../../images/cs/is-4.png)
+
 ## Reference Architecture
 
 ![architecture](../../../images/cs/architecture.png)
