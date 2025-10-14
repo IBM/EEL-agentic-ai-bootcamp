@@ -90,7 +90,7 @@ nav:
                 - Lab guide: use-cases-for-labs/low-code/chro/lab-guide.md
         - Pro-code:
             - Document extraction:
-                - Use case details: use-cases-for-labs/pro-code/legal/document-extraction.md
+                - Use case details: use-cases-for-labs/pro-code/legal/document-processing.md
                 - Lab guide: use-cases-for-labs/pro-code/legal/lab-guide.md
             - Insurance claim:
                 - Pre authorization for cashless hospitalization: 
