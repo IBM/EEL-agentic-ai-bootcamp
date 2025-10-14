@@ -416,25 +416,18 @@ To complete the flow, we need to add a final activity that presents the extracte
 1. Type `Extracted contract fields` (A) and hit Return.
 ![op-83](../../../images/legal/83.png)
 
-1. Type `**Buyer**:` in the Output message field (A) CHANGE THIS
-![op-84](../../../images/legal/84.png)
+1. Type the following to create a table output:
 
-1. To display the results for the field, ‘Buyer’ you must assign a variable to it. Click on the Select variable ‘[x]’ button.
-![op-85](../../../images/legal/85.png)
+    ```
+    Buyer|Supplier|Effective date
+    --|--|--
+    {flow["Contract extractor"].output.buyer}|{flow["Contract extractor"].output.supplier}|{flow["Contract extractor"].output.effective_date}
+    ```
 
-1. Under the ‘Contract extractor’ menu click on the buyer variable (A).
-![op-86](../../../images/legal/86.png)
+    To display the results for the field, you must assign a variable to it. Click on the Select variable ‘[x]’ button and assign the variables.
 
 1. Your screen should look like (A):
-![op-87](../../../images/legal/87.png)
-
-1. Repeat from step 9 to add the remaining fields defined in the Contract extractor:
-
-    - Supplier
-    - Effective date
-
-    Your screen should look like (A):
-    ![op-88](../../../images/legal/88.png)
+![op-87](../../../images/legal/110.png)
 
 1. Click the background to remove the property view (A).
 ![op-89](../../../images/legal/89.png)
@@ -452,7 +445,7 @@ To complete the flow, we need to add a final activity that presents the extracte
         The invoice variables will be under the Invoice extractor folder.
 
 1. You should get the following result:
-![op-91](../../../images/legal/91.png)
+![op-91](../../../images/legal/111.png)
 
 ### Define the end flow
 
