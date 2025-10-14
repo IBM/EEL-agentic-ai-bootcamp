@@ -98,6 +98,7 @@ Below is a description of each section:
 
 1. Click Toolset (A). Add click add tool (B)
 ![op-3](../../../images/cs/3.png)
+
 2. Click Add from file or MCP server (A).
 ![op-4](../../../images/cs/4.png)
 
