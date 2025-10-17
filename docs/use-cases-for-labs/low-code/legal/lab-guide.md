@@ -12,7 +12,7 @@ In this lab scenario, a financial services firm processes numerous contracts and
 - [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
 - [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
 - [Download files](https://ibm.box.com/s/n0pkqfjzwxi3cvzaq8msaclfnf7mbwro){:target="_blank"}
-- Download the **document-extraction-lab.zip** file from Lab2 folder.
+- Download the **document-extraction-lab.zip** file from Lab1 folder.
 
 ## Reference Architecture
 
