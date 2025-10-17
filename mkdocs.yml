@@ -110,5 +110,6 @@ nav:
         - Travel planner: demo-use-cases/travel-planner-demo.md
         - Maximo Workorder Maintenance: demo-use-cases/maximo-workorder-maintenance-demo.md
         - HashiCorp vault: demo-use-cases/hashi-demo.md
+    - Additional Lab Guides: additional-lab-guides.md
     - Conclusion: conclusion.md
     - Troubleshooting: troubleshooting.md
