@@ -17,6 +17,7 @@ For this bootcamp, we have created the [Agentic AI Bootcamp TechZone bundle](htt
 
 !!! note "Important Note!"
 
+    After the Techzone reservation is complete, you will receive an email about it from IBM Techzone. After this, you will receive another email from IBM Cloud inviting you to join a cloud account. Please note, you DO NOT have to create the Cloud account. Techzone reservation will create the account and you DO NOT have to put your credit card anywhere for this.
     Incase you don't have access to the TechZone you most likely don't have and IBM ID. Create an IBM ID by following the instructions here: [Create your IBMid](environment-setup-lab/create-ibmid.md)
 
 ## Next step
