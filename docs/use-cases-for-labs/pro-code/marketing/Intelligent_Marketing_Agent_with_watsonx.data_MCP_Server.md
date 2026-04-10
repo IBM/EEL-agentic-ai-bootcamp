@@ -20,6 +20,6 @@ Sarah can also use the **Intelligent Marketing Agent** to get retail analytics i
 - **Retail Analytics & Insights:** The agent provides instant access to customer analytics, purchase patterns, and business intelligence through natural language queries against watsonx.data lakehouse.
 - **Data-Driven Decision Making:** Leverages actual customer data stored in watsonx.data Iceberg tables to ensure recommendations are based on real purchase behavior and preferences.
 
-## Step by step hands-on instructions
+## Step-by-Step Hands-On Instructions
 
-- Please find the step by step hands-on instructions to execute this lab here: [Lab-guide](lab-guide.md)
+- Please find the step-by-step hands-on instructions to execute this lab here: [Lab Guide](lab-guide.md)
