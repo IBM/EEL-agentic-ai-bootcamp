@@ -41,7 +41,7 @@ You also need the following credentials:
 
 **Step 2: Deploy the MCP server on Code Engine to generate a public URL for remote MCP.**
 
-Use PODMAN-lab-guide.md for the instructor guide to generate a public URL for remote MCP.
+Use deployment-guide.md for the instructor guide to generate a public URL for remote MCP.
 
 ## Reference Architecture
 
