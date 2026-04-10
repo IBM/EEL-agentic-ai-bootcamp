@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 ## Step 2: Setup Environment Variables
 
-Create a `.env` file with your credentials:
+Create a `.env` file with your credentials , you can copy paste 'example.env' from zip folder in .env and update with your credentials.
 
 ```bash
 # IBM Cloud API Key
@@ -92,10 +92,10 @@ APP_NAME=watsonxdata-mcp
 
 ## Quick Deployment Script
 
-All the above steps are automated in the `deploy-with-podman.sh` script:
+All the above steps are automated in the `deploy.sh` script:
 
 ```bash
-./deploy-with-podman.sh
+./deploy.sh
 ```
 
 ---
@@ -125,9 +125,13 @@ After deployment, add the MCP server to watsonx Orchestrate , append /mcp in the
    ```
 
 2. **Add to watsonx Orchestrate:**
-   - Go to: watsonx Orchestrate → Tools → Add MCP Server
-   - Select: "Remote MCP server"
-   - Enter Server URL: `https://watsonxdata-mcp.abc123.us-south.codeengine.appdomain.cloud/mcp`
+   - Go to: watsonx Orchestrate → Tools → Add MCP Server 
+   - Select: "Remote MCP server" 
+   - Name : 'marketing-recommendation-mcp-tool'
+   - Description: `IBM watsonx.data MCP Server for querying lakehouse data, exploring catalogs, and managing data operations using natural language.`
+   - Enter Server URL: <MCP Server URL> 
+   - Add the listed tools
+   - save
 
 3. **Verify:**
    - Test MCP tools in Orchestrate
@@ -314,7 +318,7 @@ ibmcloud ce registry create --name icr-secret \
   --password yGDcu79Qh1Xufgum1PFrNUeASJDq1RRWFYb2BATSAiBy
 
 **Note:** This secret allows Code Engine to pull images from your private registry.
-
+```
 ---
 
 ## Step 14: Deploy Application to Code Engine
@@ -357,21 +361,22 @@ https://watsonxdata-mcp.abc123.us-south.codeengine.appdomain.cloud
 
 ## Integration with watsonx Orchestrate
 
-After deployment, add the MCP server to watsonx Orchestrate:
+After deployment, add the MCP server to watsonx Orchestrate , append /mcp in the end:
 
 1. **Get MCP Server URL:**
    ```
-   https://your-app.abc123.region.codeengine.appdomain.cloud/mcp
+   https://watsonxdata-mcp.abc123.us-south.codeengine.appdomain.cloud/mcp
    ```
 
 2. **Add to watsonx Orchestrate:**
-   - Go to: watsonx Orchestrate → Tools → Add MCP Server
-   - Select: "Remote MCP server"
-   - Enter Server URL: `https://your-app.abc123.region.codeengine.appdomain.cloud/mcp`
+   - Go to: watsonx Orchestrate → Tools → Add MCP Server 
+   - Select: "Remote MCP server" 
+   - Name : 'retail-recommendation-mcp-tool'
+   - Description: `IBM watsonx.data MCP Server for querying lakehouse data, exploring catalogs, and managing data operations using natural language.`
+   - Enter Server URL: <MCP Server URL>
+   - Add the listed tools
+   - save
 
 3. **Verify:**
    - Test MCP tools in Orchestrate
    - Try "List Engines" or "List Schemas"
-
----
-

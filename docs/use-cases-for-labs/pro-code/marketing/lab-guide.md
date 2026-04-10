@@ -8,31 +8,52 @@ We will focus on a retail data model with three main entities: Customers, Produc
 
 Before starting this lab, make sure the following items are available:
 
-- IBM Cloud account with access to:
-  - watsonx.data
-  - IBM Cloud Code Engine
-- watsonx Orchestrate environment
-- Project files available locally:
-  - `marketing_agent.yaml`
-  - `watsonxdata_mcp_http_server.py`
 
-You also need the following credentials:
+- Make sure you've already setup the environment:
+- [Lab 0 - Environment setup](../../../../labs/env-setup-lab/)
+- [ADK Installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){:target="_blank"}
+- [Download files](https://ibm.box.com/s/n0pkqfjzwxi3cvzaq8msaclfnf7mbwro){:target="_blank"}
+- Download the **marketing_agent_with_watsonxdata_mcp.zip** file from Lab2 folder.
 
-- `IBM_CLOUD_API_KEY`
-- `WATSONX_DATA_INSTANCE_ID`
-- `WATSONX_DATA_REGION`
-- `WATSONX_DATA_BASE_URL`
+
+## setup the project
+
+Make sure you have downloaded the required files for the lab and extracted it. Go to the root of the downloaded directory.
+```
+cd marketing_agent_with_watsonxdata_mcp/
+```
+
+You should see the following directories & files listed:
+```
+│
+├── agents/
+│   └── marketing_agent.yaml
+│
+├── app/
+│   └── watsonxdata_mcp_http_server.py
+│
+├── test_data_files/
+│   ├── customers.csv
+│   ├── products.csv
+│   └── transactions.csv
+│
+├── .env
+├── deploy.sh
+├── Dockerfile
+├── example.env
+└── requirements.txt
+```
 
 ## Instructor Guide
 
-**Step 1: Create a test data in watsonx.data Iceberg tables**
+**Step 1: Create a Test data files in watsonx.data Iceberg tables**
 
 1. Login https://cloud.ibm.com/
 2. go to resources --> databases and open watsonx.data and open in web console
    Make sure you select the presto engine and catelog name as 'iceberg_data_1'
 3. click on ingest data
 4. select  Add data from local storage
-5. from upload open add the csv files donloaded from lam material and click on next
+5. from upload open add the csv files downloaded from lab material in 'test_data_files' and click on next
 6. select catelog as iceberg_data_1 and add schema name as 'sales_data'
    In create new tabel section put file name as tabel name
 7. click on preview
@@ -140,37 +161,22 @@ This project already includes a ready-to-import agent definition in `marketing_a
 Use the Orchestrate CLI to import it:
 
 ```bash
-orchestrate agents import -f marketing_agent.yaml
+orchestrate agents import -f agents/marketing_agent.yaml
 ```
 
 Expected result:
 
 ```
 Importing agent from marketing_agent.yaml...
-✓ Agent 'AgenticLakehouseGrowthEngine' imported successfully
+✓ Agent 'Agentic_Lakehouse_Growth_Engine' imported successfully
 ```
 
 This imports:
 
-- Agent name: `AgenticLakehouseGrowthEngine`
+- Agent name: `Agentic_Lakehouse_Growth_Engine`
 - Style: `react`
 - LLM: `groq/openai/gpt-oss-120b`
 - Detailed instructions for simple analytics and recommendation generation
-
-## Step 5: Connect the Remote MCP Server in watsonx Orchestrate
-
-After the agent is imported, connect the remote MCP server in watsonx Orchestrate.
-
-1. Open the agent in Agent Builder.
-2. Go to the tool configuration area.
-3. Choose to add a remote MCP server.
-4. Enter the following details:
-
-- **Server Name**: `watsonxdata-mcp-server`
-- **Description**: `IBM watsonx.data MCP Server for querying lakehouse data, exploring catalogs, and managing data operations using natural language.`
-- **Server URL**: `https://your-app-url.codeengine.appdomain.cloud/mcp`
-
-5. Import the available tools.
 
 ## Step 6: Verify Imported MCP Tools
 
