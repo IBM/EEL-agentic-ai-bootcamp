@@ -67,8 +67,14 @@
         "fbprophet",
         "dateutil",
         "restockable",
-        "manojjahgirdar"
-
+        "manojjahgirdar",
+        "watsonxdata",
+        "groq",
+        "Kumar",
+        "mynta",
+        "ibmcloud",
+        "iamapikey",
+        "lakehouse"
     ],
 
     "flagWords": [
