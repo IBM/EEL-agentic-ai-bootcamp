@@ -105,6 +105,9 @@ nav:
             - Supply chain: 
                 - Use case details: use-cases-for-labs/pro-code/supply-chain/supply-chain.md
                 - Lab guide: use-cases-for-labs/pro-code/supply-chain/lab-guide.md
+            - Personalized Marketing Campaign Generation:
+                - Use case details: use-cases-for-labs/pro-code/marketing/Intelligent_Marketing_Agent_with_watsonx.data_MCP_Server.md
+                - Lab guide: use-cases-for-labs/pro-code/marketing/lab-guide.md
     - Demo use cases: 
         - AI Agent Governance: demo-use-cases/governance-demo.md
         - Travel planner: demo-use-cases/travel-planner-demo.md
